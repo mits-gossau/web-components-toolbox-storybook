@@ -5,10 +5,10 @@
   * - if a component holds other components you should share the attribute namespace with its children
   */
 :root {
-  --header-default-logo-width-custom:190px;
-  --header-default-a-logo-top-custom: calc(62px / 2 - 90px / 2);
-  --header-default-background-color-custom: transparent;
-  --navigation-default-color-custom: var(--color);
-  --header-default-a-menu-icon-background-color-custom:var(--color);
   --footer-default-invert-background-color-custom:var(--m-black);
+  --header-default-a-logo-top-custom: calc(62px / 2 - 90px / 2); /* header.height / 2 - logo.height / 2 */
+  --header-default-a-menu-icon-background-color-custom:var(--color);
+  --header-default-background-color-custom: var(--background-color);
+  --header-default-logo-width-custom:190px;
+  --navigation-default-color-custom: var(--color);
 }
