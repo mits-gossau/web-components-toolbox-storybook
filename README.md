@@ -4,8 +4,8 @@ The web component toolbox for any CMS but particularly used for [Web Components 
 ## [organize components](https://wiki.migros.net/display/OCC/Web+Components+CMS+Template)
 
 TODO:
-- [ ] pdf Download Teaser
-- [ ] Reference icon plus text wrapper
+- [x] pdf Download Teaser
+- [x] Reference icon plus text wrapper
+- [x] Emotion Pic Video
+- [x] Accordeon (Details Summary)
 - [ ] Forms styling
-- [ ] Emotion Pic Video
-- [ ] Accordeon (Details Summary)
