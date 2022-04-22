@@ -8,4 +8,4 @@ TODO:
 - [x] Reference icon plus text wrapper
 - [x] Emotion Pic Video
 - [x] Accordeon (Details Summary)
-- [ ] Forms styling
+- [x] Forms styling
