@@ -7,11 +7,23 @@
 /* font tracking */
 @import url("https://cdn.fonts.net/t/1.css?apiType=css&projectid=15e0d230-9ed9-11ec-b670-06c4e8753e28");
 :root {
-  --footer-default-invert-background-color-custom:var(--m-black);
+  --a-color:var(--m-white); 
+  --background-color:var(--m-black);
+  --bg-color:var(--m-white);
+  --color-disabled:#97A619;
+  --color-hover:#737E13;
+  --color-secondary:#97A619;
+  --color:var(--m-white);
+  --emotion-pictures-with-title-bg-background-color-custom:#97A619;
+  --emotion-pictures-with-title-bg-color-custom:var(--m-white);
+  --footer-default-invert-background-color-custom:#111111;
+  --footer-default-invert-color-custom:var(--m-white);
+  --footer-default-invert-orange-background-color-custom:var(--m-black);
   --header-default-a-logo-top-custom: calc(62px / 2 - 90px / 2); /* header.height / 2 - logo.height / 2 */
   --header-default-a-menu-icon-background-color-custom:var(--color);
-  --header-default-background-color-custom: var(--background-color);
-  --header-default-border-bottom-custom: 1px solid var(--m-gray-300);
-  --header-default-logo-width-custom:190px;
-  --navigation-default-color-custom: var(--color);
+  --header-default-background-color-custom: var(--m-black);
+  --header-default-logo-width-custom:90px;
+  --navigation-default-color-custom:var(--m-white);
+  --teaser-overlay-bg-color-custom:var(--m-white);
+  --teaser-tile-background-color-custom:var(--m-black);
 }
