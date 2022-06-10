@@ -16,9 +16,11 @@
   --color:var(--m-white);
   --emotion-pictures-with-title-bg-background-color-custom:#97A619;
   --emotion-pictures-with-title-bg-color-custom:var(--m-white);
+  --footer-default-h4-color:#97A619;
   --footer-default-invert-background-color-custom:#111111;
   --footer-default-invert-color-custom:var(--m-white);
   --footer-default-invert-orange-background-color-custom:var(--m-black);
+  --footer-default-ul-list-style:none;
   --header-default-a-logo-top-custom: calc(62px / 2 - 90px / 2); /* header.height / 2 - logo.height / 2 */
   --header-default-a-menu-icon-background-color-custom:var(--color);
   --header-default-background-color-custom: var(--m-black);
