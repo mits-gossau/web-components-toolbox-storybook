@@ -54,5 +54,6 @@
   --navigation-default-a-link-text-transform-custom: uppercase;
   --navigation-default-color-custom:var(--m-white);
   --teaser-overlay-bg-color-custom:var(--m-white);
+  --teaser-plain-h2-margin-custom: 0;
   --teaser-tile-background-color-custom:var(--m-black);
 }
