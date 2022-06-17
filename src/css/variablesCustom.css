@@ -5,7 +5,28 @@
   * - if a component holds other components you should share the attribute namespace with its children
   */
 /* font tracking */
-@import url("https://cdn.fonts.net/t/1.css?apiType=css&projectid=15e0d230-9ed9-11ec-b670-06c4e8753e28");
+@import url("https://fast.fonts.net/lt/1.css?apiType=css&c=defd2931-272a-442c-a9ee-88e0b0772cfe&fontids=5752988");
+@font-face{
+  font-family:"DINW01Regular";
+  src:url("https://cdn.migros.ch/ch.migros/static/fonts/din_regular/6ceed230-b2b3-4422-b048-4aa11687430a.woff2") format("woff2"),url("https://cdn.migros.ch/ch.migros/static/fonts/din_regular/80b0143f-6f0d-4dce-aafd-f3c81b85d177.woff") format("woff");
+  font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face{
+  font-family:"DINW01Bold";
+  src:url("https://cdn.migros.ch/ch.migros/static/fonts/din_bold/55fa1cf8-baf8-4bf8-9718-b096b1dd231f.woff2") format("woff2"),url("https://cdn.migros.ch/ch.migros/static/fonts/din_bold/4cadc2f9-fb32-4b99-b1f2-9ce6d68afbd5.woff") format("woff");
+  font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face{
+  font-family:"LucidaHandwritingW01Regular";
+  src:url("https://cdn.migros.ch/ch.migros/static/fonts/lucida_handwriting_regular/9bf126af-ad4c-4aad-a508-570b9adbe5cd.woff2") format("woff2"),url("https://cdn.migros.ch/ch.migros/static/fonts/lucida_handwriting_regular/3d566305-c229-4f4e-b5ed-dfe2660edeb9.woff") format("woff");
+  font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
 :root {
   --a-color:var(--m-white); 
   --background-color:var(--m-black);
@@ -17,16 +38,23 @@
   --emotion-pictures-with-title-h2-text-transform-custom: none;
   --emotion-pictures-with-title-bg-background-color-custom:#97A619;
   --emotion-pictures-with-title-bg-color-custom:var(--m-white);
+  --font-family-bold: DINW01Bold, HelveticaNowTextBold, HelveticaNowText, Helvetica, Arial, sans-serif;
+  --font-family-secondary: Avenir35Light, sans-serif;
+  --font-family-tertiary: LucidaHandwritingW01Regular, sans-serif;
+  --font-family: DINW01Regular, HelveticaNowText, Helvetica, Arial, sans-serif;
   --footer-default-h4-color:#97A619;
   --footer-default-invert-background-color-custom:#111111;
   --footer-default-invert-color-custom:var(--m-white);
   --footer-default-invert-orange-background-color-custom:var(--m-black);
   --footer-default-ul-list-style:none;
   --header-default-a-logo-top-custom: calc(62px / 2 - 90px / 2); /* header.height / 2 - logo.height / 2 */
+  --header-default-a-logo-top-mobile-custom: 0;
   --header-default-a-menu-icon-background-color-custom:var(--color);
   --header-default-background-color-custom: var(--m-black);
   --header-default-logo-width-custom:90px;
+  --navigation-default-a-link-text-transform-custom: uppercase;
   --navigation-default-color-custom:var(--m-white);
   --teaser-overlay-bg-color-custom:var(--m-white);
+  --teaser-plain-h2-margin-custom: 0;
   --teaser-tile-background-color-custom:var(--m-black);
 }
