@@ -35,9 +35,10 @@
   --color-hover:#737E13;
   --color-secondary:#97A619;
   --color:var(--m-white);
-  --emotion-pictures-with-title-h2-text-transform-custom: none;
   --emotion-pictures-with-title-bg-background-color-custom:#97A619;
   --emotion-pictures-with-title-bg-color-custom:var(--m-white);
+  --emotion-pictures-with-title-h2-font-family-secondary: var(--font-family-bold);
+  --emotion-pictures-with-title-h2-text-transform-custom: none;
   --font-family-bold: DINW01Bold, HelveticaNowTextBold, HelveticaNowText, Helvetica, Arial, sans-serif;
   --font-family-secondary: Avenir35Light, sans-serif;
   --font-family-tertiary: LucidaHandwritingW01Regular, sans-serif;
