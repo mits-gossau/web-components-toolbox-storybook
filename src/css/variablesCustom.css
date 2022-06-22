@@ -52,7 +52,7 @@
   --footer-default-h4-color: #97A619;
   --footer-default-invert-background-color-custom: #111111;
   --footer-default-invert-color-custom: var(--m-white);
-  --footer-default-invert-orange-background-color-custom: var(--m-black);
+  --footer-default-invert-orange-background-color-custom: #000000;
   --footer-default-ul-list-style: none;
   --header-default-a-logo-top-custom: calc(62px / 2 - 90px / 2);
   --header-default-a-logo-top-mobile-custom: 0;
