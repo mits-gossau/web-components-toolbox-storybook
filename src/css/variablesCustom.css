@@ -35,6 +35,7 @@
   --a-color: var(--m-white);
   --background-color: var(--m-black);
   --bg-color: var(--m-white);
+  --color-active: var(--color-secondary);
   --color-disabled: #97A619;
   --color-hover: #737E13;
   --color-secondary: #97A619;
@@ -58,7 +59,6 @@
   --header-default-a-menu-icon-background-color-custom: var(--color);
   --header-default-background-color-custom: var(--m-black);
   --header-default-logo-width-custom: 90px;
-  --navigation-default-a-link-text-transform-custom: uppercase;
   --navigation-default-color-custom: var(--m-white);
   --teaser-overlay-bg-color-custom: var(--m-white);
   --teaser-plain-color-custom: var(--m-white);
