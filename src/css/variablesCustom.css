@@ -5,7 +5,7 @@
   * - if a component holds other components you should share the attribute namespace with its children
   */
 /* font tracking */
-@import url("https://fast.fonts.net/lt/1.css?apiType=css&c=defd2931-272a-442c-a9ee-88e0b0772cfe&fontids=5752988");
+@import url("https://cdn.fonts.net/t/1.css?apiType=css&projectid=b2e5ea60-e0d9-11ec-b713-06e2001461d0");
 
 @font-face {
   font-family: "DINW01Regular";
