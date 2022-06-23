@@ -44,6 +44,7 @@
   --emotion-pictures-with-title-bg-color-custom: var(--m-white);
   --emotion-pictures-with-title-h2-font-family-secondary: var(--font-family-bold);
   --emotion-pictures-with-title-h2-text-transform-custom: none;
+  --emotion-pictures-with-title-subline-display-mobile: none;
   --emotion-pictures-with-title-subline-padding: 0 0 0 0.5em;
   --font-family-bold: DINW01Bold, HelveticaNowTextBold, HelveticaNowText, Helvetica, Arial, sans-serif;
   --font-family-secondary: Avenir35Light, sans-serif;
