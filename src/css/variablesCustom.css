@@ -48,6 +48,7 @@
   --emotion-pictures-with-title-h2-text-transform-custom: none;
   --emotion-pictures-with-title-subline-display-mobile: none;
   --emotion-pictures-with-title-subline-padding: 0 0 0 0.5em;
+  --emotion-pictures-with-title-text-right-mobile-custom: var(--content-spacing-mobile);
   --font-family-bold: DINW01Bold, HelveticaNowTextBold, HelveticaNowText, Helvetica, Arial, sans-serif;
   --font-family-secondary: Avenir35Light, sans-serif;
   --font-family-tertiary: LucidaHandwritingW01Regular, sans-serif;
