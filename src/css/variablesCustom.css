@@ -65,6 +65,7 @@
   --header-default-a-menu-icon-background-color-custom: var(--color);
   --header-default-background-color-custom: var(--m-black);
   --header-default-logo-width-custom: 90px;
+  --input-color: #404052;
   --navigation-default-color-custom: var(--m-white);
   --teaser-overlay-bg-color-custom: var(--m-white);
   --teaser-plain-color-custom: var(--m-white);
