@@ -71,4 +71,8 @@
   --teaser-plain-h2-margin-custom: 0;
   --teaser-tile-background-color-custom: #222222;
   --input-color: #404052;
+  --preview-default-a-text-decoration: none;
+  --preview-default-a-color-hover: white;
+  --preview-default-h3-color-hover: var(--color-hover);
+  --preview-default-h3-color: #97A619;
 }
