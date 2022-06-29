@@ -78,4 +78,11 @@
   --preview-default-h3-margin: 0 0 0.3em 0;
   --article-default-h1-color: #97A619;
   --article-preview-img-max-width: 230px;
+  --pagination-default-ul-display: flex;
+  --pagination-default-ul-flex-direction: row;
+  --pagination-default-ul-text-align: center;
+  --pagination-default-any-a-display: block;
+  --pagination-default-a-margin: 0;
+  --pagination-default-a-text-decoration: none;
+
 }
