@@ -75,4 +75,6 @@
   --preview-default-a-color-hover: white;
   --preview-default-h3-color-hover: var(--color-hover);
   --preview-default-h3-color: #97A619;
+  --preview-default-h3-margin: 0 0 0.3em 0;
+  --article-default-h1-color: #97A619;
 }
