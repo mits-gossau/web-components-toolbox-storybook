@@ -33,6 +33,9 @@
 
 :root {
   --a-color: var(--m-white);
+  --article-default-h1-color: #97A619;
+  --article-default-ul-list-style: none;
+  --article-preview-img-max-width: 230px;
   --background-color: #222222;
   --bg-color: var(--m-white);
   --color-active: var(--color-secondary);
@@ -65,24 +68,22 @@
   --header-default-a-menu-icon-background-color-custom: var(--color);
   --header-default-background-color-custom: #222222;
   --header-default-logo-width-custom: 90px;
+  --input-color: #404052;
   --navigation-default-color-custom: var(--m-white);
+  --pagination-default-a-margin: 0;
+  --pagination-default-a-text-decoration: none;
+  --pagination-default-any-a-display: block;
+  --pagination-default-ul-display: flex;
+  --pagination-default-ul-flex-direction: row;
+  --pagination-default-ul-text-align: center;
+  --preview-default-a-color-hover: white;
+  --preview-default-a-text-decoration: none;
+  --preview-default-h3-color-hover: var(--color-hover);
+  --preview-default-h3-color: #97A619;
+  --preview-default-h3-margin: 0 0 0.3em 0;
   --teaser-overlay-bg-color-custom: var(--m-white);
   --teaser-plain-color-custom: var(--m-white);
   --teaser-plain-h2-margin-custom: 0;
   --teaser-tile-background-color-custom: #222222;
-  --input-color: #404052;
-  --preview-default-a-text-decoration: none;
-  --preview-default-a-color-hover: white;
-  --preview-default-h3-color-hover: var(--color-hover);
-  --preview-default-h3-color: #97A619;
-  --preview-default-h3-margin: 0 0 0.3em 0;
-  --article-default-h1-color: #97A619;
-  --article-preview-img-max-width: 230px;
-  --pagination-default-ul-display: flex;
-  --pagination-default-ul-flex-direction: row;
-  --pagination-default-ul-text-align: center;
-  --pagination-default-any-a-display: block;
-  --pagination-default-a-margin: 0;
-  --pagination-default-a-text-decoration: none;
 
 }
