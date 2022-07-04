@@ -33,6 +33,9 @@
 
 :root {
   --a-color: var(--m-white);
+  --article-default-a-text-decoration-hover: none;
+  --article-default-a-text-decoration: underline solid #737E13;
+  --article-default-a-text-underline-offset: 0.2em;
   --article-default-h1-color: #97A619;
   --article-default-ul-list-style: none;
   --article-preview-img-max-width: 228px;
