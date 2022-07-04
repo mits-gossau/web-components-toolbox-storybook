@@ -35,9 +35,10 @@
   --a-color: var(--m-white);
   --article-default-h1-color: #97A619;
   --article-default-ul-list-style: none;
-  --article-preview-img-max-width: 230px;
+  --article-preview-img-max-width: 228px;
   --background-color: #222222;
   --bg-color: var(--m-white);
+  --button-primary-text-transform: uppercase;
   --color-active: var(--color-secondary);
   --color-disabled: #97A619;
   --color-hover: #737E13;
@@ -77,6 +78,7 @@
   --pagination-default-ul-flex-direction: row;
   --pagination-default-ul-text-align: center;
   --preview-default-a-color-hover: white;
+  --preview-default-a-margin: 0;
   --preview-default-a-text-decoration: none;
   --preview-default-h3-color-hover: var(--color-hover);
   --preview-default-h3-color: #97A619;
