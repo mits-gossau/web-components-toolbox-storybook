@@ -85,7 +85,4 @@
   --teaser-plain-color-custom: var(--m-white);
   --teaser-plain-h2-margin-custom: 0;
   --teaser-tile-background-color-custom: #222222;
-  --checkbox-flex-direction: row-reverse;
-  --checkbox-justify-content: flex-end;
-
 }
