@@ -86,6 +86,7 @@
   --preview-default-h3-color-hover: var(--color-hover);
   --preview-default-h3-color: #97A619;
   --preview-default-h3-margin: 0 0 0.3em 0;
+  --preview-default-p-margin: 0;
   --teaser-overlay-bg-color-custom: var(--m-white);
   --teaser-plain-color-custom: var(--m-white);
   --teaser-plain-h2-margin-custom: 0;
