@@ -33,15 +33,15 @@
 
 :root {
   --a-color: var(--m-white);
+  --a-text-decoration-hover: none;
+  --a-text-decoration: underline solid #737E13;
+  --a-text-underline-offset: 0.2em;
   --article-default-a-text-decoration-hover: none;
   --article-default-a-text-decoration: underline solid #737E13;
   --article-default-a-text-underline-offset: 0.2em;
   --article-default-h1-color: #97A619;
   --article-default-ul-list-style: none;
   --article-preview-img-max-width: 228px;
-  --a-text-decoration-hover: none;
-  --a-text-decoration: underline solid #737E13;
-  --a-text-underline-offset: 0.2em;
   --background-color: #222222;
   --bg-color: var(--m-white);
   --button-primary-text-transform: uppercase;
@@ -81,13 +81,13 @@
   --pagination-default-a-margin: 0;
   --pagination-default-a-text-decoration: none;
   --pagination-default-any-a-display: block;
-  --preview-default-border-image-source: "/assets/img/border-dotted.png";
   --pagination-default-ul-display: flex;
   --pagination-default-ul-flex-direction: row;
   --pagination-default-ul-text-align: center;
   --preview-default-a-color-hover: white;
   --preview-default-a-margin: 0;
   --preview-default-a-text-decoration: none;
+  --preview-default-border-image-source: "/assets/img/border-dotted.png";
   --preview-default-h3-color-hover: var(--color-hover);
   --preview-default-h3-color: var(--color-secondary);
   --preview-default-h3-margin: 0 0 0.3em 0;
@@ -96,4 +96,10 @@
   --teaser-plain-color-custom: var(--m-white);
   --teaser-plain-h2-margin-custom: 0;
   --teaser-tile-background-color-custom: #222222;
+  --ul-bull-li-before-border-width: 0;
+  --ul-bull-li-before-height:5px;
+  --ul-bull-li-before-left: 8px;
+  --ul-bull-li-before-top: 10px;
+  --ul-bull-li-before-width:5px;
+  --ul-bull-li-padding: 0 0 0 37px;
 }
