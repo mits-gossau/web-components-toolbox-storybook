@@ -38,7 +38,11 @@
   --article-default-a-text-underline-offset: 0.2em;
   --article-default-h1-color: #97A619;
   --article-default-ul-list-style: none;
-  --article-preview-img-max-width: 228px;
+  --article-preview-align-items: flex-start;
+  --article-preview-gap: var(--content-spacing);
+  --article-preview-h3-color: #97A619;
+  --article-preview-h3-margin: 0 0 0.5em 0;
+  --article-preview-justify-content: flex-start;
   --background-color: #222222;
   --bg-color: var(--m-white);
   --button-primary-text-transform: uppercase;
@@ -62,6 +66,7 @@
   --font-family-secondary: Avenir35Light, sans-serif;
   --font-family-tertiary: LucidaHandwritingW01Regular, sans-serif;
   --font-family: DINW01Regular, HelveticaNowText, Helvetica, Arial, sans-serif;
+  --font-size-mobile: min(15px, 5vw);
   --footer-default-h4-color: #97A619;
   --footer-default-invert-background-color-custom: #111111;
   --footer-default-invert-color-custom: var(--m-white);
