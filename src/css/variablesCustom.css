@@ -40,17 +40,19 @@
   --article-default-ul-list-style: none;
   --article-preview-img-max-width: 228px;
   --border-image-source: "/assets/img/border-dotted.png";
+  --a-text-decoration-hover: none;
+  --a-text-decoration: underline solid #737E13;
+  --a-text-underline-offset: 0.2em;
   --background-color: #222222;
   --bg-color: var(--m-white);
   --button-primary-text-transform: uppercase;
   --color-active: var(--color-secondary);
-  --color-disabled: #97A619;
+  --color-disabled: #666a3e;
   --color-hover: #737E13;
   --color-secondary: #97A619;
   --color: var(--m-white);
-  --emotion-pictures-with-title-a-color-hover: #737e13;
   --emotion-pictures-with-title-a-text-decoration: none;
-  --emotion-pictures-with-title-bg-background-color-custom: #97A619;
+  --emotion-pictures-with-title-bg-background-color-custom: var(--color-secondary);
   --emotion-pictures-with-title-bg-color-custom: var(--m-white);
   --emotion-pictures-with-title-h2-font-family-secondary: var(--font-family-bold);
   --emotion-pictures-with-title-h2-text-transform-custom: none;
@@ -63,7 +65,8 @@
   --font-family-secondary: Avenir35Light, sans-serif;
   --font-family-tertiary: LucidaHandwritingW01Regular, sans-serif;
   --font-family: DINW01Regular, HelveticaNowText, Helvetica, Arial, sans-serif;
-  --footer-default-h4-color: #97A619;
+  --font-size-mobile: min(15px, 5vw);
+  --footer-default-h4-color: var(--color-secondary);
   --footer-default-invert-background-color-custom: #111111;
   --footer-default-invert-color-custom: var(--m-white);
   --footer-default-invert-orange-background-color-custom: #000000;
@@ -74,6 +77,7 @@
   --header-default-background-color-custom: #222222;
   --header-default-logo-width-custom: 90px;
   --input-color: #404052;
+  --justify-content: flex-start;
   --navigation-default-color-custom: var(--m-white);
   --pagination-default-a-margin: 0;
   --pagination-default-a-text-decoration: none;
@@ -85,14 +89,11 @@
   --preview-default-a-margin: 0;
   --preview-default-a-text-decoration: none;
   --preview-default-h3-color-hover: var(--color-hover);
-  --preview-default-h3-color: #97A619;
+  --preview-default-h3-color: var(--color-secondary);
   --preview-default-h3-margin: 0 0 0.3em 0;
   --preview-default-p-margin: 0;
   --teaser-overlay-bg-color-custom: var(--m-white);
   --teaser-plain-color-custom: var(--m-white);
   --teaser-plain-h2-margin-custom: 0;
   --teaser-tile-background-color-custom: #222222;
-  --wrapper-teaser-a-text-decoration-hover: none;
-  --wrapper-teaser-a-text-decoration: underline solid #737E13;
-  --wrapper-teaser-a-text-underline-offset: 0.2em;
 }
