@@ -39,6 +39,7 @@
   --article-default-h1-color: #97A619;
   --article-default-ul-list-style: none;
   --article-preview-img-max-width: 228px;
+  --border-image-source: "/assets/img/border-dotted.png";
   --background-color: #222222;
   --bg-color: var(--m-white);
   --button-primary-text-transform: uppercase;
