@@ -39,7 +39,6 @@
   --article-default-h1-color: #97A619;
   --article-default-ul-list-style: none;
   --article-preview-img-max-width: 228px;
-  --border-image-source: "/assets/img/border-dotted.png";
   --a-text-decoration-hover: none;
   --a-text-decoration: underline solid #737E13;
   --a-text-underline-offset: 0.2em;
@@ -82,6 +81,7 @@
   --pagination-default-a-margin: 0;
   --pagination-default-a-text-decoration: none;
   --pagination-default-any-a-display: block;
+  --preview-default-border-image-source: "/assets/img/border-dotted.png";
   --pagination-default-ul-display: flex;
   --pagination-default-ul-flex-direction: row;
   --pagination-default-ul-text-align: center;
