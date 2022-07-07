@@ -78,22 +78,14 @@
   --input-color: #404052;
   --justify-content: flex-start;
   --navigation-default-color-custom: var(--m-white);
-  --preview-default-a-color-hover: white;
-  --preview-default-a-margin: 0;
-  --preview-default-a-text-decoration: none;
-  --preview-default-border-image-source: "/assets/img/border-dotted.png";
-  --preview-default-h3-color-hover: var(--color-hover);
-  --preview-default-h3-color: var(--color-secondary);
-  --preview-default-h3-margin: 0 0 0.3em 0;
-  --preview-default-p-margin: 0;
   --teaser-overlay-bg-color-custom: var(--m-white);
   --teaser-plain-color-custom: var(--m-white);
   --teaser-plain-h2-margin-custom: 0;
   --teaser-tile-background-color-custom: #222222;
   --ul-bull-li-before-border-width: 0;
-  --ul-bull-li-before-height:5px;
+  --ul-bull-li-before-height: 5px;
   --ul-bull-li-before-left: 8px;
   --ul-bull-li-before-top: 10px;
-  --ul-bull-li-before-width:5px;
+  --ul-bull-li-before-width: 5px;
   --ul-bull-li-padding: 0 0 0 37px;
 }
