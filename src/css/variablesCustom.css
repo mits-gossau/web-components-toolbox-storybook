@@ -74,6 +74,11 @@
   --header-default-logo-width-custom: 90px;
   --input-color: #404052;
   --justify-content: flex-start;
+  --li-before-display: block;
+  --li-padding-left: 2em;
+  --li-position: relative;
+  --marker-content: "";
+  --marker-display: none;
   --navigation-default-color-custom: var(--m-white);
   --teaser-overlay-bg-color-custom: var(--m-white);
   --teaser-plain-color-custom: var(--m-white);
@@ -82,6 +87,9 @@
   --ul-bull-li-before-border-width: 0;
   --ul-bull-li-before-height: 5px;
   --ul-bull-li-before-left: 8px;
+  --footer-default-li-before-display: none;
+  --footer-default-li-padding-left: 0;
+  --footer-default-li-position: static;
   --ul-bull-li-before-top: 10px;
   --ul-bull-li-before-width: 5px;
   --ul-bull-li-padding: 0 0 0 37px;
