@@ -40,6 +40,10 @@
   --article-default-link-collection-padding-custom: 2em 0;
   --background-color: #222222;
   --bg-color: var(--m-white);
+  --bull-li-before-border-width: 0;
+  --bull-li-before-height: 0.3125em;
+  --bull-li-before-top: 0.625em;
+  --bull-li-before-width: 0.3125em;
   --button-primary-text-transform: uppercase;
   --color-active: var(--color-secondary);
   --color-disabled: #666a3e;
@@ -47,16 +51,6 @@
   --color-secondary: #97A619;
   --color: var(--m-white);
   --details-menu-single-p-margin: 0;
-  --emotion-pictures-with-title-a-text-decoration: none;
-  --emotion-pictures-with-title-bg-background-color-custom: var(--color-secondary);
-  --emotion-pictures-with-title-bg-color-custom: var(--m-white);
-  --emotion-pictures-with-title-h2-font-family-secondary: var(--font-family-bold);
-  --emotion-pictures-with-title-h2-text-transform-custom: none;
-  --emotion-pictures-with-title-subline-display-mobile: none;
-  --emotion-pictures-with-title-subline-padding: 0 0 0 0.5em;
-  --emotion-pictures-with-title-text-right-mobile-custom: var(--content-spacing-mobile);
-  --emotion-pictures-with-title-text-top-mobile: 6em;
-  --emotion-pictures-with-title-text-top: 8em;
   --emotion-pictures-with-button-a-text-decoration: none;
   --emotion-pictures-with-button-bg-background-color-custom: var(--color-secondary);
   --emotion-pictures-with-button-bg-color-custom: var(--m-white);
@@ -67,6 +61,16 @@
   --emotion-pictures-with-button-text-right-mobile-custom: var(--content-spacing-mobile);
   --emotion-pictures-with-button-text-top-mobile: 6em;
   --emotion-pictures-with-button-text-top: 8em;
+  --emotion-pictures-with-title-a-text-decoration: none;
+  --emotion-pictures-with-title-bg-background-color-custom: var(--color-secondary);
+  --emotion-pictures-with-title-bg-color-custom: var(--m-white);
+  --emotion-pictures-with-title-h2-font-family-secondary: var(--font-family-bold);
+  --emotion-pictures-with-title-h2-text-transform-custom: none;
+  --emotion-pictures-with-title-subline-display-mobile: none;
+  --emotion-pictures-with-title-subline-padding: 0 0 0 0.5em;
+  --emotion-pictures-with-title-text-right-mobile-custom: var(--content-spacing-mobile);
+  --emotion-pictures-with-title-text-top-mobile: 6em;
+  --emotion-pictures-with-title-text-top: 8em;
   --font-family-bold: DINW01Bold, HelveticaNowTextBold, HelveticaNowText, Helvetica, Arial, sans-serif;
   --font-family-secondary: Avenir35Light, sans-serif;
   --font-family-tertiary: LucidaHandwritingW01Regular, sans-serif;
@@ -76,6 +80,9 @@
   --footer-default-invert-background-color-custom: #111111;
   --footer-default-invert-color-custom: var(--m-white);
   --footer-default-invert-orange-background-color-custom: #000000;
+  --footer-default-li-before-display: none;
+  --footer-default-li-padding-left: 0;
+  --footer-default-li-position: static;
   --footer-default-ul-list-style: none;
   --header-default-a-logo-top-custom: calc(62px / 2 - 90px / 2);
   --header-default-a-logo-top-mobile-custom: 0;
@@ -94,13 +101,4 @@
   --teaser-plain-color-custom: var(--m-white);
   --teaser-plain-h2-margin-custom: 0;
   --teaser-tile-background-color-custom: var(--background-color);
-  --ul-bull-li-before-border-width: 0;
-  --ul-bull-li-before-height: 5px;
-  --ul-bull-li-before-left: 8px;
-  --footer-default-li-before-display: none;
-  --footer-default-li-padding-left: 0;
-  --footer-default-li-position: static;
-  --ul-bull-li-before-top: 10px;
-  --ul-bull-li-before-width: 5px;
-  --ul-bull-li-padding: 0 0 0 37px;
 }
