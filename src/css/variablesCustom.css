@@ -101,13 +101,7 @@
   --teaser-plain-color-custom: var(--m-white);
   --teaser-plain-h2-margin-custom: 0;
   --teaser-tile-background-color-custom: var(--background-color);
-  --ul-bull-li-before-border-width: 0;
-  --ul-bull-li-before-height: 5px;
-  --ul-bull-li-before-left: 8px;
   --footer-default-li-before-display: none;
   --footer-default-li-padding-left: 0;
   --footer-default-li-position: static;
-  --ul-bull-li-before-top: 10px;
-  --ul-bull-li-before-width: 5px;
-  --ul-bull-li-padding: 0 0 0 37px;
 }
