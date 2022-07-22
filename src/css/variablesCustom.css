@@ -39,6 +39,7 @@
   --article-default-h1-color-custom: var(--color-secondary);
   --article-default-li-before-background-color-custom:var(--color-secondary); 
   --article-default-link-collection-padding-custom: 2em 0;
+  --article-default-p-white-space-custom: pre-wrap;
   --background-color: #222222;
   --bg-color: var(--m-white);
   --bull-li-before-border-width: 0;
