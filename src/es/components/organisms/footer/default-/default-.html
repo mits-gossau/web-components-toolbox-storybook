@@ -2,21 +2,14 @@
     
     <div class="invert">
         <o-wrapper namespace="footer-default-" class="font-size-tiny">
-            <style>
-                :host > section > div:last-child > ul  {
-                    display:flex;
-                    flex-direction: row;
-                    gap: 30px;
-                }
-            </style>
-            <div>
+            <div class=footer-links-row>
                 <h4><strong>Mehr über uns</strong></h4>
                 <ul>
                     <li><a href="">Aktuelles</a></li>
                     <li><a href="">Jobs</a></li>
                 </ul>
             </div>
-            <div>
+            <div class=footer-links-row>
                 <h4><strong>Rechtliches</strong></h4>
                 <ul>
                     <li><a href="">Datenschutzerklärung</a></li>
@@ -24,13 +17,15 @@
                     <li><a href="">Geschenkkarten</a></li>
                 </ul>
             </div>
-            <div>
+            <div class=footer-links-row>
                 <h4><strong>Folge uns!</strong></h4>
-                <ul>
-                    <li><a href=#><a-picture defaultSource="../../../../img/social-media-icons/facebook.svg" alt=""></a-picture></a></li>
-                    <li><a href=#><a-picture defaultSource="../../../../img/social-media-icons/instagram.svg" alt=""></a-picture></a></li>
-                    <li><a href=#><a-picture defaultSource="../../../../img/social-media-icons/pinterest.svg" alt=""></a-picture></a></li>
-                </ul>
+                <div>
+                    <ul class=social-links>
+                        <li><a href=#><a-picture defaultSource="../../../../img/social-media-icons/facebook.svg" alt=""></a-picture></a></li>
+                        <li><a href=#><a-picture defaultSource="../../../../img/social-media-icons/instagram.svg" alt=""></a-picture></a></li>
+                        <li><a href=#><a-picture defaultSource="../../../../img/social-media-icons/pinterest.svg" alt=""></a-picture></a></li>
+                    </ul>
+                </div>
             </div>
         </o-wrapper>
 
