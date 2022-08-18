@@ -56,6 +56,8 @@
   --emotion-pictures-with-button-bg-color-custom: var(--m-white);
   --emotion-pictures-with-button-h2-text-transform-custom: none;
   --emotion-pictures-with-button-subline-display-mobile: none;
+  --emotion-pictures-with-logo-bg-background-color-custom: var(--color-secondary);
+  --emotion-pictures-with-logo-bg-color-custom: var(--m-white);
   --emotion-pictures-with-title-a-text-decoration: none;
   --emotion-pictures-with-title-bg-background-color-custom: var(--color-secondary);
   --emotion-pictures-with-title-bg-color-custom: var(--m-white);
