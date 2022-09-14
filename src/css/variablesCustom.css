@@ -24,6 +24,7 @@
   --footer-default-invert-orange-background-color-custom: #B5CE34;
   --h-color: var(--color-secondary);
   --header-default-a-logo-top-custom: calc(60.5px / 2 - 90px / 2);
+  --header-default-a-logo-top-mobile-custom: -0.5em;
   --header-default-logo-width-custom: 138px;
   --hr-border-bottom: 2px dotted var(--color-tertiary);
   --hr-border-width: 0 0 2px;
