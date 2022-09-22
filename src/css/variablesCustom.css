@@ -11,6 +11,7 @@
   --color-disabled: #b37187;
   --color-hover: #592037;
   --color-secondary: #8b254c;
+  --color-tertiary: #b5ce34;
   --emotion-pictures-with-button-a-color-hover-custom: var(--m-white);
   --emotion-pictures-with-button-bg-background-color-custom: var(--color-secondary);
   --emotion-pictures-with-button-bg-color-custom: var(--m-white);
@@ -21,7 +22,11 @@
   --emotion-pictures-with-title-bg-background-color-custom: var(--color-secondary);
   --emotion-pictures-with-title-bg-color-custom: var(--m-white);
   --footer-default-invert-orange-background-color-custom: #B5CE34;
+  --h-color: var(--color-secondary);
   --header-default-a-logo-top-custom: calc(60.5px / 2 - 90px / 2);
+  --header-default-a-logo-top-mobile-custom: -0.5em;
   --header-default-logo-width-custom: 138px;
-  --navigation-default-header-default-border-bottom: 1px solid var(--m-white);
+  --hr-border-bottom: 2px dotted var(--color-tertiary);
+  --hr-border-width: 0 0 2px;
+  --title-border-display: none;
 }
