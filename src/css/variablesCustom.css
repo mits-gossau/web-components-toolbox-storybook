@@ -29,4 +29,5 @@
   --hr-border-bottom: 2px dotted var(--color-tertiary);
   --hr-border-width: 0 0 2px;
   --title-border-display: none;
+ --picture-close-btn-background-color:var(--color-secondary);
 }
