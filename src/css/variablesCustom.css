@@ -62,6 +62,7 @@
   --header-default-logo-width-custom: 138px;
   --hr-border-bottom: 2px dotted var(--color-tertiary);
   --hr-border-width: 0 0 2px;
+  --navigation-alnatura-a-link-line-height: 1.5em;
   --picture-close-btn-background-color:var(--color-secondary);
   --title-border-display: none;
 }
