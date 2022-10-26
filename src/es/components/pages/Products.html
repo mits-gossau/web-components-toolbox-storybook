@@ -20,8 +20,65 @@
 </a-emotion-pictures>
 <div class="spacer"></div>
 <o-wrapper>
+    <style>
+        :host>section {
+            --align-items: flex-start;
+        }
+    </style>
     <div>
-        NAV
+        <style>
+            :host {
+                --ul-list-style: none;
+            }
+
+            ul {              
+                background-color: #FEFCE5;
+                width:300px;
+            }
+
+            li {
+                height:50px;
+                width: 100%;
+                background-color: red;
+                margin:0 0 1px 0;
+            }
+
+            /* li a {
+            } */
+
+            /* Change the link color on hover */
+            li a:hover {
+                background-color: #fad390;
+                color: #fff;
+            }
+
+            .icon {
+               width:20px;
+               height:20px;
+            }
+        </style>
+
+
+        <ul>
+            <li><a href="#" class="active">
+                    <img class="icon icon-a__hover" src="../../../../img/products/prod_cat_backen.svg" title="Alle Produkte"
+                        alt="Alle Produkte">
+                    Alle Produkte</a></li>
+            <li><a href="#">
+                    <img class="icon icon-a__hover" src="../../../../img/products/prod_cat_backen.svg" title="Alle Produkte"
+                        alt="Alle Produkte">
+                    Beilagen und Zutaten</a></li>
+            <li><a href="#">
+                    <img class="icon icon-a__hover" src="../../../../img/products/prod_cat_backen.svg" title="Alle Produkte"
+                        alt="Alle Produkte">
+                    Backen</a></li>
+            <li><a href="#">
+                    <img class="icon icon-a__hover" src="../../../../img/products/prod_cat_backen.svg" title="Alle Produkte"
+                        alt="Alle Produkte">
+                    Brotaufstrich und Muse</a></li>
+        </ul>
+
+
     </div>
     <div>
         <msrc-product-list></msrc-product-list>
