@@ -54,7 +54,12 @@
   --font-family-bold: FrutigerBold, HelveticaNowTextBold, HelveticaNowText, Helvetica, Arial, sans-serif;
   --font-family-secondary: KalamRegular, Avenir35Light, sans-serif;
   --font-family: FrutigerRegular, HelveticaNowText, Helvetica, Arial, sans-serif;
-  --footer-default-invert-orange-background-color-custom: #B5CE34;
+  --footer-default-h4-color: var(--background-color);
+  --footer-default-invert-a-color-hover-custom: var(--color-tertiary);
+  --footer-default-invert-orange-a-color-hover-custom: var(--color-hover);
+  --footer-default-invert-orange-background-color-custom: var(--color-tertiary);
+  --footer-default-invert-svg-color-custom: var(--background-color);
+  --footer-default-invert-svg-color-hover-custom: var(--color-tertiary);
   --h-color: var(--color-secondary);
   --h3-font-family: var(--font-family-secondary);
   --header-default-a-logo-top-custom: calc(60.5px / 2 - 90px / 2);
