@@ -48,6 +48,7 @@
   --emotion-pictures-with-logo-bg-color-custom: var(--background-color);
   --emotion-pictures-with-logo-h2-font-family-secondary-custom: var(--font-family-secondary);
   --emotion-pictures-with-title-a-color-hover-custom: var(--background-color);
+  --emotion-pictures-with-title-a-color:var(--background-color);
   --emotion-pictures-with-title-bg-background-color-custom: var(--color-secondary);
   --emotion-pictures-with-title-bg-color-custom: var(--background-color);
   --emotion-pictures-with-title-h2-font-family-secondary-custom: var(--font-family-secondary);
@@ -67,6 +68,7 @@
   --header-default-logo-width-custom: 138px;
   --hr-border-bottom: 2px dotted var(--color-tertiary);
   --hr-border-width: 0 0 2px;
+  --hr-opacity:1;
   --navigation-alnatura-a-link-line-height: 1.5em;
   --picture-close-btn-background-color:var(--color-secondary);
   --title-border-display: none;
