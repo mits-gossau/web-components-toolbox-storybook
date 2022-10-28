@@ -71,7 +71,10 @@
   --hr-border-width: 0 0 2px;
   --hr-opacity:1;
   --navigation-alnatura-a-link-line-height: 1.5em;
+  --navigation-alnatura-color-mobile-custom: var(--navigation-alnatura-color-second-level-custom);
+  --navigation-alnatura-color-second-level-custom: var(--color);
   --picture-close-btn-background-color:var(--color-secondary);
   --teaser-round-figcaption-color: var(--color-tertiary);
+  --teaser-tile-rounded-h6-figcaption-color-custom: var(--color-secondary);
   --title-border-display: none;
 }
