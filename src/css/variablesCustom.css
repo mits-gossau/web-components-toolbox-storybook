@@ -72,5 +72,6 @@
   --hr-opacity:1;
   --navigation-alnatura-a-link-line-height: 1.5em;
   --picture-close-btn-background-color:var(--color-secondary);
+  --teaser-round-figcaption-color: var(--color-tertiary);
   --title-border-display: none;
 }
