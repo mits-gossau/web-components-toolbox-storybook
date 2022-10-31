@@ -33,6 +33,7 @@
 
 :root {
   --background-color: #fffef4;
+  --bg-line-height: 1.5em;
   --bg-padding-top: 0.25em;
   --color-active: var(--m-orange-800);
   --color-disabled: #b37187;
