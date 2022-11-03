@@ -19,63 +19,80 @@
 </a-emotion-pictures>
 <div class="spacer"></div>
 <o-wrapper>
-    <!-- <style>
-        :host>section {
+
+    <style>
+        :host {
+            --content-width: 80%;
             --align-items: flex-start;
+            --any-1-width: 25%;
         }
-    </style> -->
-    <!-- <div>
+    </style>
+    <div>
         <style>
             :host {
                 --ul-list-style: none;
+                --category-link-color: var(--color-secondary);
+                --category-link-color-hover: #fefce5;
+                --category-icon-img-width: 2rem;
+                --category-link-padding: 0;
+                --category-link-height: auto;
+                --category-icon-img-margin:0 1.5em 0 0.75em;
             }
 
-            ul {
-                background-color: #FEFCE5;
-                width: 300px;
-            }
-
-            li {
-                height: 50px;
+            :host a-link {
+                height: 3.5em;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
                 width: 100%;
-                background-color: red;
-                margin: 0 0 1px 0;
+            }
+            
+            li {
+                background-color: #fefce5;
+                height: 3.5em;
+                width: 100%;
+                border-bottom: 4px solid var(--background-color);
             }
 
-            /* li a {
-            } */
-
-            /* Change the link color on hover */
-            li a:hover {
-                background-color: #fad390;
-                color: #fff;
-            }
-
-            .icon {
-                width: 20px;
-                height: 20px;
+            li:hover {
+                background-color: var(--color-secondary);
+                color: #fefce5;
             }
         </style>
         <ul>
-            <li><a href="#" class="active">
-                    <img class="icon icon-a__hover" src="../../../../img/products/prod_cat_backen.svg"
-                        title="Alle Produkte" alt="Alle Produkte">
-                    Alle Produkte</a></li>
-            <li><a href="#">
-                    <img class="icon icon-a__hover" src="../../../../img/products/prod_cat_backen.svg"
-                        title="Alle Produkte" alt="Alle Produkte">
-                    Beilagen und Zutaten</a></li>
-            <li><a href="#">
-                    <img class="icon icon-a__hover" src="../../../../img/products/prod_cat_backen.svg"
-                        title="Alle Produkte" alt="Alle Produkte">
-                    Backen</a></li>
-            <li><a href="#">
-                    <img class="icon icon-a__hover" src="../../../../img/products/prod_cat_backen.svg"
-                        title="Alle Produkte" alt="Alle Produkte">
-                    Brotaufstrich und Muse</a></li>
+            <li>
+                <a-link namespace="category-link-">
+                    <a-picture namespace="category-icon-" picture-load
+                        defaultSource="../../../../img/products/prod_cat_backen.svg" alt="Galaxies">
+                    </a-picture> <a> Alle Produkte </a>
+                </a-link>
+            </li>
+            <li>
+                <a-link namespace="category-link-">
+                    <a-picture namespace="category-icon-" picture-load
+                        defaultSource="../../../../img/products/prod_cat_backen.svg" alt="Galaxies">
+                    </a-picture>
+                    <a>Beilagen und Zutaten </a>
+                </a-link>
+            <li>
+                <a-link namespace="category-link-">
+                    <a-picture namespace="category-icon-" picture-load
+                        defaultSource="../../../../img/products/prod_cat_backen.svg" alt="Galaxies">
+                    </a-picture>
+                    <a>Backen </a>
+                </a-link>
+            <li>
+                <a-link namespace="category-link-">
+                    <a-picture namespace="category-icon-" picture-load
+                        defaultSource="../../../../img/products/prod_cat_backen.svg" alt="Galaxies">
+                    </a-picture>
+                    <a>Brotaufstrich und Muse </a>
+                </a-link>
         </ul>
-    </div> -->
+    </div>
     <div>
         <msrc-product-list></msrc-product-list>
     </div>
+
 </o-wrapper>
