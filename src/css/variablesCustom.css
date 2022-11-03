@@ -7,6 +7,7 @@
 /* font tracking */
 @import url("https://cdn.fonts.net/t/1.css?apiType=css&projectid=b2e5ea60-e0d9-11ec-b713-06e2001461d0");
 
+/* custom alnatura fonts */
 @font-face {
   font-family: "FrutigerRegular";
   src: url("https://cdn.migros.ch/ch.migros/static/fonts/Frutiger/Frutiger55Roman.woff2") format("woff2"), url("https://cdn.migros.ch/ch.migros/static/fonts/Frutiger/Frutiger55Roman.woff") format("woff");
