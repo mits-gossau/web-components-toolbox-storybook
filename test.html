@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <link rel="stylesheet"
+        href="https://www.alnatura.ch/.resources/m5-bk-brand-theme/2.4.2-r84b41_64/css/styles.template.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=PT+Sans:700; https://www.alnatura.ch/resources/templating-kit/themes/m5-bk-brand/sites/alnatura.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div id="msrc-options" class="ui-js-product-list"
+            data-setup='{"colCount":["2","2","2","4","4"],"fallbackEmptyComponent":"Es wurde kein Produkt gefunden. Bitte versuchen Sie es später noch einmal.","filterOptions":{"additionalQueryParams":{"limit":999,"view":"browseallretailers"},"category":["BeSS_97"],"fo":{"anchor_target":"_blank","link_target":"/de/produkte/{productSlug}.html","target":"alnatura"},"region":"gmzh"},"hideAddToShoppingList":true,"hideRating":false,"order":"asc","sort":"updated_at","theme":"mgb"}'>
+            <div id="msrc-widget" />
+        </div>
+    </div>
+
+    <script charset="utf-8" src="https://cdn.migros.ch/msrc/20211202125214/vendors~main.js"></script>
+    <script charset="utf-8" src="https://cdn.migros.ch/msrc/20211202125214/main.js"></script>
+    <script charset="utf-8" src="https://cdn.migros.ch/msrc/20211202125214/msrc-articles/productlist.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const msrcOptions = document.querySelector('#msrc-options')
+            const setup = JSON.parse(msrcOptions.dataset.setup)
+            setup.webAPIKey = 'uEkAdBczY6Ncy26bPho7RqLXhEK4YicghdbztRDwx3iXt8D27LpUmCH62YmXZNGd'
+            setup.environment = 'production'
+            setup.mode = 'default'
+            window.msrc.components.articles.productList('#msrc-widget', setup)
+        });
+    </script>
+</body>
+
+</html>
