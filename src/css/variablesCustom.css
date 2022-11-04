@@ -32,6 +32,12 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Helvetica Neue Condensed';
+  font-weight: 600;
+  src: url(https://cdn.migros.ch/ch.migros/static/fonts/helveticaneue-condensed-bold/helveticaneue-condensed-bold.woff);
+}
+
 :root {
   --background-color: #fffef4;
   --bg-line-height: 1.5em;
@@ -71,7 +77,6 @@
   --header-default-logo-width-custom: 138px;
   --hr-border-bottom: 2px dotted var(--color-tertiary);
   --hr-border-width: 0 0 2px;
-  --hr-opacity:1;
   --navigation-alnatura-a-link-line-height: 1.5em;
   --navigation-alnatura-color-mobile-custom: var(--navigation-alnatura-color-second-level-custom);
   --navigation-alnatura-color-second-level-custom: var(--color);

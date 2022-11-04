@@ -1,0 +1,99 @@
+<a-emotion-pictures namespace="emotion-pictures-with-logo-" height-mobile="15em">
+    <a href="#">
+        <div>
+            <h2 class="bg-color font-size-big font-family-secondary">
+                Titel Mood Image
+            </h2>
+            <h2 class="bg-color font-family-secondary subline">Dein Feedback ist uns wichtig! Ob Komplimente, Fragen,
+                Kritik oder Wünsche - wir sind für dich da.</h2>
+            <div class="spacer-one">
+            </div>
+            <a-button hover-on-parent-shadow-root-host namespace="button-primary-" href="/delivery/" target="_self"
+                tabindex="0" role="link" data-href="/delivery/">
+                Order now
+            </a-button>
+        </div>
+        <a-picture picture-load defaultSource="../../../../img/emotion-pictures/emotion1.jpeg" alt="randomized image">
+        </a-picture>
+    </a>
+</a-emotion-pictures>
+<div class="spacer"></div>
+<o-wrapper>
+    <style>
+        :host {
+            --content-width: 80%;
+            --align-items: flex-start;
+            --any-1-width: 25%;
+        }
+    </style>
+    <div>
+        <style>
+            :host {
+                --ul-list-style: none;
+                --category-link-color: var(--color-secondary);
+                --category-link-color-hover: #fefce5;
+                --category-icon-img-width: 2rem;
+                --category-icon-img-margin: 0 1.5em 0 0.75em;
+                --category-link-padding:19px 10px;
+            }
+
+            :host a-link {
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                height: 3.5em;
+                justify-content: flex-start;
+                width: 100%;
+            }
+
+            li {
+                background-color: #fefce5;
+                border-bottom: 4px solid var(--background-color);
+                height: 3.5em;
+                width: 100%;
+            }
+
+            li:hover {
+                color: #fefce5;
+                background-color: var(--color-secondary);
+            }
+        </style>
+        <ul>
+            <li>
+                <a-link namespace="category-link-">
+                    <a-picture namespace="category-icon-" picture-load
+                        defaultSource="../../../../img/products/prod_cat_backen.svg" alt="Galaxies">
+                    </a-picture> <a> Alle Produkte </a>
+                </a-link>
+            </li>
+            <li>
+                <a-link namespace="category-link-">
+                    <a-picture namespace="category-icon-" picture-load
+                        defaultSource="../../../../img/products/prod_cat_backen.svg" alt="Galaxies">
+                    </a-picture>
+                    <a>Beilagen und Zutaten </a>
+                </a-link>
+            <li>
+                <a-link namespace="category-link-">
+                    <a-picture namespace="category-icon-" picture-load
+                        defaultSource="../../../../img/products/prod_cat_backen.svg" alt="Galaxies">
+                    </a-picture>
+                    <a>Backen </a>
+                </a-link>
+            <li>
+                <a-link namespace="category-link-">
+                    <a-picture namespace="category-icon-" picture-load
+                        defaultSource="../../../../img/products/prod_cat_backen.svg" alt="Galaxies">
+                    </a-picture>
+                    <a>Brotaufstrich und Muse </a>
+                </a-link>
+        </ul>
+    </div>
+    <div>
+        <div>
+            <h1 class="title-border">Alnatura Sortiment</h1>
+            <h2>789 Produkte</h2>
+        </div>
+        <msrc-product-list></msrc-product-list>
+    </div>
+</o-wrapper>
