@@ -19,7 +19,6 @@
 </a-emotion-pictures>
 <div class="spacer"></div>
 <o-wrapper>
-
     <style>
         :host {
             --content-width: 80%;
@@ -34,30 +33,29 @@
                 --category-link-color: var(--color-secondary);
                 --category-link-color-hover: #fefce5;
                 --category-icon-img-width: 2rem;
-                --category-link-padding: 0;
-                --category-link-height: auto;
-                --category-icon-img-margin:0 1.5em 0 0.75em;
+                --category-icon-img-margin: 0 1.5em 0 0.75em;
+                --category-link-padding:19px 10px;
             }
 
             :host a-link {
-                height: 3.5em;
+                align-items: center;
                 display: flex;
                 flex-direction: row;
-                align-items: center;
+                height: 3.5em;
                 justify-content: flex-start;
                 width: 100%;
             }
-            
+
             li {
                 background-color: #fefce5;
+                border-bottom: 4px solid var(--background-color);
                 height: 3.5em;
                 width: 100%;
-                border-bottom: 4px solid var(--background-color);
             }
 
             li:hover {
-                background-color: var(--color-secondary);
                 color: #fefce5;
+                background-color: var(--color-secondary);
             }
         </style>
         <ul>
@@ -92,7 +90,10 @@
         </ul>
     </div>
     <div>
+        <div>
+            <h1 class="title-border">Alnatura Sortiment</h1>
+            <h2>789 Produkte</h2>
+        </div>
         <msrc-product-list></msrc-product-list>
     </div>
-
 </o-wrapper>
