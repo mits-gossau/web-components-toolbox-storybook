@@ -27,7 +27,7 @@
         }
     </style>
     <div>
-        <msrc-product-categories></msrc-product-categories>
+        <m-product-categories namespace="categories-default-"></m-product-categories>
         <hr />
         <style>
             :host {
@@ -36,7 +36,7 @@
                 --category-link-color-hover: #fefce5;
                 --category-icon-img-width: 2rem;
                 --category-icon-img-margin: 0 1.5em 0 0.75em;
-                --category-link-padding:19px 10px;
+                --category-link-padding: 19px 10px;
             }
 
             :host a-link {
@@ -75,6 +75,7 @@
                     </a-picture>
                     <a>Beilagen und Zutaten </a>
                 </a-link>
+            </li>
             <li>
                 <a-link namespace="category-link-">
                     <a-picture namespace="category-icon-" picture-load
@@ -82,6 +83,7 @@
                     </a-picture>
                     <a>Backen </a>
                 </a-link>
+            </li>
             <li>
                 <a-link namespace="category-link-">
                     <a-picture namespace="category-icon-" picture-load
@@ -89,6 +91,7 @@
                     </a-picture>
                     <a>Brotaufstrich und Muse </a>
                 </a-link>
+            </li>
         </ul>
     </div>
     <div>
