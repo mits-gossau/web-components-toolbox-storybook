@@ -34,8 +34,10 @@
 
 @font-face {
   font-family: 'Helvetica Neue Condensed';
-  font-weight: 600;
   src: url(https://cdn.migros.ch/ch.migros/static/fonts/helveticaneue-condensed-bold/helveticaneue-condensed-bold.woff);
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 :root {
@@ -47,6 +49,8 @@
   --color-hover: #592037;
   --color-secondary: #8b254c;
   --color-tertiary: #b5ce34;
+  --download-box-shadow-color-custom: var(--download-color-custom);
+  --download-color-custom: var(--color-tertiary);
   --emotion-pictures-with-button-a-color-hover-custom: var(--background-color);
   --emotion-pictures-with-button-bg-background-color-custom: var(--color-secondary);
   --emotion-pictures-with-button-bg-color-custom: var(--background-color);
