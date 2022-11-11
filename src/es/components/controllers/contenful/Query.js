@@ -1,6 +1,6 @@
 const QUERY = `
-query GetNews($limit: Int!, $skip: Int!) {
-  newsEntryCollection(order: date_DESC, locale: "de-DE", skip: $skip, limit: $limit, where: {tags_contains_some: ["Alnatura"]}) {
+query GetNews($limit: Int!, $skip: Int!, $tags: [String]) {
+  newsEntryCollection(order: date_DESC, locale: "de-DE", skip: $skip, limit: $limit, where: {tags_contains_all:$tags}){
     total
     skip
     limit
