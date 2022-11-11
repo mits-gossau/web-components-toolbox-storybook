@@ -51,7 +51,7 @@
   --color-tertiary: #b5ce34;
   --download-box-shadow-color-custom: var(--download-color-custom);
   --download-color-custom: var(--color-tertiary);
-  --emotion-pictures-default-img-max-height: 50vh;
+  --emotion-pictures-default-img-max-height: calc(var(--vh, 1vh) * 50);
   --emotion-pictures-with-button-a-color-hover-custom: var(--background-color);
   --emotion-pictures-with-button-bg-background-color-custom: var(--color-secondary);
   --emotion-pictures-with-button-bg-color-custom: var(--background-color);
