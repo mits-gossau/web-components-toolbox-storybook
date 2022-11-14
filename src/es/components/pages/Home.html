@@ -55,13 +55,17 @@
 <hr />
 <m-teaser namespace=teaser-overlay- href="https://www.stadlerrail.com/de/ueber-uns/standorte/stadler-bussnang-ag/">
     <figure>
-      <a-picture namespace="picture-teaser-" picture-load defaultSource="../src/es/components/molecules/carouselTwo/teaser-/img/matthew-smith-9CV6WrxxdrM-unsplash.jpg" alt="Yosemite"></a-picture>
-      <figcaption>
-        <h2 class=bg-color>Unsere Angebote & Services</h2>
-        <h2 class=bg-color><a-arrow move direction=right></a-arrow></h2>
-      </figcaption>
+        <a-picture namespace="picture-teaser-" picture-load
+            defaultSource="../src/es/components/molecules/carouselTwo/teaser-/img/matthew-smith-9CV6WrxxdrM-unsplash.jpg"
+            alt="Yosemite"></a-picture>
+        <figcaption>
+            <h2 class=bg-color>Unsere Angebote & Services</h2>
+            <h2 class=bg-color>
+                <a-arrow move direction=right></a-arrow>
+            </h2>
+        </figcaption>
     </figure>
-  </m-teaser>
+</m-teaser>
 <div class="spacer"></div>
 <hr />
 <h2>Navigation Teaser</h2>
@@ -136,9 +140,36 @@
 </m-carousel-two>
 <div class="spacer"></div>
 <hr />
-<m-pagination namespace="pagination-default-">
-
-</m-pagination>
+<contentful-tag-filter
+    namespace="tag-filter-default-"
+    tag="[
+    {
+        'name':'Alle News',
+        'tag':[]
+    },
+    {
+        'name':'Aktionen',
+        'tag':['Aktionen']
+    },
+    {
+        'name':'Aktuelles',
+        'tag':['Aktuelles']
+    },
+    {
+        'name':'Neueröffnungen & Events',
+        'tag':['neueroeffnungen-events']
+    },
+    {
+        'name':'Warenrückrufe',
+        'tag':['Warenrückrufe']
+    },
+    {
+        'name':'Interviews & Kolumnen',
+        'tag':['interviews-kolumne']
+    }
+    ]">
+</contentful-tag-filter>
+<m-pagination namespace="pagination-default-"></m-pagination>
 <contentful-news-list namespace="news-list-default-"
     news-url="/src/es/components/web-components-toolbox/docs/Template.html?rootFolder=src&css=/src/css/variablesCustom.css&logo=/src/es/components/atoms/logo/default-/default-.html&nav=/src/es/components/molecules/navigation/default-/default-.html&footer=/src/es/components/organisms/footer/default-/default-.html&content=/src/es/components/pages/News.html"
     news-preview-namespace="">
