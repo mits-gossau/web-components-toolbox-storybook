@@ -68,9 +68,6 @@
 </m-teaser>
 <div class="spacer"></div>
 <hr />
-<article><p><img style="float:left" src="../src/img/waschtag.jpg" alt="" width="271" height="368">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eird tempor&nbsp;invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p><p>mo</p><ul class="bull"><li>eins</li><li>zwei</li><li>drei</li></ul><p>text text</p><ol><li>aa</li><li>bb</li><li>cc</li></ol></article>
-<div class="spacer"></div>
-<hr />
 <h2>Navigation Teaser</h2>
 <m-carousel-two no-default-nav active=11 namespace=carousel-two-teaser->
   <section>
@@ -143,7 +140,9 @@
 </m-carousel-two>
 <div class="spacer"></div>
 <hr />
-<contentful-tag-filter
+<m-tag-filter
+    answer-event-name="list-news"
+    request-event-name="request-list-news"
     namespace="tag-filter-default-"
     tag="[
     {
@@ -171,9 +170,9 @@
         'tag':['interviews-kolumne']
     }
     ]">
-</contentful-tag-filter>
-<m-pagination namespace="pagination-default-"></m-pagination>
-<contentful-news-list namespace="news-list-default-"
+</m-tag-filter>
+<m-pagination answer-event-name="list-news" request-event-name="request-list-news" namespace="pagination-default-"></m-pagination>
+<contentful-news-list answer-event-name="list-news" request-event-name="request-list-news" namespace="news-list-default-"
     news-url="/src/es/components/web-components-toolbox/docs/Template.html?rootFolder=src&css=/src/css/variablesCustom.css&logo=/src/es/components/atoms/logo/default-/default-.html&nav=/src/es/components/molecules/navigation/default-/default-.html&footer=/src/es/components/organisms/footer/default-/default-.html&content=/src/es/components/pages/News.html"
     news-preview-namespace="">
 </contentful-news-list>
