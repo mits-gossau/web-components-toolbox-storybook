@@ -91,9 +91,6 @@
   --navigation-alnatura-color-second-level-custom: var(--color);
   --picture-close-btn-background-color:var(--color-secondary);
   --teaser-round-figcaption-color: var(--color-secondary);
-  --tag-filter-background-color-active-custom:var(--color-secondary);
-  --tag-filter-background-color-custom:#fefce5;
-  --tag-filter-color-hover-custom:#fefce5;
   --teaser-tile-rounded-h6-figcaption-color-custom: var(--color-secondary);
   --title-border-display: none;
 }
