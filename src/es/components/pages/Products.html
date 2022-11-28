@@ -27,10 +27,10 @@
         }
     </style>
     <div>
-        <m-product-categories namespace="categories-default-">
+        <m-product-categories namespace="categories-default-" request-event-name="list-articles">
             <ul>
                 <li>
-                    <a-link namespace="category-link-">
+                    <a-link namespace="category-link-" category="BeSS_97">
                         <a-picture namespace="category-icon-" picture-load
                             defaultSource="../../../../img/products/prod_cat_backen.svg" alt="Galaxies">
                         </a-picture>
@@ -43,9 +43,26 @@
     <div>
         <div>
             <h1 class="title-border">Alnatura Sortiment</h1>
+            <div>
+                <m-tag-filter request-event-name="list-articles" namespace="tag-filter-default-" tag="[
+                    {
+                        'name':'Brotaufstriche',
+                        'tag':['ALNA_CAT_BrotaufstricheundMuse']
+                    },
+                    {
+                        'name':'Baby',
+                        'tag':['ALNA_CAT_BabyundKindernahrung']
+                    },
+                    {
+                        'name':'Konserven und Suppen',
+                        'tag':['ALNA_CAT_FertiggerichteKonservenundSuppen']
+                    }
+                    ]">
+                </m-tag-filter>
+            </div>
             <h2>789 Produkte</h2>
         </div>
-        <msrc-product-list web-api-key="ZDsjzNwaw9AxGQWhzqMCsnjwYzwpQ7dzigdKXeuuiXeR97ao4phWLRwe2WrZRoPe"
+        <msrc-product-list answer-event-name="list-articles" web-api-key="ZDsjzNwaw9AxGQWhzqMCsnjwYzwpQ7dzigdKXeuuiXeR97ao4phWLRwe2WrZRoPe"
             category="BeSS_97" sort="updated_at" env="production" mode="default" language="de"
             pagination-disabled="true" config='
                 {
