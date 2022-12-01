@@ -48,9 +48,9 @@
   --categories-default-li-border-bottom-custom:4px;
   --categories-default-ul-margin-mobile:0;
   --category-link-color-hover-custom:var(--color-quaternary);
-  --color-active: var(--m-orange-800);
-  --color-disabled: #b37187;
-  --color-hover: #592037;
+  --color-active: #592037;
+  --color-disabled: #592037;
+  --color-hover: #b37187;
   --color-quaternary:#fefce5;
   --color-secondary: #8b254c;
   --color-tertiary: #b5ce34;
