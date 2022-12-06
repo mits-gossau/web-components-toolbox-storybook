@@ -85,6 +85,7 @@
   --footer-default-invert-svg-color-custom: var(--background-color);
   --footer-default-invert-svg-color-hover-custom: var(--color-tertiary);
   --h-color: var(--color-secondary);
+  --h1-font-size: calc(1.5 * 1.75em);
   --h6-font-family: var(--font-family-secondary);
   --h6-font-size: var(--h2-font-size, 1.5em);
   --header-default-a-logo-top-custom: calc(60.5px / 2 - 90px / 2);
