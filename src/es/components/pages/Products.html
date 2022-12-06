@@ -18,8 +18,17 @@
     </a>
 </a-emotion-pictures>
 <div class="spacer"></div>
+
 <o-wrapper align-items=start>
-    <div width=25%>
+    <style>
+        :host{
+            --content-width:80%;
+            --align-items:flex-start;
+            --any-1-width:20%;
+        }
+    </style>
+    <div>
+        
         <m-product-categories namespace="categories-default-" request-event-name="list-articles">
             <ul>
                 <li>
@@ -51,7 +60,7 @@
     </div>
     <div>
         <div>
-            <h1 class="title-border">Alnatura Sortiment</h1>
+            <h2 class="title-border">Alnatura Sortiment</h2>
             <div>
                 <m-tag-filter request-event-name="list-articles" namespace="tag-filter-default-" tag="[
                     {
@@ -69,7 +78,7 @@
                     ]">
                 </m-tag-filter>
             </div>
-            <h2>789 Produkte</h2>
+            <h3>789 Produkte</h3>
         </div>
         <msrc-product-list answer-event-name="list-articles" web-api-key="ZDsjzNwaw9AxGQWhzqMCsnjwYzwpQ7dzigdKXeuuiXeR97ao4phWLRwe2WrZRoPe"
             category="BeSS_97" sort="updated_at" env="production" mode="default" language="de"
@@ -94,7 +103,6 @@
                     "order":"asc",
                     "theme":"mgb",
                     "paginationOptions":{}
-                }
-                '></msrc-product-list>
+                }'></msrc-product-list>
     </div>
 </o-wrapper>
