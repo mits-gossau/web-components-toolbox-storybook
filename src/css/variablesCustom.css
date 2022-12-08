@@ -43,11 +43,8 @@
 :root {
   --background-color: #fffef4;
   --bg-line-height: 1.5em;
-  --categories-default-a-link-height-custom:3.5em;
-  --categories-default-li-background-color-custom:var(--color-quaternary);
-  --categories-default-li-border-bottom-custom:4px;
-  --categories-default-ul-margin-mobile:0;
-  --category-link-color-hover-custom:var(--color-quaternary);
+  --button-category-background-color-custom:var(--color-quaternary);
+  --categories-default-li-padding-bottom-custom: 0.25em;
   --color-active: #592037;
   --color-disabled: #592037;
   --color-hover: #b37187;
