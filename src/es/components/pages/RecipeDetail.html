@@ -10,7 +10,6 @@
 <h1 class="center">Sojaschnetzel-Pilzragout</h1>
 <p class="center h-color">an einer Miso-Kokosmilch-Sauce</p>
 <div class="spacer-two"></div>
-<hr class="secondary">
 <o-body-style>
     <style>
         :host {
@@ -22,6 +21,7 @@
     </style>
     <a href="#"><h5><a-arrow move hover-on-parent-element direction="left"></a-arrow>Zurück zur Übersicht</h5></a>
 </o-body-style>
+<hr class="secondary">
 <div class="spacer"></div>
 <o-wrapper align-items="start">
     <div>
@@ -112,6 +112,37 @@
 <hr class="secondary">
 <div class="spacer"></div>
 <h2 class="center font-size-h1">Passende Produkte</h2>
+<msrc-product-list answer-event-name="list-articles"
+    web-api-key="ZDsjzNwaw9AxGQWhzqMCsnjwYzwpQ7dzigdKXeuuiXeR97ao4phWLRwe2WrZRoPe" category="BeSS_97"
+    env="production" language="de" config='
+                {
+                    "articlesPerPage": 12,
+                    "paginationOptions": {
+                        "disabled": "true"
+                    },
+                    "colCount":["2","2","2","4","4"],
+                    "fallbackEmptyComponent":"Es wurde kein Produkt gefunden. Bitte versuchen Sie es später noch einmal.",
+                    "filterOptions":{
+                        "additionalQueryParams":{
+                            "limit":12,
+                            "view":"browseallretailers"
+                        },
+                        "fo":{
+                            "anchor_target":"_blank",
+                            "context": "products",
+                            "link_target":"/de/produkte/{productSlug}.html",
+                            "target":"produktkatalog"
+                        },
+                        "region":"gmzh",
+                        "search":"sesamöl, schnetzel, kokosmilch, misopaste, gemüsebouillon, olivenöl, sojasauce, reis"
+                    },
+                    "hideAddToShoppingList":false,
+                    "hideRating":false,
+                    "order":"desc",
+                    "sort":"score",
+                    "theme":"mgb"
+                }'>
+</msrc-product-list>
 <a-button href="/baahhh" namespace="button-primary-">Weitere Produkte</a-button>
 <div class="spacer"></div>
 <h2 class="center font-size-h1">Rezepte die dich interessieren könnten</h2>
