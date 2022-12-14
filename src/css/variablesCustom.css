@@ -90,6 +90,7 @@
   --header-default-logo-width-custom: min(9em, 138px);
   --hr-border-bottom: 2px dotted var(--m-gray-600);
   --hr-border-width: 0 0 2px;
+  --hr-secondary-border-bottom: 2px solid var(--color-secondary);
   --navigation-alnatura-a-link-line-height: 1.5em;
   --navigation-alnatura-color-mobile-custom: var(--navigation-alnatura-color-second-level-custom);
   --navigation-alnatura-color-second-level-custom: var(--color);
