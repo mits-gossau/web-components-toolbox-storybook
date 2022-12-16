@@ -29,7 +29,8 @@
         }
     </style>
     <div>
-        <m-categories namespace="categories-default-" request-event-name="list-articles">
+        <m-categories namespace="categories-default-" answer-event-name="list-articles"
+            request-event-name="request-list-articles">
             <ul>
                 <li>
                     <a-button namespace="button-category-" category="BeSS_97">
@@ -146,7 +147,8 @@
         <div>
             <h2 class="title-border">Alnatura Sortiment</h2>
             <div>
-                <m-tag-filter request-event-name="list-articles" namespace="tag-filter-default-" tag="[
+                <m-tag-filter answer-event-name="request-list-articles" request-event-name="request-list-articles"
+                    namespace="tag-filter-default-" tag="[
                     {
                         'name':'Brotaufstriche',
                         'tag':['ALNA_CAT_BrotaufstricheundMuse']
@@ -164,7 +166,7 @@
             </div>
             <h3>789 Produkte</h3>
         </div>
-        <msrc-product-list answer-event-name="list-articles"
+        <msrc-product-list answer-event-name="request-list-articles" 
             web-api-key="ZDsjzNwaw9AxGQWhzqMCsnjwYzwpQ7dzigdKXeuuiXeR97ao4phWLRwe2WrZRoPe" category="BeSS_97"
             sort="updated_at" env="production" mode="default" language="de" pagination-disabled="true" config='
                         {
