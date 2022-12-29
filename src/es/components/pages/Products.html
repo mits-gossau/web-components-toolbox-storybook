@@ -25,9 +25,14 @@
 </style>
 <h2 class="title-border">Alnatura Sortiment</h2>
 <o-grid namespace="grid-2colums2rows-" first-container-vertical first-column-with="20%">
+    <style>
+        :host > section > *:nth-child(1) {
+            margin-top: var(--content-spacing);
+        }
+    </style>
     <section>
-        <m-tag-filter namespace="tag-filter-vertical-" answer-event-name="list-articles">
-            <a-button namespace="button-category-" tag="BeSS_97" request-event-name="request-list-articles"
+        <m-tag-filter namespace="tag-filter-vertical-">
+            <a-button namespace="button-category-" tag="BeSS_97" clear-sub-tags answer-event-name="list-articles" request-event-name="request-list-articles"
                 answer-event-name="list-articles">
                 Neu: Alle Produkte
                 <svg class="icon-left" xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 50 50"
@@ -80,7 +85,7 @@
                     </g>
                     </svg>
             </a-button>
-            <a-button namespace="button-category-" tag="ALNA_CAT_BeilagenundZutaten" request-event-name="request-list-articles"
+            <a-button namespace="button-category-" tag="ALNA_CAT_BeilagenundZutaten" fetch-sub-tags answer-event-name="list-articles" request-event-name="request-list-articles"
                 answer-event-name="list-articles">
                 Beilagen und Zutaten
                 <svg class="icon-left" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -125,34 +130,31 @@
                     </svg>
             </a-button>
         </m-tag-filter>
-        <m-tag-filter namespace="tag-filter-horizontal-" answer-event-name="list-articles" tag-detail-property-name="subTagFetch">
-        </m-tag-filter>
-        <div>
-            <msrc-product-list
-                web-api-key="ZDsjzNwaw9AxGQWhzqMCsnjwYzwpQ7dzigdKXeuuiXeR97ao4phWLRwe2WrZRoPe" category="BeSS_97"
-                sort="updated_at" env="production" mode="default" language="de" pagination-disabled="true" config='{
-                                    "colCount":["2","2","2","4","4"],
-                                    "fallbackEmptyComponent":"Es wurde kein Produkt gefunden. Bitte versuchen Sie es später noch einmal.",
-                                    "filterOptions":{
-                                        "additionalQueryParams":{
-                                            "limit":8,
-                                            "view":"browseallretailers"
-                                        },
-                                        "fo":{
-                                            "anchor_target":"_blank",
-                                            "link_target":"/de/produkte/{productSlug}.html",
-                                            "target":"alnatura"
-                                        },
-                                        "region":"gmzh"
+        <m-tag-filter namespace="tag-filter-horizontal-" answer-event-name="list-articles" request-event-name="request-list-articles" tag-detail-property-name="subTagFetch"></m-tag-filter>
+        <msrc-product-list
+            web-api-key="ZDsjzNwaw9AxGQWhzqMCsnjwYzwpQ7dzigdKXeuuiXeR97ao4phWLRwe2WrZRoPe" category="BeSS_97"
+            sort="updated_at" env="production" mode="default" language="de" pagination-disabled="true" config='{
+                                "colCount":["2","2","2","4","4"],
+                                "fallbackEmptyComponent":"Es wurde kein Produkt gefunden. Bitte versuchen Sie es später noch einmal.",
+                                "filterOptions":{
+                                    "additionalQueryParams":{
+                                        "limit":8,
+                                        "view":"browseallretailers"
                                     },
-                                    "hideAddToShoppingList":true,
-                                    "hideRating":false,
-                                    "order":"asc",
-                                    "theme":"mgb",
-                                    "paginationOptions":{}
-                                }'>
-            </msrc-product-list>
-        </div>
+                                    "fo":{
+                                        "anchor_target":"_blank",
+                                        "link_target":"/de/produkte/{productSlug}.html",
+                                        "target":"alnatura"
+                                    },
+                                    "region":"gmzh"
+                                },
+                                "hideAddToShoppingList":true,
+                                "hideRating":false,
+                                "order":"asc",
+                                "theme":"mgb",
+                                "paginationOptions":{}
+                            }'>
+        </msrc-product-list>
     </section>
 </o-grid>
 <!-- live-server bug workaround: https://github.com/ritwickdey/vscode-live-server/issues/684 - don't use this empty comment in production!!! -->
