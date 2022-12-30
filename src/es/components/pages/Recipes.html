@@ -21,7 +21,17 @@
 <o-grid namespace="grid-2colums2rows-" first-container-horizontal>
     <o-body-style background-color=var(--color-secondary) color=var(--m-white)>
         <div>
-            FILTER
+            <m-tag-filter namespace="tag-filter-horizontal-">
+                <a-button 
+                    namespace="button-category-" 
+                    tag="Drinks" 
+                    answer-event-name="list-recipes"
+                    request-event-name="request-list-recipes">Getränke</a-button>
+                <a-button namespace="button-category-" 
+                    tag="Appetizers" 
+                    answer-event-name="list-articles" 
+                    request-event-name="request-list-articles">Vorspeisen</a-button>
+            </m-tag-filter>
         </div>
     </o-body-style>
     <div>
