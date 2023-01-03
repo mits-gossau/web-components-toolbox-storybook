@@ -18,28 +18,55 @@
     </a>
 </a-emotion-pictures>
 <h2 class="title-border">Alnatura Rezepte</h2>
-<o-grid namespace="grid-2colums2rows-" first-container-horizontal>
-    <o-body-style background-color=var(--color-secondary) color=var(--m-white)>
+<!-- <o-body-style background-color=var(--color-secondary) color=var(--m-white)>
+    <o-grid namespace="grid-2colums2rows-" first-container-horizontal>
+        <div>SEARCH</div>
         <div>
             <m-tag-filter namespace="tag-filter-horizontal-">
-                <a-button 
-                    namespace="button-category-" 
-                    tag="Drinks" 
-                    answer-event-name="list-recipe"
+                <a-button namespace="button-category-" tag="Drinks" answer-event-name="list-recipe"
                     request-event-name="request-list-recipe">Getränke</a-button>
-                <a-button namespace="button-category-" 
-                    tag="Appetizers" 
-                    answer-event-name="list-recipe" 
+                <a-button namespace="button-category-" tag="Appetizers" answer-event-name="list-recipe"
                     request-event-name="request-list-recipe">Vorspeisen</a-button>
             </m-tag-filter>
         </div>
-    </o-body-style>
-    <div>
-        <m-pagination answer-event-name="list-recipe" request-event-name="request-list-recipe"
-            namespace="pagination-default-" compact>
-        </m-pagination>
-        <m-recipe-list answer-event-name="list-recipe" request-event-name="request-list-recipe"
-            namespace="recipe-list-default-">
-        </m-recipe-list>
-    </div>
+    </o-grid>
+</o-body-style> -->
+<style>
+    :host {
+        --content-width: 80%;
+    }
+</style>
+<o-grid namespace="grid-2colums2rows-" first-container-vertical first-column-with="25%">
+    <section>
+        <m-tag-filter namespace="tag-filter-vertical-">
+            <a-button namespace="button-category-" tag="Drinks" answer-event-name="list-recipe"
+                request-event-name="request-list-recipe">Getränke</a-button>
+            <a-button namespace="button-category-" tag="Appetizers" answer-event-name="list-recipe"
+                request-event-name="request-list-recipe">Vorspeisen</a-button>
+            <a-button namespace="button-category-" tag="MainDishes" answer-event-name="list-recipe"
+                request-event-name="request-list-recipe">Hauptgerichte</a-button>
+            <a-button namespace="button-category-" tag="DessertsAndBaking" answer-event-name="list-recipe"
+                request-event-name="request-list-recipe">Dessert & Backen</a-button>
+            <a-button namespace="button-category-" tag="DIY" answer-event-name="list-recipe"
+                request-event-name="request-list-recipe">DIY</a-button>
+        </m-tag-filter>
+        <div>
+            <a-input inputid="inputSearch" placeholder="Suchen..." search="?q=" type=search></a-input>
+            <m-tag-filter namespace="tag-filter-horizontal-" answer-event-name="list-recipe"
+                request-event-name="request-list-recipe">
+                <a-button namespace="button-category-" tag="Drinks" answer-event-name="list-recipe"
+                    request-event-name="request-list-recipe">Vegetarisch</a-button>
+                <a-button namespace="button-category-" tag="Drinks" answer-event-name="list-recipe"
+                    request-event-name="request-list-recipe">Glutenfrei</a-button>
+                <a-button namespace="button-category-" tag="Drinks" answer-event-name="list-recipe"
+                    request-event-name="request-list-recipe">Vegan</a-button>
+            </m-tag-filter>
+            <div class="spacer-one"></div>
+            <m-pagination answer-event-name="list-recipe" request-event-name="request-list-recipe"
+                namespace="pagination-default-" compact></m-pagination>
+            <m-recipe-list answer-event-name="list-recipe" request-event-name="request-list-recipe"
+                namespace="recipe-list-default-">
+            </m-recipe-list>
+        </div>
+    </section>
 </o-grid>

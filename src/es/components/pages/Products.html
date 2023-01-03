@@ -24,9 +24,9 @@
     }
 </style>
 <h2 class="title-border">Alnatura Sortiment</h2>
-<o-grid namespace="grid-2colums2rows-" first-container-vertical first-column-with="20%">
+<o-grid namespace="grid-2colums2rows-" first-container-vertical first-column-with="25%">
     <section>
-        <m-tag-filter namespace="tag-filter-vertical-">
+        <m-tag-filter namespace="tag-filter-vertical-" has-icons>
             <a-button namespace="button-category-" tag="BeSS_97" clear-sub-tags answer-event-name="list-articles" request-event-name="request-list-articles">
                 Neu: Alle Produkte
                 <svg class="icon-left" xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 50 50"
@@ -125,6 +125,7 @@
         </m-tag-filter>
         <m-tag-filter namespace="tag-filter-horizontal-" answer-event-name="list-articles" request-event-name="request-list-articles" tag-detail-property-name="subTagFetch"></m-tag-filter>
         <msrc-product-list
+            endpoint="https://admin.alnatura.ch/umbraco/api/ProductsApi/GetCats?cat="
             web-api-key="ZDsjzNwaw9AxGQWhzqMCsnjwYzwpQ7dzigdKXeuuiXeR97ao4phWLRwe2WrZRoPe" category="BeSS_97"
             sort="updated_at" env="production" mode="default" language="de" pagination-disabled="true" config='{
                                 "colCount":["2","2","2","4","4"],
