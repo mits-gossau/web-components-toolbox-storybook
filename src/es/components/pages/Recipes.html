@@ -18,25 +18,12 @@
     </a>
 </a-emotion-pictures>
 <h2 class="title-border">Alnatura Rezepte</h2>
-<!-- <o-body-style background-color=var(--color-secondary) color=var(--m-white)>
-    <o-grid namespace="grid-2colums2rows-" first-container-horizontal>
-        <div>SEARCH</div>
-        <div>
-            <m-tag-filter namespace="tag-filter-horizontal-">
-                <a-button namespace="button-category-" tag="Drinks" answer-event-name="list-recipe"
-                    request-event-name="request-list-recipe">Getränke</a-button>
-                <a-button namespace="button-category-" tag="Appetizers" answer-event-name="list-recipe"
-                    request-event-name="request-list-recipe">Vorspeisen</a-button>
-            </m-tag-filter>
-        </div>
-    </o-grid>
-</o-body-style> -->
 <style>
     :host {
         --content-width: 80%;
     }
 </style>
-<a-input inputid="inputSearch" placeholder="Suchen..." search="?q=" type=search></a-input>
+<a-input inputid="inputSearch" placeholder="Suchen..." submit-search="request-list-recipe" search="" type=search></a-input>
 <o-grid namespace="grid-2colums2rows-" first-container-vertical first-column-with="20%">
     <section>
         <m-tag-filter namespace="tag-filter-vertical-">
