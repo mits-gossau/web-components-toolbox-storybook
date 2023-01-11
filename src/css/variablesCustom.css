@@ -79,10 +79,11 @@
   --hr-border-width: 0 0 2px;
   --hr-secondary-border-bottom: 2px solid var(--color-secondary);
   --hr-secondary-opacity: 1;
-  --navigation-alnatura-a-link-line-height-mobile: normal;
+  --navigation-alnatura-a-link-line-height-mobile: 1.5;
   --navigation-alnatura-a-link-line-height: 1.5;
   --navigation-alnatura-color-mobile-custom: var(--navigation-alnatura-color-second-level-custom);
   --navigation-alnatura-color-second-level-custom: var(--color);
+  --navigation-alnatura-line-height-mobile: 1.5;
   --news-alnatura-line-height-mobile:100%;
   --news-alnatura-line-height:100%;
   --picture-close-btn-background-color:var(--color-secondary);
