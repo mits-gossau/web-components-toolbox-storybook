@@ -44,6 +44,7 @@
   --background-color: #fffef4;
   --bg-line-height: 1.5em;
   --button-category-background-color-custom:var(--color-quaternary);
+  --button-category-background-color-hover-mobile-custom: var(--color-quaternary);
   --color-active: #592037;
   --color-disabled: #592037;
   --color-hover: #b37187;
