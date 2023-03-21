@@ -1,6 +1,6 @@
 # Storybook of Web Components
 
-The web component toolbox for any CMS but particularly used for [Web Components + Umbraco === Mutobo](http://mutobo.ch/)
+This repository is about offering a Storybook with all Web Components, which are build for any CMS but particularly used for [Mutobo](http://mutobo.ch/).
 
 ## Setup
 
@@ -30,13 +30,14 @@ You can find all stories in `src/stories`.
 
 ## Projects
 
-Storybook supports following clients (added as submodules in `src`):
+This Storybook supports following clients (added as submodules in `src`):
 
 - [Default](https://github.com/mits-gossau/web-components-toolbox)
 - [Alnatura](https://github.com/mits-gossau/web-components-toolbox-alnatura)
 
 ## Web Components
 
+At the moment the following components are included.
 ### Atoms
 
 - [Arrow](src/stories/atoms/Arrow.stories.js)
