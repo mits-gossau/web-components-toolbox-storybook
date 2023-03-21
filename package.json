@@ -6,18 +6,31 @@
   "scripts": {
     "fix": "standard --fix",
     "serve": "live-server --port=3000 --host=localhost --no-css-inject",
-    "test": "live-server --port=2200 --host=localhost --no-browser --ignorePattern=.* & npx playwright test --config=src/es/components/web-components-toolbox/e2e/ && killall node"
+    "test": "live-server --port=2200 --host=localhost --no-browser --ignorePattern=.* & npx playwright test --config=src/es/components/web-components-toolbox/e2e/ && killall node",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "weedshaker@gmail.com, edx.mgb@gmail.com",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@etchteam/storybook-addon-css-variables-theme": "^1.4.1",
     "@playwright/test": "^1.20.2",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-webpack4": "^6.5.16",
+    "@storybook/manager-webpack4": "^6.5.16",
+    "@storybook/web-components": "^6.5.16",
+    "babel-loader": "^8.3.0",
+    "lit-html": "^2.6.1",
     "live-server": "*",
     "standard": "*"
   },
   "standard": {
     "ignore": [
-      "/src/es/components/web-components-toolbox/"
+      "/src/es/components/web-components-toolbox/",
+      "/src/es/components/web-components-toolbox-alnatura/"
     ]
   }
 }
