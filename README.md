@@ -35,6 +35,10 @@ This Storybook supports following clients (added as submodules in `src`):
 - [Default](https://github.com/mits-gossau/web-components-toolbox)
 - [Alnatura](https://github.com/mits-gossau/web-components-toolbox-alnatura)
 
+> Hint: Update submodules
+> ```console
+> git submodule update --init --recursive --remote --force```
+
 ## Web Components
 
 At the moment the following components are included.
