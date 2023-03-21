@@ -32,6 +32,20 @@ You can find all stories in `src/stories`.
 
 Take a look at [the deployed Storybook](https://mits-gossau.github.io/web-components-toolbox-storybook/storybook-static/).
 
+## Build
+
+To take over changes on stories just build Storybook with static files, create a commit and push it afterwards.
+
+```console
+npm run build-storybook
+```
+
+```console
+git add .
+git commit -m "build Storybook"
+git push
+```
+
 ## Projects
 
 This Storybook supports following clients (added as submodules in `src`):
