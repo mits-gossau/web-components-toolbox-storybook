@@ -1,4 +1,4 @@
-name: Build and Publish storybook to GitHub Pages
+name: Build and publish Storybook to GitHub Pages
 
 on:
   push:
@@ -14,5 +14,5 @@ jobs:
     - id: build-publish
       uses: bitovi/github-actions-react-to-ghp@v1.2.0
       with:
-        path: dist/storybook
+        path: storybook-static
         build_command: npm run build-storybook
