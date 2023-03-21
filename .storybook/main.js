@@ -1,6 +1,6 @@
 module.exports = {
   staticDirs: [
-    { from: "../src/web-components-toolbox", to: "/src" },
+    { from: "../src/web-components-toolbox/src", to: "/src" },
   ],
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
