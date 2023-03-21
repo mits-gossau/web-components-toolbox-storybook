@@ -28,6 +28,10 @@ Take a look at package.json for other scripts.
 
 You can find all stories in `src/stories`.
 
+## Demo
+
+Take a look at [the deployed Storybook](https://mits-gossau.github.io/web-components-toolbox-storybook/storybook-static/).
+
 ## Projects
 
 This Storybook supports following clients (added as submodules in `src`):
