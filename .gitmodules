@@ -1,6 +1,8 @@
 [submodule "src/es/components/web-components-toolbox"]
 	path = src/web-components-toolbox
 	url = https://github.com/mits-gossau/web-components-toolbox.git
+	ignore = dirty
 [submodule "src/es/components/web-components-toolbox-alnatura"]
 	path = src/web-components-toolbox-alnatura
 	url = https://github.com/mits-gossau/web-components-toolbox-alnatura.git
+	ignore = dirty
