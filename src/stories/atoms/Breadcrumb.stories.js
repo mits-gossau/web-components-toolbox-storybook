@@ -12,7 +12,7 @@ export default {
 
 export const Default = () =>
   html`
-    <a-breadcrumb icon="src/icons/chevron_right.svg"
+    <a-breadcrumb icon="src/web-components-toolbox/src/icons/chevron_right.svg"
       ><ul>
         <li><a href="#">Home</a></li>
         <li><span></span></li>
