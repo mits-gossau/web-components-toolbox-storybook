@@ -37,7 +37,8 @@ This Storybook supports following clients (added as submodules in `src`):
 
 > Hint: Update submodules
 > ```console
-> git submodule update --init --recursive --remote --force```
+> git submodule update --init --recursive --remote --force
+>```
 
 ## Web Components
 
