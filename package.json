@@ -1,5 +1,5 @@
 {
-  "name": "web-components-toolbox-alnatura",
+  "name": "web-components-toolbox-storybook",
   "version": "0.0.1",
   "description": "web components toolbox to be used in a CMS",
   "main": "./index.html",
