@@ -71,3 +71,4 @@ At the moment the following components are included.
 - [Email](src/stories/atoms/Email.stories.js)
 - [EmotionPictures](src/stories/atoms/EmotionPictures.stories.js)
 - [GoogleMaps](src/stories/atoms/GoogleMaps.stories.js)
+- [Hotspot](src/stories/atoms/Hotspot.stories.js)
