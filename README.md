@@ -68,3 +68,4 @@ At the moment the following components are included.
 - [Button](src/stories/atoms/Button.stories.js)
 - [Email](src/stories/atoms/Email.stories.js)
 - [EmotionPictures](src/stories/atoms/EmotionPictures.stories.js)
+- [GoogleMaps](src/stories/atoms/GoogleMaps.stories.js)
