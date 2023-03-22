@@ -76,3 +76,4 @@ At the moment the following components are included.
 - [IconAmp](src/stories/atoms/IconLocation.stories.js)
 - [IconAmp](src/stories/atoms/IconPaperclip.stories.js)
 - [Iframe](src/stories/atoms/Iframe.stories.js)
+- [Input](src/stories/atoms/Input.stories.js)
