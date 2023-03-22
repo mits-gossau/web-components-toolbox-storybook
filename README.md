@@ -73,3 +73,5 @@ At the moment the following components are included.
 - [GoogleMaps](src/stories/atoms/GoogleMaps.stories.js)
 - [Hotspot](src/stories/atoms/Hotspot.stories.js)
 - [IconAmp](src/stories/atoms/IconAmp.stories.js)
+- [IconAmp](src/stories/atoms/IconLocation.stories.js)
+- [IconAmp](src/stories/atoms/IconPaperclip.stories.js)

@@ -1,4 +1,4 @@
-// Arrow.stories.js
+// IconAmp.stories.js
 import { html } from "lit-html";
 
 import("../../web-components-toolbox/src/es/components/atoms/iconAmp/IconAmp").then(
