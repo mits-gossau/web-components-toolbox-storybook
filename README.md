@@ -78,3 +78,4 @@ At the moment the following components are included.
 - [Iframe](src/stories/atoms/Iframe.stories.js)
 - [Input](src/stories/atoms/Input.stories.js)
 - [Loading](src/stories/atoms/Loading.stories.js)
+- [Logo](src/stories/atoms/Logo.stories.js)
