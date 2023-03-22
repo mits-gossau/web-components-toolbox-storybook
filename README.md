@@ -46,6 +46,8 @@ git commit -m "build Storybook"
 git push
 ```
 
+This push triggers an action to auto deploy static Storybook files. See [static.yml](.github/workflows/static.yml) for more information.
+
 ## Projects
 
 This Storybook supports following clients (added as submodules in `src`):
