@@ -54,7 +54,7 @@ npm run build-storybook
 
 ```console
 git add .
-git commit -m "build Storybook"
+git commit -m "feat(storybook-static): build static files for Storybook"
 git push
 ```
 
