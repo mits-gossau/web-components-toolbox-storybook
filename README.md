@@ -59,6 +59,7 @@ This Storybook supports following clients (added as submodules in `src`):
 - [Klubschule](https://github.com/mits-gossau/web-components-toolbox-klubschule)
 - [Nature](https://github.com/mits-gossau/web-components-toolbox-nature)
 - [Stage One](https://github.com/mits-gossau/web-components-toolbox-stage-one)
+- [TechDay](https://github.com/mits-gossau/web-components-toolbox-techday)
 - [Yearbooks](https://github.com/mits-gossau/web-components-toolbox-yearbooks)
 - [Zürisee Center](https://github.com/mits-gossau/web-components-toolbox-zueriseecenter)
 

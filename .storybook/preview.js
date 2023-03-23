@@ -12,6 +12,7 @@ import themeKaimug from '!!style-loader?injectType=lazyStyleTag!css-loader!../sr
 import themeKlubschule from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-klubschule/src/css/variablesCustom.css';
 import themeNature from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-nature/src/css/variablesCustom.css';
 import themeStageOne from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-stage-one/src/css/variablesCustom.css';
+import themeTechDay from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-techday/src/css/variablesCustom.css';
 import themeYearbooksIndustrie from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-yearbooks/src/css/variablesIndustrie.css';
 import themeYearbooksMiduca from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-yearbooks/src/css/variablesMiduca.css';
 import themeYearbooksOperations from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-yearbooks/src/css/variablesOperations.css';
@@ -38,6 +39,7 @@ export const parameters = {
       'Klubschule': themeKlubschule,
       'Nature': themeNature,
       'Stage One': themeStageOne,
+      'TechDay': themeTechDay,
       'Yearbooks Industrie': themeYearbooksIndustrie,
       'Yearbooks Miduca': themeYearbooksMiduca,
       'Yearbooks Operations': themeYearbooksOperations,
