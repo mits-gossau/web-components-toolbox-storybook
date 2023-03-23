@@ -51,3 +51,6 @@
 [submodule "src/web-components-toolbox-buelach-sued"]
 	path = src/web-components-toolbox-buelach-sued
 	url = git@github.com:mits-gossau/web-components-toolbox-buelach-sued.git
+[submodule "src/web-components-toolbox-betriebsrestaurant"]
+	path = src/web-components-toolbox-betriebsrestaurant
+	url = git@github.com:mits-gossau/web-components-toolbox-betriebsrestaurant.git

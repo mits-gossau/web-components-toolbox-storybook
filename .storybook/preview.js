@@ -7,6 +7,7 @@ import "../src/web-components-toolbox/src/css/fonts.css";
 import "../src/web-components-toolbox/src/css/variables.css";
 
 import themeAlnatura from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-alnatura/src/css/variablesCustom.css';
+import themeBetriebsrestaurants from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-betriebsrestaurant/src/css/variablesCustom.css';
 import themeBuelachSued from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-buelach-sued/src/css/variablesCustom.css';
 import themeEatery from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-eatery/src/css/variablesCustom.css';
 import themeHitzberger from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-hitzberger/src/css/variablesCustom.css';
@@ -41,6 +42,7 @@ export const parameters = {
     files: {
       'No Theme': '',
       'Alnatura': themeAlnatura,
+      'Betriebsrestaurants': themeBetriebsrestaurants,
       'Bülach Süd': themeBuelachSued,
       'Eatery': themeEatery,
       'Hitzberger': themeHitzberger,

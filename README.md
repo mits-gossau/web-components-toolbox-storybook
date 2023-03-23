@@ -54,6 +54,7 @@ This Storybook supports following clients (added as submodules in `src`):
 
 - [Default](https://github.com/mits-gossau/web-components-toolbox)
 - [Alnatura](https://github.com/mits-gossau/web-components-toolbox-alnatura)
+- [Betriebsrestaurants](https://github.com/mits-gossau/web-components-toolbox-betriebsrestaurant)
 - [Bülach Süd](https://github.com/mits-gossau/web-components-toolbox-buelach-sued)
 - [Eatery](https://github.com/mits-gossau/web-components-toolbox-eatery)
 - [Hitzberger](https://github.com/mits-gossau/web-components-toolbox-hitzberger)
