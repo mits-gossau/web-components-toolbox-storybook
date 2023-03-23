@@ -80,3 +80,6 @@ At the moment the following components are included.
 - [Loading](src/stories/atoms/Loading.stories.js)
 - [Logo](src/stories/atoms/Logo.stories.js)
 - [MenuIcon](src/stories/atoms/MenuIcon.stories.js)
+- [Picture](src/stories/atoms/Picture.stories.js)
+- [SliderButton](src/stories/atoms/SliderButton.stories.js)
+- [Video](src/stories/atoms/Video.stories.js)
