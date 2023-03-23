@@ -42,3 +42,6 @@
 [submodule "src/web-components-toolbox-migros-city"]
 	path = src/web-components-toolbox-migros-city
 	url = git@github.com:mits-gossau/web-components-toolbox-migros-city.git
+[submodule "src/web-components-toolbox-logistikplattform"]
+	path = src/web-components-toolbox-logistikplattform
+	url = git@github.com:mits-gossau/web-components-toolbox-logistikplattform.git

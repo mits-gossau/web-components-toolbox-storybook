@@ -10,6 +10,7 @@ import themeAlnatura from '!!style-loader?injectType=lazyStyleTag!css-loader!../
 import themeHitzberger from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-hitzberger/src/css/variablesCustom.css';
 import themeKaimug from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-kaimug/src/css/variablesCustom.css';
 import themeKlubschule from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-klubschule/src/css/variablesCustom.css';
+import themeLogistikplattform from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-logistikplattform/src/css/variablesCustom.css';
 import themeMakerSpace from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-maker-space/src/css/variablesCustom.css';
 import themeMigrosCity from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-migros-city/src/css/variablesCustom.css';
 import themeNature from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-nature/src/css/variablesCustom.css';
@@ -41,6 +42,7 @@ export const parameters = {
       'Hitzberger': themeHitzberger,
       'Kaimug': themeKaimug,
       'Klubschule': themeKlubschule,
+      'Logistikplattform': themeLogistikplattform,
       'Maker Space': themeMakerSpace,
       'Migros City': themeMigrosCity,
       'Nature': themeNature,
