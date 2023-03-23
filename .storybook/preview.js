@@ -15,6 +15,7 @@ import themeStageOne from '!!style-loader?injectType=lazyStyleTag!css-loader!../
 import themeYearbooksIndustrie from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-yearbooks/src/css/variablesIndustrie.css';
 import themeYearbooksMiduca from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-yearbooks/src/css/variablesMiduca.css';
 import themeYearbooksOperations from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-yearbooks/src/css/variablesOperations.css';
+import themeZueriseeCenter from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-zueriseecenter/src/css/variablesCustom.css';
 
 export const decorators = [
   cssVariablesTheme,
@@ -40,6 +41,7 @@ export const parameters = {
       'Yearbooks Industrie': themeYearbooksIndustrie,
       'Yearbooks Miduca': themeYearbooksMiduca,
       'Yearbooks Operations': themeYearbooksOperations,
+      'Zürisee Center': themeZueriseeCenter,
     },
     defaultTheme: 'No Theme'
   }

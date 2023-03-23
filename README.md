@@ -60,6 +60,7 @@ This Storybook supports following clients (added as submodules in `src`):
 - [Nature](https://github.com/mits-gossau/web-components-toolbox-nature)
 - [Stage One](https://github.com/mits-gossau/web-components-toolbox-stage-one)
 - [Yearbooks](https://github.com/mits-gossau/web-components-toolbox-yearbooks)
+- [Zürisee Center](https://github.com/mits-gossau/web-components-toolbox-zueriseecenter)
 
 > Hint: Update submodules
 > ```console

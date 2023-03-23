@@ -24,3 +24,6 @@
 [submodule "src/web-components-toolbox-yearbooks"]
 	path = src/web-components-toolbox-yearbooks
 	url = git@github.com:mits-gossau/web-components-toolbox-yearbooks.git
+[submodule "src/web-components-toolbox-zueriseecenter"]
+	path = src/web-components-toolbox-zueriseecenter
+	url = git@github.com:mits-gossau/web-components-toolbox-zueriseecenter.git
