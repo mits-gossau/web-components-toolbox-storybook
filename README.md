@@ -1,6 +1,17 @@
-# Storybook of Web Components
+# Web Components Storybook
 
 This repository is about offering a Storybook with all Web Components, which are build for any CMS but particularly used for [Mutobo](http://mutobo.ch/).
+
+## Table of contents
+
+- [Web Components Storybook](#web-components-storybook)
+  - [Table of contents](#table-of-contents)
+  - [Setup](#setup)
+  - [Demo](#demo)
+  - [Build](#build)
+  - [Supported Projects](#supported-projects)
+  - [Web Components](#web-components)
+    - [Atoms](#atoms)
 
 ## Setup
 
@@ -48,7 +59,7 @@ git push
 
 This push triggers an action to auto deploy static Storybook files. See [static.yml](.github/workflows/static.yml) for more information.
 
-## Projects
+## Supported Projects
 
 This Storybook supports following clients (added as submodules in `src`):
 
