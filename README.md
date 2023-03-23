@@ -54,6 +54,7 @@ This Storybook supports following clients (added as submodules in `src`):
 
 - [Default](https://github.com/mits-gossau/web-components-toolbox)
 - [Alnatura](https://github.com/mits-gossau/web-components-toolbox-alnatura)
+- [Bülach Süd](https://github.com/mits-gossau/web-components-toolbox-buelach-sued)
 - [Eatery](https://github.com/mits-gossau/web-components-toolbox-eatery)
 - [Hitzberger](https://github.com/mits-gossau/web-components-toolbox-hitzberger)
 - [Kaimug](https://github.com/mits-gossau/web-components-toolbox-kaimug)
@@ -63,8 +64,8 @@ This Storybook supports following clients (added as submodules in `src`):
 - [Migros City](https://github.com/mits-gossau/web-components-toolbox-migros-city)
 - [Nature](https://github.com/mits-gossau/web-components-toolbox-nature)
 - [Neumarkt Altstetten](https://github.com/mits-gossau/web-components-toolbox-neumarkt-altstetten)
-- [Park im Grüne](https://github.com/mits-gossau/web-components-toolbox-parkimgruene)
-- [Stage One](https://github.com/mits-gossau/web-components-toolbox-stage-one)
+- [Park im Grüene](https://github.com/mits-gossau/web-components-toolbox-parkimgruene)
+- [StageOne](https://github.com/mits-gossau/web-components-toolbox-stage-one)
 - [TechDay](https://github.com/mits-gossau/web-components-toolbox-techday)
 - [Yearbooks](https://github.com/mits-gossau/web-components-toolbox-yearbooks)
 - [Zürisee Center](https://github.com/mits-gossau/web-components-toolbox-zueriseecenter)

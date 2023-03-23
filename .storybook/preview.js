@@ -7,6 +7,7 @@ import "../src/web-components-toolbox/src/css/fonts.css";
 import "../src/web-components-toolbox/src/css/variables.css";
 
 import themeAlnatura from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-alnatura/src/css/variablesCustom.css';
+import themeBuelachSued from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-buelach-sued/src/css/variablesCustom.css';
 import themeEatery from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-eatery/src/css/variablesCustom.css';
 import themeHitzberger from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-hitzberger/src/css/variablesCustom.css';
 import themeKaimug from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-kaimug/src/css/variablesCustom.css';
@@ -40,6 +41,7 @@ export const parameters = {
     files: {
       'No Theme': '',
       'Alnatura': themeAlnatura,
+      'Bülach Süd': themeBuelachSued,
       'Eatery': themeEatery,
       'Hitzberger': themeHitzberger,
       'Kaimug': themeKaimug,
@@ -49,8 +51,8 @@ export const parameters = {
       'Migros City': themeMigrosCity,
       'Nature': themeNature,
       'Neumarkt Altstetten': themeNeumarktAltstetten,
-      'Park im Grüne': themeParkImGruene,
-      'Stage One': themeStageOne,
+      'Park im Grüene': themeParkImGruene,
+      'StageOne': themeStageOne,
       'TechDay': themeTechDay,
       'Yearbooks Industrie': themeYearbooksIndustrie,
       'Yearbooks Miduca': themeYearbooksMiduca,
