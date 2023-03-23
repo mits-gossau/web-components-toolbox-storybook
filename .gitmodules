@@ -33,3 +33,6 @@
 [submodule "src/web-components-toolbox-parkimgruene"]
 	path = src/web-components-toolbox-parkimgruene
 	url = git@github.com:mits-gossau/web-components-toolbox-parkimgruene.git
+[submodule "src/web-components-toolbox-neumarkt-altstetten"]
+	path = src/web-components-toolbox-neumarkt-altstetten
+	url = git@github.com:mits-gossau/web-components-toolbox-neumarkt-altstetten.git

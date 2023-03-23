@@ -11,6 +11,7 @@ import themeHitzberger from '!!style-loader?injectType=lazyStyleTag!css-loader!.
 import themeKaimug from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-kaimug/src/css/variablesCustom.css';
 import themeKlubschule from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-klubschule/src/css/variablesCustom.css';
 import themeNature from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-nature/src/css/variablesCustom.css';
+import themeNeumarktAltstetten from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-neumarkt-altstetten/src/css/variablesCustom.css';
 import themeParkImGruene from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-parkimgruene/src/css/variablesCustom.css';
 import themeStageOne from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-stage-one/src/css/variablesCustom.css';
 import themeTechDay from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-techday/src/css/variablesCustom.css';
@@ -39,6 +40,7 @@ export const parameters = {
       'Kaimug': themeKaimug,
       'Klubschule': themeKlubschule,
       'Nature': themeNature,
+      'Neumarkt Altstetten': themeNeumarktAltstetten,
       'Park im Grüne': themeParkImGruene,
       'Stage One': themeStageOne,
       'TechDay': themeTechDay,
