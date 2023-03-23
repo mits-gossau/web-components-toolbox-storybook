@@ -54,3 +54,6 @@
 [submodule "src/web-components-toolbox-betriebsrestaurant"]
 	path = src/web-components-toolbox-betriebsrestaurant
 	url = git@github.com:mits-gossau/web-components-toolbox-betriebsrestaurant.git
+[submodule "src/web-components-toolbox-orangergarten"]
+	path = src/web-components-toolbox-orangergarten
+	url = git@github.com:mits-gossau/web-components-toolbox-orangergarten.git

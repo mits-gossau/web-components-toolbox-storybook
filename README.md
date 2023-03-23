@@ -65,6 +65,7 @@ This Storybook supports following clients (added as submodules in `src`):
 - [Migros City](https://github.com/mits-gossau/web-components-toolbox-migros-city)
 - [Nature](https://github.com/mits-gossau/web-components-toolbox-nature)
 - [Neumarkt Altstetten](https://github.com/mits-gossau/web-components-toolbox-neumarkt-altstetten)
+- [Oranger Garten](https://github.com/mits-gossau/web-components-toolbox-orangergarten)
 - [Park im Grüene](https://github.com/mits-gossau/web-components-toolbox-parkimgruene)
 - [StageOne](https://github.com/mits-gossau/web-components-toolbox-stage-one)
 - [TechDay](https://github.com/mits-gossau/web-components-toolbox-techday)
