@@ -5,11 +5,6 @@ import(
   "../../web-components-toolbox/src/es/components/atoms/iframe/Iframe"
 ).then((module) => self.customElements.define("a-iframe", module.default));
 
-import(
-    "../../web-components-toolbox/src/es/components/organisms/wrapper/Wrapper"
-  ).then((module) => self.customElements.define("o-wrapper", module.default));
-  
-
 export default {
   title: "Atoms/Iframe",
   component: "a-iframe",

@@ -7,18 +7,6 @@ import(
   self.customElements.define("a-emotion-pictures", module.default)
 );
 
-import(
-  "../../web-components-toolbox/src/es/components/atoms/button/Button"
-).then((module) => self.customElements.define("a-button", module.default));
-
-import(
-  "../../web-components-toolbox/src/es/components/atoms/picture/Picture"
-).then((module) => self.customElements.define("a-picture", module.default));
-
-import("../../web-components-toolbox/src/es/components/atoms/video/Video").then(
-  (module) => self.customElements.define("a-video", module.default)
-);
-
 export default {
   title: "Atoms/EmotionPictures",
   component: "a-emotion-pictures",
