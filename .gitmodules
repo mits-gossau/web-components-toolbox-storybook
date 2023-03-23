@@ -21,3 +21,6 @@
 [submodule "src/web-components-toolbox-stage-one"]
 	path = src/web-components-toolbox-stage-one
 	url = git@github.com:mits-gossau/web-components-toolbox-stage-one.git
+[submodule "src/web-components-toolbox-yearbooks"]
+	path = src/web-components-toolbox-yearbooks
+	url = git@github.com:mits-gossau/web-components-toolbox-yearbooks.git
