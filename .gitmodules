@@ -30,3 +30,6 @@
 [submodule "src/web-components-toolbox-techday"]
 	path = src/web-components-toolbox-techday
 	url = git@github.com:mits-gossau/web-components-toolbox-techday.git
+[submodule "src/web-components-toolbox-parkimgruene"]
+	path = src/web-components-toolbox-parkimgruene
+	url = git@github.com:mits-gossau/web-components-toolbox-parkimgruene.git
