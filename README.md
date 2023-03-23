@@ -53,9 +53,7 @@ npm run build-storybook
 ```
 
 ```console
-git add .
-git commit -m "feat(storybook-static): build static files for Storybook"
-git push
+git add . && git commit -m "feat(storybook-static): build static files for Storybook" && git push
 ```
 
 This push triggers an action to auto deploy static Storybook files. See [static.yml](.github/workflows/static.yml) for more information.
