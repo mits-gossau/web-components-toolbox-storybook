@@ -11,6 +11,7 @@ import themeHitzberger from '!!style-loader?injectType=lazyStyleTag!css-loader!.
 import themeKaimug from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-kaimug/src/css/variablesCustom.css';
 import themeKlubschule from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-klubschule/src/css/variablesCustom.css';
 import themeMakerSpace from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-maker-space/src/css/variablesCustom.css';
+import themeMigrosCity from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-migros-city/src/css/variablesCustom.css';
 import themeNature from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-nature/src/css/variablesCustom.css';
 import themeNeumarktAltstetten from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-neumarkt-altstetten/src/css/variablesCustom.css';
 import themeParkImGruene from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-parkimgruene/src/css/variablesCustom.css';
@@ -41,6 +42,7 @@ export const parameters = {
       'Kaimug': themeKaimug,
       'Klubschule': themeKlubschule,
       'Maker Space': themeMakerSpace,
+      'Migros City': themeMigrosCity,
       'Nature': themeNature,
       'Neumarkt Altstetten': themeNeumarktAltstetten,
       'Park im Grüne': themeParkImGruene,

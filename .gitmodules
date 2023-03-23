@@ -39,3 +39,6 @@
 [submodule "src/web-components-toolbox-maker-space"]
 	path = src/web-components-toolbox-maker-space
 	url = git@github.com:mits-gossau/web-components-toolbox-maker-space.git
+[submodule "src/web-components-toolbox-migros-city"]
+	path = src/web-components-toolbox-migros-city
+	url = git@github.com:mits-gossau/web-components-toolbox-migros-city.git

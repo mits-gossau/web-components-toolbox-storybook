@@ -58,6 +58,7 @@ This Storybook supports following clients (added as submodules in `src`):
 - [Kaimug](https://github.com/mits-gossau/web-components-toolbox-kaimug)
 - [Klubschule](https://github.com/mits-gossau/web-components-toolbox-klubschule)
 - [Maker Space](https://github.com/mits-gossau/web-components-toolbox-maker-space)
+- [Migros City](https://github.com/mits-gossau/web-components-toolbox-migros-city)
 - [Nature](https://github.com/mits-gossau/web-components-toolbox-nature)
 - [Neumarkt Altstetten](https://github.com/mits-gossau/web-components-toolbox-neumarkt-altstetten)
 - [Park im Grüne](https://github.com/mits-gossau/web-components-toolbox-parkimgruene)
