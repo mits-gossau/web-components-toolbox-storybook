@@ -117,3 +117,4 @@ At the moment the following components are included.
 
 - [Carousel](src/stories/molecules/Carousel.stories.js)
 - [CarouselTwo](src/stories/molecules/CarouselTwo.stories.js)
+- [CookieBanner](src/stories/molecules/CookieBanner.stories.js)
