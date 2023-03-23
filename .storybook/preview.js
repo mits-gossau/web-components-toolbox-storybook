@@ -5,6 +5,7 @@ import "../src/web-components-toolbox/src/css/fonts.css";
 import "../src/web-components-toolbox/src/css/variables.css";
 
 import themeAlnatura from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-alnatura/src/css/variablesCustom.css';
+import themeNature from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-nature/src/css/variablesCustom.css';
 
 import cssVariablesTheme from '@etchteam/storybook-addon-css-variables-theme';
 
@@ -24,6 +25,7 @@ export const parameters = {
     files: {
       'No Theme': '',
       'Alnatura': themeAlnatura,
+      'Nature': themeNature,
     },
     defaultTheme: 'No Theme'
   }

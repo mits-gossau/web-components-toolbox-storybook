@@ -6,3 +6,6 @@
 	path = src/web-components-toolbox-alnatura
 	url = https://github.com/mits-gossau/web-components-toolbox-alnatura.git
 	ignore = dirty
+[submodule "src/web-components-toolbox-nature"]
+	path = src/web-components-toolbox-nature
+	url = git@github.com:mits-gossau/web-components-toolbox-nature.git
