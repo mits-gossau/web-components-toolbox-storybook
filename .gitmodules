@@ -9,3 +9,6 @@
 [submodule "src/web-components-toolbox-nature"]
 	path = src/web-components-toolbox-nature
 	url = git@github.com:mits-gossau/web-components-toolbox-nature.git
+[submodule "src/web-components-toolbox-kaimug"]
+	path = src/web-components-toolbox-kaimug
+	url = git@github.com:mits-gossau/web-components-toolbox-kaimug.git
