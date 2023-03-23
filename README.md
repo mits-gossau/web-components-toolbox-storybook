@@ -118,3 +118,4 @@ At the moment the following components are included.
 ### Molecules
 
 - [Carousel](src/stories/molecules/Carousel.stories.js)
+- [CarouselTwo](src/stories/molecules/CarouselTwo.stories.js)
