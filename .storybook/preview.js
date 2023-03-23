@@ -7,6 +7,7 @@ import "../src/web-components-toolbox/src/css/fonts.css";
 import "../src/web-components-toolbox/src/css/variables.css";
 
 import themeAlnatura from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-alnatura/src/css/variablesCustom.css';
+import themeEatery from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-eatery/src/css/variablesCustom.css';
 import themeHitzberger from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-hitzberger/src/css/variablesCustom.css';
 import themeKaimug from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-kaimug/src/css/variablesCustom.css';
 import themeKlubschule from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/web-components-toolbox-klubschule/src/css/variablesCustom.css';
@@ -39,6 +40,7 @@ export const parameters = {
     files: {
       'No Theme': '',
       'Alnatura': themeAlnatura,
+      'Eatery': themeEatery,
       'Hitzberger': themeHitzberger,
       'Kaimug': themeKaimug,
       'Klubschule': themeKlubschule,

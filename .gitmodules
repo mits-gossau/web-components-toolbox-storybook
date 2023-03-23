@@ -45,3 +45,6 @@
 [submodule "src/web-components-toolbox-logistikplattform"]
 	path = src/web-components-toolbox-logistikplattform
 	url = git@github.com:mits-gossau/web-components-toolbox-logistikplattform.git
+[submodule "src/web-components-toolbox-eatery"]
+	path = src/web-components-toolbox-eatery
+	url = git@github.com:mits-gossau/web-components-toolbox-eatery.git
