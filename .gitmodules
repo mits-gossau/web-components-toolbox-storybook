@@ -12,3 +12,12 @@
 [submodule "src/web-components-toolbox-kaimug"]
 	path = src/web-components-toolbox-kaimug
 	url = git@github.com:mits-gossau/web-components-toolbox-kaimug.git
+[submodule "src/web-components-toolbox-klubschule"]
+	path = src/web-components-toolbox-klubschule
+	url = git@github.com:mits-gossau/web-components-toolbox-klubschule.git
+[submodule "src/web-components-toolbox-hitzberger"]
+	path = src/web-components-toolbox-hitzberger
+	url = git@github.com:mits-gossau/web-components-toolbox-hitzberger.git
+[submodule "src/web-components-toolbox-stage-one"]
+	path = src/web-components-toolbox-stage-one
+	url = git@github.com:mits-gossau/web-components-toolbox-stage-one.git
