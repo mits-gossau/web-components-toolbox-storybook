@@ -54,6 +54,8 @@ This Storybook supports following clients (added as submodules in `src`):
 
 - [Default](https://github.com/mits-gossau/web-components-toolbox)
 - [Alnatura](https://github.com/mits-gossau/web-components-toolbox-alnatura)
+- [Kaimug](https://github.com/mits-gossau/web-components-toolbox-kaimug)
+- [Nature](https://github.com/mits-gossau/web-components-toolbox-nature)
 
 > Hint: Update submodules
 > ```console
