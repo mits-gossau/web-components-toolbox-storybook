@@ -12,6 +12,7 @@ This repository is about offering a Storybook with all Web Components, which are
   - [Supported Projects](#supported-projects)
   - [Web Components](#web-components)
     - [Atoms](#atoms)
+    - [Molecules](#molecules)
 
 ## Setup
 
@@ -84,6 +85,7 @@ This Storybook supports following clients (added as submodules in `src`):
 - [Zürisee Center](https://github.com/mits-gossau/web-components-toolbox-zueriseecenter)
 
 > Hint: Update submodules
+>
 > ```console
 > git submodule update --init --recursive --remote --force
 >```
@@ -91,6 +93,7 @@ This Storybook supports following clients (added as submodules in `src`):
 ## Web Components
 
 At the moment the following components are included.
+
 ### Atoms
 
 - [Arrow](src/stories/atoms/Arrow.stories.js)
@@ -111,3 +114,7 @@ At the moment the following components are included.
 - [Picture](src/stories/atoms/Picture.stories.js)
 - [SliderButton](src/stories/atoms/SliderButton.stories.js)
 - [Video](src/stories/atoms/Video.stories.js)
+
+### Molecules
+
+- [Carousel](src/stories/molecules/Carousel.stories.js)
