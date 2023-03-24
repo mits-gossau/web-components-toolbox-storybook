@@ -13,6 +13,6 @@ export default {
 export const Default = () =>
   html`
     <m-cookie-banner
-      props="{'env': 'test', 'language': 'de', 'theme': 'mgb', 'webAPIKey': '5reweDEbruthex8s'}"
+      props="{'env': 'local', 'language': 'de', 'theme': 'mgb', 'webAPIKey': 'Z46wsqjsTLLFybf2RiThevVkZ4Lvt2AtQPNi4LreVCRe4bA9d3cRmNspVXzRXM7P'}"
     />
   `;
