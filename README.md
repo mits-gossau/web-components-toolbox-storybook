@@ -123,5 +123,6 @@ At the moment the following components are included.
 - [Form](src/stories/molecules/Form.stories.js)
 - [FormZadb](src/stories/molecules/FormZadb.stories.js)
 - [ImageHotspot](src/stories/molecules/ImageHotspot.stories.js)
-- [Navigation](src/stories/molecules/ImageHotspot.stories.js) (wip)
-- [Pagination](src/stories/molecules/ImageHotspot.stories.js) (wip)
+- [Navigation](src/stories/molecules/Navigation.stories.js) (wip)
+- [Pagination](src/stories/molecules/Pagination.stories.js) (wip)
+- [PictureText](src/stories/molecules/PictureText.stories.js)
