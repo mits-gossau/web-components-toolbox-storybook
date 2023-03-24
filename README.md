@@ -117,9 +117,11 @@ At the moment the following components are included.
 
 - [Carousel](src/stories/molecules/Carousel.stories.js)
 - [CarouselTwo](src/stories/molecules/CarouselTwo.stories.js)
-- [CookieBanner](src/stories/molecules/CookieBanner.stories.js)
+- [CookieBanner](src/stories/molecules/CookieBanner.stories.js) (wip)
 - [Details](src/stories/molecules/Details.stories.js)
 - [Flockler](src/stories/molecules/Flockler.stories.js)
 - [Form](src/stories/molecules/Form.stories.js)
 - [FormZadb](src/stories/molecules/FormZadb.stories.js)
 - [ImageHotspot](src/stories/molecules/ImageHotspot.stories.js)
+- [Navigation](src/stories/molecules/ImageHotspot.stories.js) (wip)
+- [Pagination](src/stories/molecules/ImageHotspot.stories.js) (wip)
