@@ -130,4 +130,4 @@ At the moment the following components are included.
 - [PictureWithPicture](src/stories/molecules/PictureWithPicture.stories.js)
 - [RecipeList](src/stories/molecules/RecipeList.stories.js) (wip)
 - [TagFilter](src/stories/molecules/TagFilter.stories.js)
-- [Teaser](src/stories/molecules/Teaser.stories.js) (wip)
+- [Teaser](src/stories/molecules/Teaser.stories.js)
