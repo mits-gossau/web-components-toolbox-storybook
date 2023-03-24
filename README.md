@@ -120,3 +120,4 @@ At the moment the following components are included.
 - [CookieBanner](src/stories/molecules/CookieBanner.stories.js)
 - [Details](src/stories/molecules/Details.stories.js)
 - [Flockler](src/stories/molecules/Flockler.stories.js)
+- [Form](src/stories/molecules/Form.stories.js)
