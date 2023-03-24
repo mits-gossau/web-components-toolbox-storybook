@@ -126,3 +126,6 @@ At the moment the following components are included.
 - [Navigation](src/stories/molecules/Navigation.stories.js) (wip)
 - [Pagination](src/stories/molecules/Pagination.stories.js) (wip)
 - [PictureText](src/stories/molecules/PictureText.stories.js)
+- [PictureWithPicture](src/stories/molecules/PictureWithPicture.stories.js)
+- [RecipeList](src/stories/molecules/RecipeList.stories.js) (wip)
+- [TagFilter](src/stories/molecules/TagFilter.stories.js) (wip)
