@@ -1546,7 +1546,8 @@ export const Tile = () => html`
   </o-wrapper>
 `;
 
-export const TileRounded = () => html`<o-wrapper namespace="wrapper-teaser-">
+export const TileRounded = () => html`
+  <o-wrapper namespace="wrapper-teaser-">
     <m-teaser namespace="teaser-tile-rounded-" href="https://www.migrosbank.ch">
       <figure>
         <a-picture
@@ -2641,6 +2642,137 @@ export const TileRounded = () => html`<o-wrapper namespace="wrapper-teaser-">
         </figcaption>
       </figure>
     </m-teaser>
-  </o-wrapper>`;
+  </o-wrapper>
+`;
 
-export const TileTextCenter = () => html``;
+export const TileTextCenter = () => html`
+  <o-wrapper namespace="wrapper-teaser-">
+    <m-teaser
+      namespace="teaser-tile-text-center-"
+      href="https://www.migrosbank.ch"
+    >
+      <figure>
+        <a-picture
+          namespace="picture-teaser-"
+          picture-load
+          defaultSource="src/web-components-toolbox/src/es/components/molecules/teaser/tile-text-center-/img/migros_bank_logo_orange-pink_300x225px.jpg"
+          alt="randomized image"
+        ></a-picture>
+        <figcaption>
+          <h5>Personalrestaurant Migros Bank AG</h5>
+          <p>Seidengasse 12<br />8001 Zürich<br />Schweiz</p>
+          <a-link namespace="underline-"><a>Mehr erfahren</a></a-link>
+        </figcaption>
+      </figure>
+    </m-teaser>
+    <m-teaser
+      namespace="teaser-tile-text-center-"
+      href="https://www.stadlerrail.com/de/ueber-uns/standorte/stadler-bussnang-ag/"
+    >
+      <figure>
+        <a-picture
+          namespace="picture-teaser-"
+          picture-load
+          defaultSource="src/web-components-toolbox/src/es/components/molecules/teaser/tile-text-center-/img/stadler.png"
+          alt="randomized image"
+        ></a-picture>
+        <figcaption>
+          <h5>Personalrestaurant Stadler Bussnang</h5>
+          <p>Ernst-Stadler-Strasse 1<br />9565 Bussnang<br />Schweiz</p>
+          <a-link namespace="underline-"><a>Mehr erfahren</a></a-link>
+        </figcaption>
+      </figure>
+    </m-teaser>
+  </o-wrapper>
+  <o-wrapper namespace="wrapper-teaser-">
+    <m-teaser
+      namespace="teaser-tile-text-center-"
+      href="https://www.migrosbank.ch"
+    >
+      <figure>
+        <a-picture
+          namespace="picture-teaser-"
+          picture-load
+          defaultSource="src/web-components-toolbox/src/es/components/molecules/teaser/tile-text-center-/img/migros_bank_logo_orange-pink_300x225px.jpg"
+          alt="randomized image"
+        ></a-picture>
+        <figcaption>
+          <h5>Personalrestaurant Migros Bank AG</h5>
+          <p>Seidengasse 12<br />8001 Zürich<br />Schweiz</p>
+          <a-link namespace="underline-"><a>Mehr erfahren</a></a-link>
+        </figcaption>
+      </figure>
+    </m-teaser>
+    <m-teaser
+      namespace="teaser-tile-text-center-"
+      href="https://www.stadlerrail.com/de/ueber-uns/standorte/stadler-bussnang-ag/"
+    >
+      <figure>
+        <a-picture
+          namespace="picture-teaser-"
+          picture-load
+          defaultSource="src/web-components-toolbox/src/es/components/molecules/teaser/tile-text-center-/img/stadler.png"
+          alt="randomized image"
+        ></a-picture>
+        <figcaption>
+          <h5>Personalrestaurant Stadler Bussnang</h5>
+          <p>Ernst-Stadler-Strasse 1<br />9565 Bussnang<br />Schweiz</p>
+          <a-link namespace="underline-"><a>Mehr erfahren</a></a-link>
+        </figcaption>
+      </figure>
+    </m-teaser>
+    <m-teaser namespace="teaser-tile-text-center-" href="http://www.jowa.ch">
+      <figure>
+        <a-picture
+          namespace="picture-teaser-"
+          picture-load
+          defaultSource="src/web-components-toolbox/src/es/components/molecules/teaser/tile-text-center-/img/jowa.jpg"
+          alt="randomized image"
+        ></a-picture>
+        <figcaption>
+          <h5>Personalrestaurant JOWA AG</h5>
+          <p>Erlenwiesenstrasse 9<br />8604 Volketswil ZH<br />Schweiz</p>
+          <a-link namespace="underline-"><a>Mehr erfahren</a></a-link>
+        </figcaption>
+      </figure>
+    </m-teaser>
+  </o-wrapper>
+  <o-wrapper namespace="wrapper-teaser-" simulate-children="3">
+    <m-teaser
+      namespace="teaser-tile-text-center-"
+      href="https://www.migrosbank.ch"
+    >
+      <figure>
+        <a-picture
+          namespace="picture-teaser-"
+          picture-load
+          defaultSource="src/web-components-toolbox/src/es/components/molecules/teaser/tile-text-center-/img/migros_bank_logo_orange-pink_300x225px.jpg"
+          alt="randomized image"
+        ></a-picture>
+        <figcaption>
+          <h5>Personalrestaurant Migros Bank AG</h5>
+          <p>Seidengasse 12<br />8001 Zürich<br />Schweiz</p>
+          <a-link namespace="underline-"><a>Mehr erfahren</a></a-link>
+        </figcaption>
+      </figure>
+    </m-teaser>
+  </o-wrapper>
+  <m-teaser
+    namespace="teaser-tile-text-center-"
+    href="https://www.migrosbank.ch"
+  >
+    <figure>
+      <a-picture
+        namespace="picture-teaser-"
+        picture-load
+        defaultSource="src/web-components-toolbox/src/es/components/molecules/teaser/tile-text-center-/img/migros_bank_logo_orange-pink_300x225px.jpg"
+        alt="randomized image"
+      ></a-picture>
+      <figcaption>
+        <h5>Personalrestaurant Migros Bank AG</h5>
+        <p>Seidengasse 12<br />8001 Zürich<br />Schweiz</p>
+        <a-link namespace="underline-"><a>Mehr erfahren</a></a-link>
+      </figcaption>
+    </figure>
+  </m-teaser>
+`;
