@@ -121,3 +121,4 @@ At the moment the following components are included.
 - [Details](src/stories/molecules/Details.stories.js)
 - [Flockler](src/stories/molecules/Flockler.stories.js)
 - [Form](src/stories/molecules/Form.stories.js)
+- [FormZadb](src/stories/molecules/FormZadb.stories.js)
