@@ -122,3 +122,4 @@ At the moment the following components are included.
 - [Flockler](src/stories/molecules/Flockler.stories.js)
 - [Form](src/stories/molecules/Form.stories.js)
 - [FormZadb](src/stories/molecules/FormZadb.stories.js)
+- [ImageHotspot](src/stories/molecules/ImageHotspot.stories.js)
