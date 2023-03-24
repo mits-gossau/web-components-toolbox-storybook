@@ -10,7 +10,53 @@ export default {
   component: "m-tag-filter",
 };
 
-export const Default = () =>
+export const Horizontal = () =>
+  html`
+    <m-tag-filter namespace="tag-filter-horizontal-">
+      <a-button
+        namespace="button-category-"
+        tag="Drinks"
+        answer-event-name="list-recipe"
+        request-event-name="request-list-recipe"
+        active-detail-property-name="fetch:tag"
+        >Getränke</a-button
+      >
+      <a-button
+        namespace="button-category-"
+        tag="Appetizers"
+        answer-event-name="list-recipe"
+        request-event-name="request-list-recipe"
+        active-detail-property-name="fetch:tag"
+        >Vorspeisen</a-button
+      >
+      <a-button
+        namespace="button-category-"
+        tag="MainDishes"
+        answer-event-name="list-recipe"
+        request-event-name="request-list-recipe"
+        active-detail-property-name="fetch:tag"
+        >Hauptgerichte</a-button
+      >
+      <a-button
+        namespace="button-category-"
+        tag="DessertsAndBaking"
+        answer-event-name="list-recipe"
+        request-event-name="request-list-recipe"
+        active-detail-property-name="fetch:tag"
+        >Dessert & Backen</a-button
+      >
+      <a-button
+        namespace="button-category-"
+        tag="DIY"
+        answer-event-name="list-recipe"
+        request-event-name="request-list-recipe"
+        active-detail-property-name="fetch:tag"
+        >DIY</a-button
+      >
+    </m-tag-filter>
+  `;
+
+export const Vertical = () =>
   html`
     <m-tag-filter namespace="tag-filter-vertical-">
       <a-button
