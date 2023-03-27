@@ -139,3 +139,4 @@ At the moment the following components are included.
 - [BodyStyle](src/stories/organisms/BodyStyle.stories.js)
 - [Footer](src/stories/organisms/Footer.stories.js) (wip)
 - [Grid](src/stories/organisms/Grid.stories.js) (wip)
+- [Header](src/stories/organisms/Header.stories.js) (wip)
