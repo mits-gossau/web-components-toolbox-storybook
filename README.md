@@ -13,7 +13,7 @@ This repository is about offering a Storybook with all Web Components, which are
   - [Web Components](#web-components)
     - [Atoms](#atoms)
     - [Molecules](#molecules)
-    - [Organsims](#organsims)
+    - [Organisms](#organisms)
 
 ## Setup
 
@@ -133,7 +133,7 @@ At the moment the following components are included.
 - [TagFilter](src/stories/molecules/TagFilter.stories.js)
 - [Teaser](src/stories/molecules/Teaser.stories.js)
 
-### Organsims
+### Organisms
 
 - [Body](src/stories/organisms/Body.stories.js)
 - [BodyStyle](src/stories/organisms/BodyStyle.stories.js)
