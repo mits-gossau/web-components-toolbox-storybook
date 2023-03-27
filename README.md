@@ -136,3 +136,4 @@ At the moment the following components are included.
 ### Organsims
 
 - [Body](src/stories/organisms/Body.stories.js)
+- [BodyStyle](src/stories/organisms/BodyStyle.stories.js)
