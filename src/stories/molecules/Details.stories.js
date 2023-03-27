@@ -6,10 +6,6 @@ import(
 ).then((module) => self.customElements.define("m-details", module.Details()));
 
 import(
-  "../../web-components-toolbox/src/es/components/organisms/bodyStyle/BodyStyle"
-).then((module) => self.customElements.define("o-body-style", module.default));
-
-import(
   "../../web-components-toolbox/src/es/components/organisms/wrapper/Wrapper"
 ).then((module) => self.customElements.define("o-wrapper", module.Wrapper()));
 

@@ -25,7 +25,7 @@ export const Default = () =>
     >
       <a-picture
         namespace="picture-"
-        defaultSource="https://picsum.photos/id/237/640/480"
+        defaultSource="https://picsum.photos/id/866/640/480"
         alt="Image Alt"
       ></a-picture>
     </o-intersection-scroll-effect>
