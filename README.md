@@ -140,3 +140,4 @@ At the moment the following components are included.
 - [Footer](src/stories/organisms/Footer.stories.js) (wip)
 - [Grid](src/stories/organisms/Grid.stories.js) (wip)
 - [Header](src/stories/organisms/Header.stories.js) (wip)
+- [IntersectionScrollEffect](src/stories/organisms/IntersectionScrollEffect.stories.js) 
