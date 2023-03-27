@@ -50,15 +50,6 @@ export const Default = () => html` <a-video>
     ></iframe>
   </a-video>`;
 
-export const Controls = () => html`
-  <a-video controls>
-    <source
-      type="video/mp4"
-      src="https://gateway.ipfs.io/ipfs/QmRjXPrLb4wyvNQNfqaeZxT7tchAcznbTJimdey8aLRmJ9?filename=no_coast_drift_hd_stock_video.mp4"
-    />
-  </a-video>
-`;
-
 export const Autoplay = () => html`
   <a-video
     muted
@@ -74,5 +65,31 @@ export const Autoplay = () => html`
         --outline: 2px pink solid;
       }
     </style>
+  </a-video>
+`;
+
+export const Controls = () => html`
+  <a-video controls>
+    <source
+      type="video/mp4"
+      src="https://gateway.ipfs.io/ipfs/QmRjXPrLb4wyvNQNfqaeZxT7tchAcznbTJimdey8aLRmJ9?filename=no_coast_drift_hd_stock_video.mp4"
+    />
+  </a-video>
+`;
+
+export const Crop = () => html`
+  <a-video
+    namespace="video-crop-"
+    muted
+    video-load
+    autoplay
+    loop="true"
+    aspect-ratio="0.5618181818181818"
+    poster="src/web-components-toolbox/src/es/components/atoms/video/crop-/video/video.JPG"
+  >
+    <source
+      type="video/mp4"
+      src="src/web-components-toolbox/src/es/components/atoms/video/crop-/video/video.mp4"
+    />
   </a-video>
 `;
