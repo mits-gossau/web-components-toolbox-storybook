@@ -1,9 +1,9 @@
 // Button.stories.js
 import { html } from "lit-html";
 
-import("../../web-components-toolbox/src/es/components/atoms/button/Button").then((module) =>
-  self.customElements.define("a-button", module.default)
-);
+import(
+  "../../web-components-toolbox/src/es/components/atoms/button/Button"
+).then((module) => self.customElements.define("a-button", module.default));
 
 export default {
   title: "Atoms/Button",
