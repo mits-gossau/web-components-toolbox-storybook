@@ -1,0 +1,24 @@
+/* variablesCustom.css */
+
+@import "./mdx/01_base/color.css";
+@import "./mdx/01_base/font.css";
+
+:root {
+  --background-color: var(--mdx-base-color-grey-100);
+
+  --color-active: var(--mdx-base-color-vivid-cerulean-600);
+  --color-disabled: var(--mdx-base-color-vivid-cerulean-600);
+  --color-hover: var(--mdx-base-color-vivid-cerulean-400);
+  --color-quaternary: var(--mdx-base-color-vivid-cerulean-200);
+  --color-secondary: var(--mdx-base-color-vivid-cerulean-500);
+  --color-tertiary: var(--mdx-base-color-apple-green-500);
+
+  --font-family-bold: var(
+    --mdx-base-font-family-text,
+    Helvetica,
+    Arial,
+    sans-serif
+  );
+  --font-family-secondary: var(--mdx-base-font-family-display, sans-serif);
+  --font-family: var(--mdx-base-font-family-text, Helvetica, Arial, sans-serif);
+}
