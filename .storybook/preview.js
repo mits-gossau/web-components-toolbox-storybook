@@ -15,6 +15,7 @@ import themeKaimug from '!!style-loader?injectType=lazyStyleTag!css-loader!../sr
 import themeKlubschule from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/mandants/web-components-toolbox-klubschule/src/css/variablesCustom.css';
 import themeLogistikplattform from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/mandants/web-components-toolbox-logistikplattform/src/css/variablesCustom.css';
 import themeMakerSpace from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/mandants/web-components-toolbox-maker-space/src/css/variablesCustom.css';
+import themeMDX from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/mandants/web-components-toolbox-mdx/src/css/variablesCustom.css';
 import themeMigrosCity from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/mandants/web-components-toolbox-migros-city/src/css/variablesCustom.css';
 import themeNature from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/mandants/web-components-toolbox-nature/src/css/variablesCustom.css';
 import themeNeumarktAltstetten from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/mandants/web-components-toolbox-neumarkt-altstetten/src/css/variablesCustom.css';
@@ -51,6 +52,7 @@ export const parameters = {
       'Klubschule': themeKlubschule,
       'Logistikplattform': themeLogistikplattform,
       'Maker Space': themeMakerSpace,
+      'MDX': themeMDX,
       'Migros City': themeMigrosCity,
       'Nature': themeNature,
       'Neumarkt Altstetten': themeNeumarktAltstetten,
