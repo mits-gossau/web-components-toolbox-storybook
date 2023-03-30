@@ -27,11 +27,5 @@
     "lit-html": "^2.6.1",
     "live-server": "*",
     "standard": "*"
-  },
-  "standard": {
-    "ignore": [
-      "/src/es/components/web-components-toolbox/",
-      "/src/es/components/web-components-toolbox-alnatura/"
-    ]
   }
 }
