@@ -1,132 +1,80 @@
-[submodule "src/es/components/web-components-toolbox-alnatura"]
-	path = src/web-components-toolbox-alnatura
-	url = https://github.com/mits-gossau/web-components-toolbox-alnatura.git
-	ignore = dirty
-[submodule "src/web-components-toolbox-nature"]
-	path = src/web-components-toolbox-nature
-	url = git@github.com:mits-gossau/web-components-toolbox-nature.git
-	ignore = dirty
-[submodule "src/web-components-toolbox-kaimug"]
-	path = src/web-components-toolbox-kaimug
-	url = git@github.com:mits-gossau/web-components-toolbox-kaimug.git
-	ignore = dirty
-[submodule "src/web-components-toolbox-klubschule"]
-	path = src/web-components-toolbox-klubschule
-	url = git@github.com:mits-gossau/web-components-toolbox-klubschule.git
-	ignore = dirty
-[submodule "src/web-components-toolbox-hitzberger"]
-	path = src/web-components-toolbox-hitzberger
-	url = git@github.com:mits-gossau/web-components-toolbox-hitzberger.git
-	ignore = dirty
-[submodule "src/web-components-toolbox-stage-one"]
-	path = src/web-components-toolbox-stage-one
-	url = git@github.com:mits-gossau/web-components-toolbox-stage-one.git
-	ignore = dirty
-[submodule "src/web-components-toolbox-yearbooks"]
-	path = src/web-components-toolbox-yearbooks
-	url = git@github.com:mits-gossau/web-components-toolbox-yearbooks.git
-	ignore = dirty
-[submodule "src/web-components-toolbox-zueriseecenter"]
-	path = src/web-components-toolbox-zueriseecenter
-	url = git@github.com:mits-gossau/web-components-toolbox-zueriseecenter.git
-	ignore = dirty
-[submodule "src/web-components-toolbox-techday"]
-	path = src/web-components-toolbox-techday
-	url = git@github.com:mits-gossau/web-components-toolbox-techday.git
-	ignore = dirty
-[submodule "src/web-components-toolbox-parkimgruene"]
-	path = src/web-components-toolbox-parkimgruene
-	url = git@github.com:mits-gossau/web-components-toolbox-parkimgruene.git
-	ignore = dirty
-[submodule "src/web-components-toolbox-neumarkt-altstetten"]
-	path = src/web-components-toolbox-neumarkt-altstetten
-	url = git@github.com:mits-gossau/web-components-toolbox-neumarkt-altstetten.git
-	ignore = dirty
-[submodule "src/web-components-toolbox-maker-space"]
-	path = src/web-components-toolbox-maker-space
-	url = git@github.com:mits-gossau/web-components-toolbox-maker-space.git
-	ignore = dirty
-[submodule "src/web-components-toolbox-migros-city"]
-	path = src/web-components-toolbox-migros-city
-	url = git@github.com:mits-gossau/web-components-toolbox-migros-city.git
-	ignore = dirty
-[submodule "src/web-components-toolbox-logistikplattform"]
-	path = src/web-components-toolbox-logistikplattform
-	url = git@github.com:mits-gossau/web-components-toolbox-logistikplattform.git
-	ignore = dirty
-[submodule "src/web-components-toolbox-eatery"]
-	path = src/web-components-toolbox-eatery
-	url = git@github.com:mits-gossau/web-components-toolbox-eatery.git
-	ignore = dirty
-[submodule "src/web-components-toolbox-buelach-sued"]
-	path = src/web-components-toolbox-buelach-sued
-	url = git@github.com:mits-gossau/web-components-toolbox-buelach-sued.git
-	ignore = dirty
-[submodule "src/web-components-toolbox-betriebsrestaurant"]
-	path = src/web-components-toolbox-betriebsrestaurant
-	url = git@github.com:mits-gossau/web-components-toolbox-betriebsrestaurant.git
-	ignore = dirty
-[submodule "src/web-components-toolbox-orangergarten"]
-	path = src/web-components-toolbox-orangergarten
-	url = git@github.com:mits-gossau/web-components-toolbox-orangergarten.git
-	ignore = dirty
 [submodule "src/web-components-toolbox"]
 	path = src/web-components-toolbox
 	url = git@github.com:mits-gossau/web-components-toolbox
+	ignore = dirty
 [submodule "src/mandants/web-components-toolbox-mdx"]
 	path = src/mandants/web-components-toolbox-mdx
 	url = git@github.com:mits-gossau/web-components-toolbox-mdx
+	ignore = dirty
 [submodule "src/mandants/web-components-toolbox-nature"]
 	path = src/mandants/web-components-toolbox-nature
 	url = git@github.com:mits-gossau/web-components-toolbox-nature
+	ignore = dirty
 [submodule "src/mandants/web-components-toolbox-orangergarten"]
 	path = src/mandants/web-components-toolbox-orangergarten
 	url = git@github.com:mits-gossau/web-components-toolbox-orangergarten
+	ignore = dirty
 [submodule "src/mandants/web-components-toolbox-betriebsrestaurant"]
 	path = src/mandants/web-components-toolbox-betriebsrestaurant
 	url = git@github.com:mits-gossau/web-components-toolbox-betriebsrestaurant
+	ignore = dirty
 [submodule "src/mandants/web-components-toolbox-buelach-sued"]
 	path = src/mandants/web-components-toolbox-buelach-sued
 	url = git@github.com:mits-gossau/web-components-toolbox-buelach-sued
+	ignore = dirty
 [submodule "src/mandants/web-components-toolbox-eatery"]
 	path = src/mandants/web-components-toolbox-eatery
 	url = git@github.com:mits-gossau/web-components-toolbox-eatery
+	ignore = dirty
 [submodule "src/mandants/web-components-toolbox-logistikplattform"]
 	path = src/mandants/web-components-toolbox-logistikplattform
 	url = git@github.com:mits-gossau/web-components-toolbox-logistikplattform
+	ignore = dirty
 [submodule "src/mandants/web-components-toolbox-migros-city"]
 	path = src/mandants/web-components-toolbox-migros-city
 	url = git@github.com:mits-gossau/web-components-toolbox-migros-city
+	ignore = dirty
 [submodule "src/mandants/web-components-toolbox-maker-space"]
 	path = src/mandants/web-components-toolbox-maker-space
 	url = git@github.com:mits-gossau/web-components-toolbox-maker-space
+	ignore = dirty
 [submodule "src/mandants/web-components-toolbox-neumarkt-altstetten"]
 	path = src/mandants/web-components-toolbox-neumarkt-altstetten
 	url = git@github.com:mits-gossau/web-components-toolbox-neumarkt-altstetten
+	ignore = dirty
 [submodule "src/mandants/web-components-toolbox-parkimgruene"]
 	path = src/mandants/web-components-toolbox-parkimgruene
 	url = git@github.com:mits-gossau/web-components-toolbox-parkimgruene
+	ignore = dirty
 [submodule "src/mandants/web-components-toolbox-techday"]
 	path = src/mandants/web-components-toolbox-techday
 	url = git@github.com:mits-gossau/web-components-toolbox-techday
+	ignore = dirty
 [submodule "src/mandants/web-components-toolbox-zueriseecenter"]
 	path = src/mandants/web-components-toolbox-zueriseecenter
 	url = git@github.com:mits-gossau/web-components-toolbox-zueriseecenter
+	ignore = dirty
 [submodule "src/mandants/web-components-toolbox-yearbooks"]
 	path = src/mandants/web-components-toolbox-yearbooks
 	url = git@github.com:mits-gossau/web-components-toolbox-yearbooks
+	ignore = dirty
 [submodule "src/mandants/web-components-toolbox-stage-one"]
 	path = src/mandants/web-components-toolbox-stage-one
 	url = git@github.com:mits-gossau/web-components-toolbox-stage-one
+	ignore = dirty
 [submodule "src/mandants/web-components-toolbox-hitzberger"]
 	path = src/mandants/web-components-toolbox-hitzberger
 	url = git@github.com:mits-gossau/web-components-toolbox-hitzberger
+	ignore = dirty
 [submodule "src/mandants/web-components-toolbox-klubschule"]
 	path = src/mandants/web-components-toolbox-klubschule
 	url = git@github.com:mits-gossau/web-components-toolbox-klubschule
+	ignore = dirty
 [submodule "src/mandants/web-components-toolbox-kaimug"]
 	path = src/mandants/web-components-toolbox-kaimug
 	url = git@github.com:mits-gossau/web-components-toolbox-kaimug
+	ignore = dirty
 [submodule "src/mandants/web-components-toolbox-alnatura"]
 	path = src/mandants/web-components-toolbox-alnatura
 	url = git@github.com:mits-gossau/web-components-toolbox-alnatura
+	ignore = dirty
