@@ -1,0 +1,6 @@
+:root {
+  --mdx-base-shadow-light: 0 0 6px 0 rgba(51, 51, 51, 0.1);
+  --mdx-base-shadow-medium: 0 0 12px 0 rgba(51, 51, 51, 0.1);
+  --mdx-base-shadow-strong: 0 0 12px 0 rgba(51, 51, 51, 0.2);
+  --mdx-base-shadow-none: 0 0 0 0 rgb(0, 0, 0);
+}

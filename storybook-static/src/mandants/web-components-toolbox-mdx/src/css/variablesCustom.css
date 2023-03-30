@@ -1,0 +1,23 @@
+/* variablesCustom.css */
+
+@import "./mdx/01_base/color.css";
+@import "./mdx/01_base/font.css";
+@import "./mdx/01_base/spacing.css";
+
+:root {
+  --background-color: var(--mdx-base-color-global-white);
+  --color-active: var(--color-hover);
+  --color-disabled: var(--mdx-base-color-orange-300);
+  --color-hover: var(--mdx-base-color-orange-800);
+  --color-secondary: var(--mdx-base-color-orange-600);
+  --color: var(--mdx-base-color-global-black);
+  --content-spacing-mobile: var(--mdx-base-spacing-unit-2x);
+  --content-spacing: var(--mdx-base-spacing-unit-2-5x);
+  --font-family-bold: HelveticaNowTextBold, var(--mdx-base-font-family-text), Helvetica, Arial, sans-serif;
+  --font-family-secondary: Avenir35Light, sans-serif;
+  --font-family: var(--mdx-base-font-family-text), Helvetica, Arial, sans-serif;
+  --font-size-mobile: var(--mdx-base-font-font-size-175);
+  --font-size: var(--mdx-base-font-font-size-200);
+  --font-weight: var(--mdx-base-font-weight-regular);
+  --line-height: var(--mdx-base-font-line-height-300);
+}
