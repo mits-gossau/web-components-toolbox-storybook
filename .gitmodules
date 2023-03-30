@@ -74,3 +74,7 @@
 	path = src/web-components-toolbox-orangergarten
 	url = git@github.com:mits-gossau/web-components-toolbox-orangergarten.git
 	ignore = dirty
+[submodule "src/mandants/web-components-toolbox-mdx"]
+	path = src/mandants/web-components-toolbox-mdx
+	url = git@github.com:mits-gossau/web-components-toolbox-mdx.git
+	ignore = dirty
