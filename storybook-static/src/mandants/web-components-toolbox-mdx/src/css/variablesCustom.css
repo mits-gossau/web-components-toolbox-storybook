@@ -13,12 +13,7 @@
   --color-secondary: var(--mdx-base-color-vivid-cerulean-500);
   --color-tertiary: var(--mdx-base-color-apple-green-500);
 
-  --font-family-bold: var(
-    --mdx-base-font-family-text,
-    Helvetica,
-    Arial,
-    sans-serif
-  );
+  --font-family-bold: var(--mdx-base-font-family-text, Helvetica, Arial, sans-serif);
   --font-family-secondary: var(--mdx-base-font-family-display, sans-serif);
   --font-family: var(--mdx-base-font-family-text, Helvetica, Arial, sans-serif);
 }
