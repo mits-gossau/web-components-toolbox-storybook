@@ -30,7 +30,7 @@ npm install
 ```
 
 ```console
-git submodule update --init --recursive --remote --force
+npm update
 ```
 
 ```console
