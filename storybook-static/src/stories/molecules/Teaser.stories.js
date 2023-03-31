@@ -390,20 +390,6 @@ export const Plain = () => html`
       </figure>
     </m-teaser>
   </o-wrapper>
-  <!-- load web components for Demo Purposes Only -->
-  <script
-    class="template-script"
-    type="text/javascript"
-    src="./plain-.js"
-  ></script>
-  <script
-    type="text/javascript"
-    src="../../../../../../docs/es/loader.js"
-  ></script>
-  <script
-    type="text/javascript"
-    src="../../../../../../docs/es/documenter.js?component=Teaser.js"
-  ></script>
 `;
 
 export const Round = () => html`
