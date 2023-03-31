@@ -1,0 +1,15 @@
+:root {
+  --mdx-base-border-radius-none: 0;
+  --mdx-base-border-radius-xs: 2px;
+  --mdx-base-border-radius-sm: 4px;
+  --mdx-base-border-radius-md: 8px;
+  --mdx-base-border-radius-lg: 16px;
+  --mdx-base-border-radius-xl: 24px;
+  --mdx-base-border-radius-2xl: 32px;
+  --mdx-base-border-width-none: 0;
+  --mdx-base-border-width-xs: 1px;
+  --mdx-base-border-width-sm: 1.5px;
+  --mdx-base-border-width-md: 2px;
+  --mdx-base-border-width-lg: 3px;
+  --mdx-base-border-width-xl: 4px;
+}
