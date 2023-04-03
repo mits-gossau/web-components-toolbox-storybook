@@ -9,7 +9,7 @@
     "test": "live-server --port=2200 --host=localhost --no-browser --ignorePattern=.* & npx playwright test --config=src/es/components/web-components-toolbox/e2e/ && killall node",
     "update": "git submodule update --init --recursive --remote --force",
     "storybook": "NODE_OPTIONS='--openssl-legacy-provider' start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "NODE_OPTIONS='--openssl-legacy-provider' build-storybook"
   },
   "author": "weedshaker@gmail.com, edx.mgb@gmail.com",
   "license": "MIT",
