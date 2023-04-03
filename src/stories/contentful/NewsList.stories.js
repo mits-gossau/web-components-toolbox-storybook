@@ -1,4 +1,4 @@
-// News.stories.js
+// NewsList.stories.js
 import { html } from "lit-html";
 
 import(
@@ -21,6 +21,14 @@ export const Default = () =>
       news-preview-namespace=""
     >
     </contentful-news-list>
+    <script
+      type="text/javascript"
+      src="/src/web-components-toolbox/wc-config.js?triggerImmediately=true"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/src/web-components-toolbox/src/es/helpers/Environment.js"
+    ></script>
     <script
       type="text/javascript"
       src="/src/web-components-toolbox/docs/es/documenter.js?component=NewsList.js"
