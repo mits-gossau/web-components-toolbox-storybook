@@ -12,6 +12,7 @@ module.exports = {
         outline: false,
       },
     },
+    'storybook-addon-themes',
   ],
   framework: "@storybook/web-components",
 };

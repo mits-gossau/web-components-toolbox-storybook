@@ -1,3 +1,8 @@
+// import { addDecorator } from '@storybook/web-components'; // <- or your storybook framework
+// import { withThemes } from 'storybook-addon-themes/html'; // <- or your storybook framework
+
+// addDecorator(withThemes);
+
 import cssVariablesTheme from '@etchteam/storybook-addon-css-variables-theme';
 
 import "../src/web-components-toolbox/src/css/initial.css";
@@ -66,5 +71,13 @@ export const parameters = {
       'Zürisee Center': themeZueriseeCenter,
     },
     defaultTheme: 'No Theme'
-  }
+  },
+  themes: {
+    list: [
+      { name: 'corporate', class: 'themeCorporateLight', color: 'rgb(255, 102, 0)' },
+      { name: 'm', class: 'themeMLight', color: 'rgb(255, 102, 0)' },
+      { name: 'micasa', class: 'themeMicasaLight', color: 'rgb(255, 191, 41)' }
+    ],
+    target: 'root',
+  },
 }

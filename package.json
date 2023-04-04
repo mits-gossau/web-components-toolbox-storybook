@@ -26,6 +26,7 @@
     "babel-loader": "^8.3.0",
     "lit-html": "^2.7.0",
     "live-server": "*",
-    "standard": "*"
+    "standard": "*",
+    "storybook-addon-themes": "^6.1.0"
   }
 }
