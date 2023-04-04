@@ -1,8 +1,15 @@
 /* variablesCustom.css */
 
+@import "./mdx/01_base/border.css";
 @import "./mdx/01_base/color.css";
 @import "./mdx/01_base/font.css";
+@import "./mdx/01_base/opacity.css";
+@import "./mdx/01_base/shadows.css";
 @import "./mdx/01_base/spacing.css";
+
+@import "./mdx/corporate/light.css";
+@import "./mdx/m/light.css";
+@import "./mdx/micasa/light.css";
 
 :root {
   --background-color: var(--mdx-base-color-global-white);
@@ -20,4 +27,24 @@
   --font-size: var(--mdx-base-font-font-size-200);
   --font-weight: var(--mdx-base-font-weight-regular);
   --line-height: var(--mdx-base-font-line-height-300);
+  
+  --button-primary-background-color-hover-custom: var(--mdx-comp-button-primary-medium-background-color-hover);
+  --button-primary-background-color-custom: var(--mdx-comp-button-primary-medium-background-color-default);
+  --button-primary-border-radius-custom: var(--mdx-comp-button-primary-medium-border-radius-default);
+  --button-primary-color-custom: var(--mdx-comp-button-primary-medium-foreground-color-default);
+  --button-primary-color-hover-custom: var(--mdx-comp-button-primary-medium-foreground-color-hover);
+  --button-primary-font-custom: var(--mdx-comp-button-primary-medium-font-default);
+
+  --button-secondary-background-color-disabled: var(--mdx-comp-button-secondary-medium-background-color-disabled);
+  --button-secondary-background-color-hover: var(--mdx-comp-button-secondary-medium-background-color-hover);
+  --button-secondary-background-color: var(--mdx-comp-button-secondary-medium-background-color-default);
+  --button-secondary-border-color-disabled: var(--mdx-comp-button-secondary-medium-border-color-disabled);
+  --button-secondary-border-color-hover: var(--mdx-comp-button-secondary-medium-border-color-hover);
+  --button-secondary-border-color: var(--mdx-comp-button-secondary-medium-border-color-default);
+  --button-secondary-border-width: var(--mdx-comp-button-secondary-medium-border-width-default);
+  --button-secondary-color-disabled: var(--mdx-comp-button-secondary-medium-foreground-color-disabled);
+  --button-secondary-color-hover: var(--mdx-comp-button-secondary-medium-foreground-color-hover);
+  --button-secondary-color: var(--mdx-comp-button-secondary-medium-foreground-color-default);
+  --button-secondary-font-custom: var(--mdx-comp-button-secondary-medium-font-default);
+  --button-secondary-font-family: var(--mdx-comp-button-secondary-medium-font-default);
 }

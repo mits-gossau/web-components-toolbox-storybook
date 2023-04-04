@@ -47,6 +47,7 @@ export default class Button extends Shadow() {
       let tags = event.detail.tags
       if (this.getAttribute('active-detail-property-name')) {
         tags = await this.getAttribute('active-detail-property-name').split(':').reduce(async (accumulator, propertyName) => {
+          // @ts-ignore
           propertyName = propertyName.replace(/-([a-z]{1})/g, (match, p1) => p1.toUpperCase())
           if (accumulator instanceof Promise) accumulator = await accumulator
           return accumulator[propertyName]
@@ -65,13 +66,17 @@ export default class Button extends Shadow() {
       this.setAttribute('data-href', this.getAttribute('href'))
       this.setAttribute('role', 'link')
     }
+    // @ts-ignore
     if (this.textContent.length) {
+      // @ts-ignore
       this.labelText = this.textContent.trim() // allow its initial textContent to become the label if there are no nodes but only text
       this.textContent = ''
     }
+    // @ts-ignore
     this.mouseoverListener = event => {
       this.button.classList.add('hover')
     }
+    // @ts-ignore
     this.mouseoutListener = event => {
       this.button.classList.remove('hover')
     }
@@ -99,6 +104,7 @@ export default class Button extends Shadow() {
     }
   }
 
+  // @ts-ignore
   attributeChangedCallback (name, oldValue, newValue) {
     if (name === 'label') {
       this.labelText = newValue
@@ -144,12 +150,9 @@ export default class Button extends Shadow() {
         color: var(--color, black);
         cursor: pointer;
         display: flex;
-        font-family: var(--font-family, unset);
-        font-size: var(--font-size, 1em);
-        font-weight: var(--font-weight, 400);
+        font: var(--font, var(--font-weight, 400) var(--font-size, 1em)/var(--line-height, 1.5em) var(--font-family, unset));
         justify-content: var(--justify-content, center);
         letter-spacing: var(--letter-spacing, normal);
-        line-height: var(--line-height, 1.5em);
         margin: var(--margin, auto);
         opacity: var(--opacity, 1);
         outline: var(--outline, none);
@@ -317,6 +320,7 @@ export default class Button extends Shadow() {
   }
 
   get mouseEventElement () {
+    // @ts-ignore
     return this[this.hasAttribute('hover-on-parent-element') ? 'parentNode' : this.hasAttribute('hover-on-parent-shadow-root-host') ? 'parentNodeShadowRootHost' : undefined]
   }
 

@@ -8,6 +8,18 @@ import(
 export default {
   title: "Atoms/Button",
   component: "a-button",
+  argTypes: {
+    disabled: {
+      control: 'boolean',
+    },
+    label: {
+      control: 'text',
+    }
+  },
+  args: {
+    disabled: false,
+    label: 'Button',
+  }
 };
 
 export const Primary = () => html`
