@@ -14,7 +14,6 @@ This repository is about offering a Storybook with all Web Components, which are
     - [Atoms](#atoms)
     - [Molecules](#molecules)
     - [Organisms](#organisms)
-    - [Contentful](#contentful)
 
 ## Setup
 
@@ -145,6 +144,6 @@ At the moment the following components are included.
 - [Modal](src/stories/organisms/Modal.stories.js)
 - [Wrapper](src/stories/organisms/Wrapper.stories.js)
 
-### Contentful
+<!-- ### Contentful
 
-- [NewsList](src/stories/contentful/NewsList.stories.js)
+- [NewsList](src/stories/contentful/NewsList.stories.js) -->

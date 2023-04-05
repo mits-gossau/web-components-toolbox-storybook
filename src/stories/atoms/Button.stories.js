@@ -38,8 +38,8 @@ export default {
 //   },
 // };
 
-export const Primary = ({ label }) => html`
-  <a-button namespace="button-primary-">Button ${label}</a-button>
+export const Primary = () => html`
+  <a-button namespace="button-primary-">Button</a-button>
 `;
 
 export const Secondary = () => html`
