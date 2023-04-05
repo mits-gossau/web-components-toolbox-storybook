@@ -22,25 +22,25 @@ export default {
   },
 };
 
-export const Primary = {
-  render: (args) => {
-    const btn = document.createElement('a-button');
-    
-    btn.setAttribute("namespace",'button-primary-')
-    btn.innerText = args.label ? args.label : 'Button';
-    args.disabled ? btn.setAttribute('disabled', 'disabled') : undefined;
-    
-    return btn;
-  },
-  args: {
-    disabled: true,
-    label: 'Button',
-  },
-};
+// export const Primary = {
+//   render: (args) => {
+//     const btn = document.createElement('a-button');
 
-// export const Primary = ({ label }) => html`
-//   <a-button namespace="button-primary-">Button ${label}</a-button>
-// `;
+//     btn.setAttribute("namespace",'button-primary-')
+//     btn.innerText = args.label ? args.label : 'Button';
+//     args.disabled ? btn.setAttribute('disabled', 'disabled') : undefined;
+    
+//     return btn;
+//   },
+//   args: {
+//     disabled: true,
+//     label: 'Button',
+//   },
+// };
+
+export const Primary = ({ label }) => html`
+  <a-button namespace="button-primary-">Button ${label}</a-button>
+`;
 
 export const Secondary = () => html`
   <a-button namespace="button-secondary-">Button</a-button>
