@@ -10,17 +10,33 @@ export default {
   component: "a-button",
   argTypes: {
     disabled: {
-      control: 'boolean',
+      control: "boolean",
     },
     label: {
-      control: 'text',
-    }
+      control: "text",
+    },
   },
   args: {
     disabled: false,
-    label: 'Button',
-  }
+    label: "Button",
+  },
 };
+
+// export const Primary = {
+//   render: (args) => {
+//     const btn = document.createElement('a-button');
+
+//     btn.setAttribute("namespace",'button-primary-')
+//     btn.innerText = args.label ? args.label : 'Button';
+//     args.disabled ? btn.setAttribute('disabled', 'disabled') : undefined;
+    
+//     return btn;
+//   },
+//   args: {
+//     disabled: true,
+//     label: 'Button',
+//   },
+// };
 
 export const Primary = () => html`
   <a-button namespace="button-primary-">Button</a-button>
