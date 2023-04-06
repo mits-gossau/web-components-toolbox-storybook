@@ -8,46 +8,21 @@ import(
 export default {
   title: "Atoms/Button",
   component: "a-button",
-  argTypes: {
-    disabled: {
-      control: "boolean",
-    },
-    label: {
-      control: "text",
-    },
-  },
-  args: {
-    disabled: false,
-    label: "Button",
-  },
 };
-
-// export const Primary = {
-//   render: (args) => {
-//     const btn = document.createElement('a-button');
-
-//     btn.setAttribute("namespace",'button-primary-')
-//     btn.innerText = args.label ? args.label : 'Button';
-//     args.disabled ? btn.setAttribute('disabled', 'disabled') : undefined;
-    
-//     return btn;
-//   },
-//   args: {
-//     disabled: true,
-//     label: 'Button',
-//   },
-// };
 
 export const Primary = () => html`
   <a-button namespace="button-primary-">Button</a-button>
+  <a-button namespace="button-primary-" disabled>Button</a-button>
 `;
 
 export const Secondary = () => html`
   <a-button namespace="button-secondary-">Button</a-button>
+  <a-button namespace="button-secondary-" disabled>Button</a-button>
 `;
 
 export const Quaternary = () => html`
   <a-button namespace="button-quaternary-">Button</a-button>
+  <a-button namespace="button-quaternary-" disabled>Button</a-button>
 `;
 
 export const Download = () => html`
