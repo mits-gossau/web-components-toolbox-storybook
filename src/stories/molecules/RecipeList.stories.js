@@ -6,7 +6,7 @@ import(
 ).then((module) => self.customElements.define("m-recipe-list", module.default));
 
 export default {
-  title: "Molecules/RecipeList",
+  title: "Molecules/RecipeList (WIP)",
   component: "m-recipe-list",
 };
 

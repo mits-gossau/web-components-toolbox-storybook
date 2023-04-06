@@ -6,7 +6,7 @@ import(
 ).then((module) => self.customElements.define("m-pagination", module.default));
 
 export default {
-  title: "Molecules/Pagination",
+  title: "Molecules/Pagination (WIP)",
   component: "m-pagination",
 };
 

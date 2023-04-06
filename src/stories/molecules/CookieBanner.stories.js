@@ -6,7 +6,7 @@ import(
 ).then((module) => self.customElements.define("m-cookie-banner", module.default));
 
 export default {
-  title: "Molecules/CookieBanner",
+  title: "Molecules/CookieBanner (WIP)",
   component: "m-cookie-banner",
 };
 
