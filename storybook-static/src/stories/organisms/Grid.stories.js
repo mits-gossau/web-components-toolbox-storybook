@@ -6,7 +6,7 @@ import(
 ).then((module) => self.customElements.define("o-grid", module.default));
 
 export default {
-  title: "Organisms/Grid",
+  title: "Organisms/Grid (WIP)",
   component: "o-grid",
 };
 

@@ -6,7 +6,7 @@ import(
 ).then((module) => self.customElements.define("o-header", module.default));
 
 export default {
-  title: "Organisms/Header",
+  title: "Organisms/Header (WIP)",
   component: "o-header",
 };
 
