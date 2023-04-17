@@ -76,7 +76,7 @@ export const parameters = {
     list: [
       { name: 'corporate', class: 'themeCorporateLight', color: 'rgb(255, 102, 0)' },
       { name: 'm', class: 'themeMLight', color: 'rgb(255, 102, 0)' },
-      { name: 'micasa', class: 'themeMicasaLight', color: 'rgb(255, 191, 41)' }
+      { name: 'showcase', class: 'themeShowcaseLight', color: 'rgb(255, 191, 41)' }
     ],
     target: 'root',
   },
