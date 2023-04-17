@@ -6,15 +6,18 @@ export default {
 };
 
 export const Default = () => html`
-  <o-grid namespace="grid-2colums2rows-" first-container-vertical first-column-with="50%">
+  <o-grid
+    namespace="grid-2colums2rows-"
+    first-container-vertical
+  >
     <section>
       <div>
         <a-iframe background-color="var(--m-gray-400)">
           <template>
             <iframe
-              width="640"
-              height="360"
-              src="https://www.bitchute.com/embed/veHkCPWUdPGB"
+              height="1920"
+              width="1080"
+              src="https://youtube.com/embed/HWIIoYTOQac"
               frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
             ></iframe>
@@ -25,9 +28,9 @@ export const Default = () => html`
         <a-iframe background-color="var(--m-gray-400)">
           <template>
             <iframe
-              width="640"
-              height="360"
-              src="https://www.bitchute.com/embed/veHkCPWUdPGB"
+              height="1920"
+              width="1080"
+              src="https://youtube.com/embed/enyMjVjQ-EU"
               frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
             ></iframe>
