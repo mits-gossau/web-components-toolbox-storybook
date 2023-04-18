@@ -24,6 +24,7 @@
     "@storybook/web-components": "^7.0.5",
     "@storybook/web-components-webpack5": "^7.0.5",
     "babel-loader": "^8.3.0",
+    "css-loader": "^6.7.3",
     "lit": "^2.7.2",
     "lit-html": "^2.7.2",
     "live-server": "*",
@@ -31,6 +32,7 @@
     "react-dom": "^18.2.0",
     "standard": "*",
     "storybook": "^7.0.5",
-    "storybook-addon-themes": "^6.1.0"
+    "storybook-addon-themes": "^6.1.0",
+    "style-loader": "^3.3.2"
   }
 }
