@@ -8,8 +8,8 @@
     "serve": "live-server --port=3000 --host=localhost --no-css-inject",
     "test": "live-server --port=2200 --host=localhost --no-browser --ignorePattern=.* & npx playwright test --config=src/es/components/web-components-toolbox/e2e/ && killall node",
     "update": "git submodule update --init --recursive --remote --force",
-    "storybook": "NODE_OPTIONS='--openssl-legacy-provider' start-storybook -p 6006",
-    "build-storybook": "NODE_OPTIONS='--openssl-legacy-provider' build-storybook"
+    "storybook": "NODE_OPTIONS='--openssl-legacy-provider' storybook dev -p 6006",
+    "build-storybook": "NODE_OPTIONS='--openssl-legacy-provider' storybook build"
   },
   "author": "weedshaker@gmail.com, edx.mgb@gmail.com",
   "license": "MIT",
@@ -17,16 +17,22 @@
     "@babel/core": "^7.21.3",
     "@etchteam/storybook-addon-css-variables-theme": "^1.4.1",
     "@playwright/test": "^1.32.1",
-    "@storybook/addon-actions": "^6.5.16",
-    "@storybook/addon-essentials": "^6.5.16",
-    "@storybook/addon-links": "^6.5.16",
-    "@storybook/builder-webpack4": "^6.5.16",
-    "@storybook/manager-webpack4": "^6.5.16",
-    "@storybook/web-components": "^6.5.16",
+    "@storybook/addon-actions": "^7.0.5",
+    "@storybook/addon-essentials": "^7.0.5",
+    "@storybook/addon-links": "^7.0.5",
+    "@storybook/addon-mdx-gfm": "^7.0.5",
+    "@storybook/web-components": "^7.0.5",
+    "@storybook/web-components-webpack5": "^7.0.5",
     "babel-loader": "^8.3.0",
-    "lit-html": "^2.7.0",
+    "css-loader": "^6.7.3",
+    "lit": "^2.7.2",
+    "lit-html": "^2.7.2",
     "live-server": "*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "standard": "*",
-    "storybook-addon-themes": "^6.1.0"
+    "storybook": "^7.0.5",
+    "storybook-addon-themes": "^6.1.0",
+    "style-loader": "^3.3.2"
   }
 }
