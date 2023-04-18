@@ -149,6 +149,8 @@ export default class Login extends Prototype() {
     this.msrcLoginButtonWrapper = this.root.querySelector('div') || document.createElement('div')
     // subscribe to login:authenticate user by calling the getter before starting any msrc stuff
     return this.loadDependency().then(async msrc => {
+      // subscribe before login | https://jira.migros.net/browse/MUTOBOTEAM-1964
+      this.user
       // Setup OIDC login configuration
       await msrc.utilities.login.setup(this.constructor.parseAttribute(this.getAttribute('setup') || '{}'))
       // Initialize the login button
@@ -181,7 +183,12 @@ export default class Login extends Prototype() {
       const msrc = await this.loadDependency()
       // https://react-components.migros.ch/?path=/docs/msrc-login-00-readme--page#events
       const instance = await msrc.messenger.getInstance()
-      instance.subscribe('login:authenticate', ({ isManualLogin, loggedIn, error }) => resolve(msrc.utilities.login.getUser()))
+      // in case the subscribe event login:authenticate does not fire
+      const timeoutId = setTimeout(() => resolve(msrc.utilities.login.getUser()), 3000)
+      instance.subscribe('login:authenticate', ({ isManualLogin, loggedIn, error }) => {
+        clearTimeout(timeoutId)
+        resolve(msrc.utilities.login.getUser())
+      })
     }))
   }
 }
