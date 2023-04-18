@@ -1,15 +1,15 @@
 /* variablesCustom.css */
 
-@import "./mdx/01_base/border.css";
-@import "./mdx/01_base/color.css";
-@import "./mdx/01_base/font.css";
-@import "./mdx/01_base/opacity.css";
-@import "./mdx/01_base/shadows.css";
-@import "./mdx/01_base/spacing.css";
+@import "../../node_modules/@migros/mdx-design-tokens/dist/01_base/border.css";
+@import "../../node_modules/@migros/mdx-design-tokens/dist/01_base/color.css";
+@import "../../node_modules/@migros/mdx-design-tokens/dist/01_base/font.css";
+@import "../../node_modules/@migros/mdx-design-tokens/dist/01_base/opacity.css";
+@import "../../node_modules/@migros/mdx-design-tokens/dist/01_base/shadows.css";
+@import "../../node_modules/@migros/mdx-design-tokens/dist/01_base/spacing.css";
 
-@import "./mdx/corporate/light.css";
-@import "./mdx/m/light.css";
-@import "./mdx/micasa/light.css";
+@import "../../node_modules/@migros/mdx-design-tokens/dist/corporate/light.css";
+@import "../../node_modules/@migros/mdx-design-tokens/dist/m/light.css";
+@import "../../node_modules/@migros/mdx-design-tokens/dist/showcase/light.css";
 
 :root {
   --background-color: var(--mdx-base-color-global-white);

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mits-gossau/web-components-toolbox-mdx/issues"
   },
-  "homepage": "https://github.com/mits-gossau/web-components-toolbox-mdx#readme"
+  "homepage": "https://github.com/mits-gossau/web-components-toolbox-mdx#readme",
+  "dependencies": {
+    "@migros/mdx-design-tokens": "^0.24.0"
+  }
 }
