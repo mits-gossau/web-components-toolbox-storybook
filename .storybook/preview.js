@@ -1,8 +1,4 @@
-// import { addDecorator } from '@storybook/web-components'; // <- or your storybook framework
-// import { withThemes } from 'storybook-addon-themes/html'; // <- or your storybook framework
-
-// addDecorator(withThemes);
-
+// .storybook/preview.js
 import cssVariablesTheme from '@etchteam/storybook-addon-css-variables-theme';
 
 import "../src/web-components-toolbox/src/css/initial.css";
@@ -32,6 +28,8 @@ import themeYearbooksIndustrie from '!!style-loader?injectType=lazyStyleTag!css-
 import themeYearbooksMiduca from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/mandants/web-components-toolbox-yearbooks/src/css/variablesMiduca.css';
 import themeYearbooksOperations from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/mandants/web-components-toolbox-yearbooks/src/css/variablesOperations.css';
 import themeZueriseeCenter from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/mandants/web-components-toolbox-zueriseecenter/src/css/variablesCustom.css';
+
+
 
 export const decorators = [
   cssVariablesTheme,
