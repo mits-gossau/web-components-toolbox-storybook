@@ -12,7 +12,7 @@ export const Default = () => html`
   >
     <section>
       <div>
-        <a-iframe background-color="var(--m-gray-400)">
+        <a-iframe keep-aspect-ratio background-color="var(--m-gray-400)">
           <template>
             <iframe
               height="1920"
@@ -25,7 +25,7 @@ export const Default = () => html`
         </a-iframe>
       </div>
       <div>
-        <a-iframe background-color="var(--m-gray-400)">
+        <a-iframe keep-aspect-ratio background-color="var(--m-gray-400)">
           <template>
             <iframe
               height="1920"
