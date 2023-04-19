@@ -12,94 +12,87 @@ import { Shadow } from '../../prototypes/Shadow.js'
  * @css {}
  */
 export default class Grid extends Shadow() {
-  async connectedCallback() {
-    this.hidden = true;
-    const showPromises = [];
-    if (this.shouldRenderCSS()) {
-      showPromises.push(this.renderCSS());
-    }
-    if (this.shouldRenderHTML()) {
-      showPromises.push(this.renderHTML());
-    }
-    await Promise.all(showPromises);
-    this.hidden = false;
+  connectedCallback () {
+    this.hidden = true
+    const showPromises = []
+    if (this.shouldComponentRenderCSS()) showPromises.push(this.renderCSS())
+    if (this.shouldComponentRenderHTML()) showPromises.push(this.renderHTML())
+    Promise.all(showPromises).then(() => (this.hidden = false))
   }
 
   /**
-   * Evaluates whether a render is necessary.
+   * evaluates if a render is necessary
    *
    * @return {boolean}
    */
-  shouldRenderCSS() {
-    return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`);
+  shouldComponentRenderCSS () {
+    return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
   }
 
   /**
-   * Evaluates whether a render is necessary.
+   * evaluates if a render is necessary
    *
    * @return {boolean}
    */
-  shouldRenderHTML() {
-    return !this.grid;
+  shouldComponentRenderHTML () {
+    return !this.grid
   }
 
   /**
-   * Renders the o-grid CSS.
+   * renders the o-grid css
    *
    * @return {Promise<void>}
    */
-  async renderCSS() {
-    const url = import.meta.url.replace(/(.*\/)(.*)$/, '$1');
-    this.css = /* css */ `
+  renderCSS () {
+    this.css = /* css */`
       :host > section {
-        display: grid;
-        ${this.hasAttribute('height') ? `height: ${this.getAttribute('height') || '100%'};` : ''}
+        display:grid;
+        ${this.hasAttribute('height')
+          ? `height: ${this.getAttribute('height') || '100%'};`
+          : ''
+        }
       }
-    `;
+    `
+    /** @type {import("../../prototypes/Shadow.js").fetchCSSParams[]} */
     const styles = [
       {
-        path: `${url}../../../../css/reset.css`,
-        namespace: false,
+        path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}../../../../css/reset.css`, // no variables for this reason no namespace
+        namespace: false
       },
       {
-        path: `${url}../../../../css/style.css`,
-        namespaceFallback: true,
-      },
-    ];
+        path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}../../../../css/style.css`, // apply namespace and fallback to allow overwriting on deeper level
+        namespaceFallback: true
+      }
+    ]
     switch (this.getAttribute('namespace')) {
       case 'grid-2colums2rows-':
-        const [{ styleNode, style }] = await this.fetchCSS(
-          [
-            {
-              path: `${url}./2colums2rows-/2colums2rows-.css`,
-              namespace: false,
-            },
-            ...styles,
-          ],
-          false
-        );
-        styleNode.textContent = `${style}`;
-        break;
+        return this.fetchCSS([{
+          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./2colums2rows-/2colums2rows-.css`, // apply namespace since it is specific and no fallback
+          namespace: false
+        }, ...styles], false).then(fetchCSSParams => {
+          // make template ${code} accessible
+          fetchCSSParams[0].styleNode.textContent = eval('`' + fetchCSSParams[0].style + '`')// eslint-disable-line no-eval
+        })
       default:
-        await this.fetchCSS(styles, false);
-        break;
+        return this.fetchCSS(styles, false)
     }
   }
 
   /**
-   * Renders the HTML.
+   * renders the html
    *
    * @return {Promise<void>}
    */
-  async renderHTML() {
-    const section = this.root.querySelector(`${this.cssSelector} > section`) || document.createElement('section');
-    for (const node of Array.from(this.root.children)) {
-      if (node.tagName !== 'STYLE' && node.tagName !== 'SECTION') section.appendChild(node);
-    }
-    this.setAttribute('count-section-children', section.children.length);
-    for (const node of section.children) {
-      if ((node.getAttribute('style') || '').includes('background')) node.setAttribute('has-background', 'true');
-    }
-    this.html = [section];
+  renderHTML () {
+    this.section = this.root.querySelector(this.cssSelector + ' > section') || document.createElement('section')
+    Array.from(this.root.children).forEach(node => {
+      if (node.tagName !== 'STYLE' && node.tagName !== 'SECTION') this.section.appendChild(node)
+    })
+    this.setAttribute('count-section-children', this.section.children.length)
+    Array.from(this.section.children).forEach(node => {
+      if ((node.getAttribute('style') || '').includes('background')) node.setAttribute('has-background', 'true')
+    })
+    this.html = [this.section]
+    return Promise.resolve()
   }
 }

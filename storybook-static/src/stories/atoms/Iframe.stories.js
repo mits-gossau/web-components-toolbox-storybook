@@ -117,3 +117,18 @@ export const Default = () => html`
     </template>
   </a-iframe>
 `;
+
+export const Portrait = () => html`
+  <h2>iframe in portrait mode with keep aspect ratio</h2>
+  <a-iframe keep-aspect-ratio background-color="var(--m-gray-400)">
+    <template>
+      <iframe
+        height="1920"
+        width="1080"
+        src="https://youtube.com/embed/HWIIoYTOQac"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+      ></iframe>
+    </template>
+  </a-iframe>
+`;
