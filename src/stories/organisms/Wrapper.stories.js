@@ -3,7 +3,11 @@ import { html } from "lit-html";
 
 import(
   "../../web-components-toolbox/src/es/components/organisms/wrapper/Wrapper"
-).then((module) => self.customElements.define("o-wrapper", module.default));
+).then((module) => self.customElements.define("o-wrapper", module.Wrapper()));
+
+import(
+  "../../web-components-toolbox/src/es/components/atoms/picture/Picture"
+).then((module) => self.customElements.define("a-picture", module.default));
 
 export default {
   title: "Organisms/Wrapper (WIP)",

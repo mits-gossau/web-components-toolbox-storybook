@@ -7,7 +7,7 @@ export default {
 };
 
 export const Default = () => html`
-  <o-grid namespace="grid-2colums2rows-" first-container-vertical>
+  <o-wrapper>
     <section>
       <div>
         <a-iframe keep-aspect-ratio background-color="var(--m-gray-400)">
@@ -37,5 +37,5 @@ export const Default = () => html`
         </a-iframe>
       </div>
     </section>
-  </o-grid>
+  </o-wrapper>
 `;
