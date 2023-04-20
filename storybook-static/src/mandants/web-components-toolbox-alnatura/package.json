@@ -6,7 +6,8 @@
   "scripts": {
     "fix": "standard --fix",
     "serve": "live-server --port=3000 --host=localhost --no-css-inject",
-    "test": "live-server --port=2200 --host=localhost --no-browser --ignorePattern=.* & npx playwright test --config=src/es/components/web-components-toolbox/e2e/ && killall node"
+    "test": "live-server --port=2200 --host=localhost --no-browser --ignorePattern=.* & npx playwright test --config=src/es/components/web-components-toolbox/e2e/ && killall node",
+    "update": "git submodule update --init --recursive --remote --force"
   },
   "author": "weedshaker@gmail.com, edx.mgb@gmail.com",
   "license": "MIT",

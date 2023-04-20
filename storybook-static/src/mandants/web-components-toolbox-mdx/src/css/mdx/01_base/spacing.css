@@ -1,0 +1,26 @@
+:root {
+  --mdx-base-spacing-factor: 8.000;
+  --mdx-base-spacing-unit-0x: 0;
+  --mdx-base-spacing-unit-0-5x: 0.25rem;
+  --mdx-base-spacing-unit-1x: 0.5rem;
+  --mdx-base-spacing-unit-1-5x: 0.75rem;
+  --mdx-base-spacing-unit-2x: 1rem;
+  --mdx-base-spacing-unit-2-5x: 1.25rem;
+  --mdx-base-spacing-unit-3x: 1.5rem;
+  --mdx-base-spacing-unit-3-5x: 1.75rem;
+  --mdx-base-spacing-unit-4x: 2rem;
+  --mdx-base-spacing-unit-4-5x: 2.25rem;
+  --mdx-base-spacing-unit-5x: 2.5rem;
+  --mdx-base-spacing-unit-6x: 3rem;
+  --mdx-base-spacing-unit-7x: 3.5rem;
+  --mdx-base-spacing-unit-8x: 4rem;
+  --mdx-base-spacing-unit-9x: 4.5rem;
+  --mdx-base-spacing-unit-10x: 5rem;
+  --mdx-base-spacing-unit-11x: 5.5rem;
+  --mdx-base-spacing-unit-12x: 6rem;
+  --mdx-base-spacing-unit-13x: 6.5rem;
+  --mdx-base-spacing-unit-14x: 7rem;
+  --mdx-base-spacing-unit-15x: 7.5rem;
+  --mdx-base-spacing-unit-16x: 8rem;
+  --mdx-base-spacing-unit-20x: 10rem;
+}
