@@ -149,5 +149,3 @@ At the moment the following components are included.
 - [IntersectionScrollEffect](src/stories/organisms/IntersectionScrollEffect.stories.js)
 - [Modal](src/stories/organisms/Modal.stories.js)
 - [Wrapper](src/stories/organisms/Wrapper.stories.js)
-
-

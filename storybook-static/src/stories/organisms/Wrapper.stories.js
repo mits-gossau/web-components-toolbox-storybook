@@ -10,7 +10,7 @@ import(
 ).then((module) => self.customElements.define("a-picture", module.default));
 
 export default {
-  title: "Organisms/Wrapper (WIP)",
+  title: "Organisms/Wrapper",
   component: "o-wrapper",
 };
 
