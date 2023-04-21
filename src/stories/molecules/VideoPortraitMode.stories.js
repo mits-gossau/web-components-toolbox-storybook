@@ -2,7 +2,7 @@
 import { html } from "lit-html";
 
 export default {
-  title: "Molecules/Video Portrait Mode (WIP)",
+  title: "Molecules/Video Portrait Mode",
   component: "m-video-portrait-mode"
 };
 

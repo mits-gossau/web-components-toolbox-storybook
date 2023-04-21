@@ -12,9 +12,9 @@ This repository is about offering a Storybook with all Web Components, which are
   - [Supported Projects](#supported-projects)
   - [Web Components](#web-components)
     - [Atoms](#atoms)
+    - [Contentful](#contentful)
     - [Molecules](#molecules)
     - [Organisms](#organisms)
-    - [Contentful](#contentful)
 
 ## Setup
 
@@ -116,6 +116,10 @@ At the moment the following components are included.
 - [SliderButton](src/stories/atoms/SliderButton.stories.js)
 - [Video](src/stories/atoms/Video.stories.js)
 
+### Contentful
+
+- [NewsList](src/stories/contentful/NewsList.stories.js) (wip)
+
 ### Molecules
 
 - [Carousel](src/stories/molecules/Carousel.stories.js)
@@ -133,6 +137,7 @@ At the moment the following components are included.
 - [RecipeList](src/stories/molecules/RecipeList.stories.js) (wip)
 - [TagFilter](src/stories/molecules/TagFilter.stories.js)
 - [Teaser](src/stories/molecules/Teaser.stories.js)
+- [VideoPortraitMode](src/stories/molecules/VideoPortraitMode.stories.js)
 
 ### Organisms
 
@@ -145,6 +150,4 @@ At the moment the following components are included.
 - [Modal](src/stories/organisms/Modal.stories.js)
 - [Wrapper](src/stories/organisms/Wrapper.stories.js)
 
-### Contentful
 
-- [NewsList](src/stories/contentful/NewsList.stories.js) (wip)
