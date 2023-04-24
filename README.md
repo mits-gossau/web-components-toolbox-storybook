@@ -74,6 +74,10 @@ This Storybook supports following clients (added as submodules in `src`):
 - [Klubschule](https://github.com/mits-gossau/web-components-toolbox-klubschule)
 - [Logistikplattform](https://github.com/mits-gossau/web-components-toolbox-logistikplattform)
 - [Maker Space](https://github.com/mits-gossau/web-components-toolbox-maker-space)
+- [MDX](https://github.com/mits-gossau/web-components-toolbox-mdx)
+  - corporate
+  - m
+  - showcase
 - [Migros City](https://github.com/mits-gossau/web-components-toolbox-migros-city)
 - [Nature](https://github.com/mits-gossau/web-components-toolbox-nature)
 - [Neumarkt Altstetten](https://github.com/mits-gossau/web-components-toolbox-neumarkt-altstetten)
