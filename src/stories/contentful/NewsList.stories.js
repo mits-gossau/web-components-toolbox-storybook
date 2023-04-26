@@ -1,9 +1,9 @@
 // NewsList.stories.js
 import { html } from "lit-html";
 
-import(
-  "../../web-components-toolbox/src/es/components/controllers/contentful/Contentful"
-).then((module) => customElements.define("c-contentful", module.default));
+// import(
+//   "../../web-components-toolbox/src/es/components/controllers/contentful/Contentful"
+// ).then((module) => customElements.define("c-contentful", module.default));
 
 import(
   "../../web-components-toolbox/src/es/components/controllers/recipe/Recipe"
@@ -29,13 +29,14 @@ export default {
 };
 
 export const Default = () =>
-  html`<c-contentful
+  html`
+  <!--<c-contentful
     space-id="sqcdqqsdj2qy"
     token="N0oUSHJElroOFejl3xoL-KMDTU7rNDfwa84cG_JCPxg"
     limit="5"
     skip="5"
     tag="Alnatura"
-  >
+  >-->
     <c-recipe
       limit="9"
       skip="9"
@@ -54,4 +55,4 @@ export const Default = () =>
         </o-body>
       </p-general>
     </c-recipe>
-  </c-contentful> `;
+  <!--</c-contentful>--> `;
