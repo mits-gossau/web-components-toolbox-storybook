@@ -2,8 +2,28 @@
 import { html } from "lit-html";
 
 import(
+  "../../web-components-toolbox/src/es/components/atoms/input/Input"
+).then((module) => self.customElements.define("a-input", module.default));
+
+import(
+  "../../web-components-toolbox/src/es/components/atoms/button/Button"
+).then((module) => self.customElements.define("a-button", module.default));
+
+import(
+  "../../web-components-toolbox/src/es/components/molecules/pagination/Pagination"
+).then((module) => self.customElements.define("m-pagination", module.default));
+
+import(
   "../../web-components-toolbox/src/es/components/molecules/recipeList/RecipeList"
 ).then((module) => self.customElements.define("m-recipe-list", module.default));
+
+import(
+  "../../web-components-toolbox/src/es/components/molecules/tagFilter/TagFilter"
+).then((module) => self.customElements.define("m-tag-filter", module.default));
+
+import(
+  "../../web-components-toolbox/src/es/components/organisms/grid/Grid"
+).then((module) => self.customElements.define("o-grid", module.default));
 
 export default {
   title: "Molecules/RecipeList (WIP)",
