@@ -6,7 +6,7 @@ import(
 ).then((module) => self.customElements.define("o-footer", module.default));
 
 export default {
-  title: "Organisms/Footer (WIP)",
+  title: "Organisms/Footer",
   component: "o-footer",
 };
 
