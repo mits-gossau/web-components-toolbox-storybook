@@ -1,10 +1,8 @@
 // @ts-check
 import { Shadow } from '../../prototypes/Shadow.js'
 
-
 export default class TotalPrice extends Shadow() {
-
-  constructor(...args) {
+  constructor (...args) {
     super(...args)
     const itemList = []
     this.answerEventNameListener = event => {
@@ -13,14 +11,14 @@ export default class TotalPrice extends Shadow() {
           total: event.detail.total,
           name: event.detail.name
         }
-        const currentItem = itemList.find(il => il.name === item.name);
+        const currentItem = itemList.find(il => il.name === item.name)
         if (currentItem) {
           currentItem.total = item.total
         } else {
           itemList.push(item)
         }
         const priceValues = itemList.map(i => i.total)
-        const totalPrice = price => price.reduce((a, b) => a + Number(b), 0);
+        const totalPrice = price => price.reduce((a, b) => a + Number(b), 0)
         this.totalPriceElement.textContent = parseFloat(totalPrice(priceValues)).toFixed(2)
       }
     }
@@ -32,7 +30,7 @@ export default class TotalPrice extends Shadow() {
     document.body.addEventListener(this.getAttribute('answer-event-name') || 'answer-event-name', this.answerEventNameListener)
   }
 
-  disconnectedCallback() {
+  disconnectedCallback () {
     document.body.removeEventListener(this.getAttribute('answer-event-name') || 'answer-event-name', this.answerEventNameListener)
   }
 
@@ -41,13 +39,14 @@ export default class TotalPrice extends Shadow() {
    *
    * @return {void}
    */
-  renderCSS() {
+  renderCSS () {
     this.css = /* css */`
       :host > div {
-        display: flex;
-        justify-content: flex-end;
         align-items: center;
+        display: flex;
         flex-direction: row;
+        gap:var(--gap, 1em);
+        justify-content: flex-end;
       }
     `
   }
@@ -60,7 +59,6 @@ export default class TotalPrice extends Shadow() {
   shouldRenderCSS() {
     return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
   }
-
 
   /**
    * evaluates if a render is necessary
@@ -76,10 +74,27 @@ export default class TotalPrice extends Shadow() {
    *
    * @return {void}
    */
-  renderHTML() {
+  renderHTML () {
     this.divWrapper = document.createElement('div')
-    this.totalPriceElement = document.createElement('p')
+    this.divWrapper.appendChild(this.createTextContentElement(this.totalText))
+    this.totalPriceElement = this.createTextContentElement('0.00')
     this.divWrapper.appendChild(this.totalPriceElement)
+    this.divWrapper.appendChild(this.createTextContentElement('CHF'))
     this.html = this.divWrapper
+  }
+
+  /**
+   * create a simple p element
+   * @param {string} content
+   * @returns
+   */
+  createTextContentElement (content) {
+    const contentElement = document.createElement('p')
+    if (content) contentElement.textContent = content
+    return contentElement
+  }
+
+  get totalText () {
+    return this.getAttribute('total-text') || 'Total'
   }
 }
