@@ -36,6 +36,9 @@
   --footer-default-color:var(--m-black);
   --footer-default-invert-background-color-custom: var(--m-gray-100);
   --footer-default-invert-color-custom: var(--m-black);
+  --footer-default-invert-svg-color-custom: var(--m-gray-400);
+  --footer-default-ul-list-style: none;
+  --footer-default-ul-margin: 0;
   --header-default-a-logo-top-custom:0;
   --header-default-a-logo-top-mobile-custom: calc(69px / 2 - 38px / 2);
   --header-default-a-menu-icon-background-color-custom:var(--color);
