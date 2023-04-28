@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/mits-gossau/web-components-toolbox-mdx#readme",
   "dependencies": {
-    "@migros/mdx-design-tokens": "^0.24.0"
+    "@migros/mdx-design-tokens": "^0.32.1"
   }
 }

@@ -6,7 +6,8 @@
   isActive: boolean,
   origEvent: CustomEvent,
   tags: [string],
-  this: HTMLElement
+  this: HTMLElement,
+  textContent: string
 }} productListEventDetail */
 
 import { Prototype } from '../Prototype.js'
@@ -24,7 +25,6 @@ export default class ProductList extends Intersection(Prototype()) {
     this.config = this.configSetup()
     this.requestListArticlesEventListener = event => this.widgetRenderSetup(event)
     this.updatePopState = event => {
-      if (!event.state) return
       /** @type {productListEventDetail} */
       if (!event.detail) event.detail = { ...event.state }
       this.widgetRenderSetup(event, false)
@@ -89,7 +89,7 @@ export default class ProductList extends Intersection(Prototype()) {
     let detail
     // check if it has a real event or else it renders the first-time after load at render
     if (event && event.detail && event.detail.tags) {
-      if (setFilter) this.setFilter(event.detail)
+      if (setFilter) this.setFilter(event)
     } else if ((detail = this.getFilter())) {
       // check if this has no subTags and won't clear subTags plus if there has been a detailWithSubTags in the url pre-run it
       if (!detail.fetchSubTags && !detail.clearSubTags) {
@@ -100,7 +100,8 @@ export default class ProductList extends Intersection(Prototype()) {
         detail
       }
     }
-    if (event) this.config.filterOptions.category = event.detail.tags
+    this.setTitle(event)
+    if (event) this.config.filterOptions.category = event.detail.tags || this.configSetup().filterOptions.category
     let subTagFetch
     this.dispatchEvent(new CustomEvent(this.getAttribute('list-articles') || 'list-articles', {
       detail: {
@@ -110,11 +111,11 @@ export default class ProductList extends Intersection(Prototype()) {
         tags: this.config.filterOptions.category,
         subTagFetch: (subTagFetch = event && event.detail.fetchSubTags
           ? fetch((this.getAttribute('endpoint') ? this.getAttribute('endpoint') : 'https://testadmin.alnatura.ch/umbraco/api/ProductsApi/GetCats?cat=') + this.config.filterOptions.category).then(async response => {
-              if (response.status >= 200 && response.status <= 299) {
-                return await response.json()
-              }
-              throw new Error(response.statusText)
-            })
+            if (response.status >= 200 && response.status <= 299) {
+              return await response.json()
+            }
+            throw new Error(response.statusText)
+          })
           : null),
         clearSubTags: event && event.detail.clearSubTags
       },
@@ -182,15 +183,15 @@ export default class ProductList extends Intersection(Prototype()) {
 
   /**
    * Set detail and page in window.history
-   * @param {productListEventDetail} detail
+   * @param {CustomEvent} event
    * @return {void}
    */
-  setFilter (detail) {
-    detail = {
-      pushHistory: detail.pushHistory,
-      fetchSubTags: detail.fetchSubTags,
-      clearSubTags: detail.clearSubTags,
-      tags: detail.tags
+  setFilter (event) {
+    const detail = {
+      pushHistory: event.detail.pushHistory,
+      fetchSubTags: event.detail.fetchSubTags,
+      clearSubTags: event.detail.clearSubTags,
+      tags: event.detail.tags
     }
     const url = new URL(location.href, location.href.charAt(0) === '/' ? location.origin : location.href.charAt(0) === '.' ? import.meta.url.replace(/(.*\/)(.*)$/, '$1') : undefined)
     const detailValue = encodeURIComponent(JSON.stringify(detail))
@@ -211,6 +212,24 @@ export default class ProductList extends Intersection(Prototype()) {
       return JSON.parse(decodeURIComponent(urlParams.get(name) || '')) || null
     } catch (e) {
       return null
+    }
+  }
+
+  /**
+   * @param {CustomEvent | null} event
+   * @param {false | string} [addToTitle = false]
+   */
+  setTitle (event, addToTitle = false) {
+    let textContent
+    if (event && event.detail && event.detail.textContent && (textContent = event.detail.textContent.trim())) {
+      if (addToTitle) {
+        document.title = document.title.replace(new RegExp(`(.*)${addToTitle.replace(/\s/g, '\\s').replace(/\|/g, '\\|')}.*`), '$1')
+        document.title += addToTitle + textContent
+      } else if (document.title.includes('|')) {
+        document.title = document.title.replace(/[^|]*(.*)/, textContent + ' $1')
+      } else {
+        document.title = textContent
+      }
     }
   }
 }
