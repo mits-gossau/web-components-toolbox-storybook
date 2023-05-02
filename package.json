@@ -14,7 +14,7 @@
   "author": "weedshaker@gmail.com, edx.mgb@gmail.com",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.21.4",
+    "@babel/core": "^7.21.5",
     "@etchteam/storybook-addon-css-variables-theme": "^1.4.1",
     "@playwright/test": "^1.33.0",
     "@storybook/addon-actions": "^7.0.7",
