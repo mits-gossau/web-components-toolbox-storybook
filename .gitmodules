@@ -81,3 +81,6 @@
 [submodule "src/clients/web-components-toolbox-mitreva"]
 	path = src/clients/web-components-toolbox-mitreva
 	url = https://github.com/mits-gossau/web-components-toolbox-mitreva
+[submodule "src/clients/web-components-toolbox-migrospro"]
+	path = src/clients/web-components-toolbox-migrospro
+	url = https://github.com/mits-gossau/web-components-toolbox-migrospro
