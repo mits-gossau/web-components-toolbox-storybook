@@ -17,11 +17,14 @@ export default class FormZadb extends Form {
       zip: {
         id: 'zip',
         listId: 'zip-list',
-        customErrorElement: '#plz-field-validation-error'
+        customErrorElement: '#plz-field-validation-error',
+        key: 'localityName'
       },
       street: {
         id: 'street',
-        listId: 'street-list'
+        listId: 'street-list',
+        customErrorElement: '#street-field-validation-error',
+        key: 'streetName'
       }
     }
 
@@ -44,7 +47,7 @@ export default class FormZadb extends Form {
           this.showLoader(this.zipLoader)
           this.zipResults = await this.searchCities(inputField.value)
           this.hideLoader(this.zipLoader)
-          this.showDataList(this.zipResults, this.inputFields.zip.listId, ['zip', 'name_long'], inputField)
+          this.showDataList(this.zipResults, this.inputFields.zip.listId, [this.inputFields.zip.id, this.inputFields.zip.key], inputField)
         } else {
           this.zipResults = []
           this.cleanDialogList(this.inputFields.zip.listId)
@@ -55,7 +58,7 @@ export default class FormZadb extends Form {
         this.clearFieldValues([this.city, this.street])
       }
 
-      if (inputField.getAttribute('id') === this.inputFields.street.id) {
+      if (inputField?.getAttribute('id') === this.inputFields.street.id) {
         this.addListIdAttribute(inputField, this.inputFields.street.listId)
         if (inputField?.value.length >= 1) {
           this.showLoader(this.streetLoader)
@@ -63,7 +66,7 @@ export default class FormZadb extends Form {
           this.hideLoader(this.streetLoader)
           this.removeListIdAttribute(inputField)
           if (this.streetResults.length) {
-            this.showDataList(this.streetResults, this.inputFields.street.listId, ['name'], inputField)
+            this.showDataList(this.streetResults, this.inputFields.street.listId, [this.inputFields.street.key], inputField)
           } else {
             this.cleanDialogList(this.inputFields.street.listId)
           }
@@ -163,7 +166,7 @@ export default class FormZadb extends Form {
       this.streetsByZip = {}
       if (!this.zipResults.length) return
       this.enableFields([this.street, this.city])
-      this.setCityValue(this.city, this.zipResults, e.detail.value, e.detail.name)
+      this.setCityValue(this.city, this.zipResults, e.detail.value, e.detail.localityName)
     }
   }
 
@@ -172,7 +175,7 @@ export default class FormZadb extends Form {
 
   setCityValue (cityField, zipList, zipValue, cityName) {
     if (!zipList.length) return
-    cityField.value = zipList.find(city => city.zip === zipValue && city.name === cityName).name
+    cityField.value = zipList.find(city => city.zip === zipValue && city.localityName === cityName).localityName
   }
 
   enableFields (fields) {
@@ -181,36 +184,55 @@ export default class FormZadb extends Form {
 
   async searchCities (str) {
     this.triggerCustomZipError(false)
+    this.triggerCustomStreetError(false)
     if (str.length > 4) return
     const allCities = await this.getCities(str)
-    if (!allCities.cities.length && str.length === 4) {
+    if (!allCities.length && str.length === 4) {
       this.triggerCustomZipError(true)
     }
-    return allCities.cities.filter(city => city.zip.startsWith(str))
+    return allCities.filter(city => city.zip.startsWith(str))
   }
 
   async searchStreets (str, zip) {
-    if (Object.keys(this.streetsByZip).length === 0) this.streetsByZip = await this.getStreets(zip)
-    return this.streetsByZip.streets.filter(street => street.name.toLowerCase().startsWith(str.toLowerCase()))
+    this.triggerCustomStreetError(false)
+    if (Object.keys(this.streetsByZip).length === 0) {
+      this.streetsByZip = await this.getStreets(zip)
+    }
+    const streets = this.streetsByZip.filter(street => street.streetName.toLowerCase().startsWith(str.toLowerCase()))
+    if(!streets.length) {
+      this.triggerCustomStreetError(true)
+      return []
+    }else{
+      return streets
+    }
   }
 
-  showDataList (results, listName, value, inputField) {
+  /**
+   * Populates the data list
+   * @param {Array} results
+   * @param {string} dataListId
+   * @param {Array} dataValues
+   * @param {HTMLInputElement} inputField
+   * @returns
+   */
+  showDataList (results, dataListId, dataValues, inputField) {
     if (!results || !results.length) return
-    const container = this.root.querySelector(`#${listName}`)
+    const [valueKey, valueName] = dataValues
+    const container = this.root.querySelector(`#${dataListId}`)
     container.innerHTML = ''
     container.style.display = 'block'
     results.forEach(element => {
       const option = document.createElement('option')
-      option.value = element[value[0]]
-      option.text = `${value.map(v => element[v]).join(' ')}`
+      option.value = element[valueKey]
+      option.text = `${dataValues.map(v => element[v]).join(' ')}`
       option.onclick = (e) => {
-        inputField.value = element[value]
+        inputField.value = element[valueKey]
         container.style.display = 'none'
         container.innerHTML = ''
-        this.dispatchEvent(new CustomEvent(listName, {
+        this.dispatchEvent(new CustomEvent(dataListId, {
           detail: {
-            value: element[value[0]],
-            name: element[value[1]]
+            value: element[valueKey],
+            localityName: element[valueName]
           }
         }))
       }
@@ -238,9 +260,6 @@ export default class FormZadb extends Form {
 
   async getStreets (zip) {
     try {
-      // if (this.controller) this.controller.abort()
-      // this.streetFetchController = new AbortController();
-      // const response = await fetch(`${self.Environment.getApiBaseUrl('zadb')}/umbraco/api/BetriebsrestaurantZadbApi/GetStreetsByZip?zip=${zip}`, { signal: this.streetFetchController.signal })
       // @ts-ignore
       const response = await fetch(`${self.Environment.getApiBaseUrl('zadb')}/GetStreetsByZip?zip=${zip}`)
       const streets = await response.json()
@@ -287,6 +306,10 @@ export default class FormZadb extends Form {
     return this.root.querySelector(this.inputFields.zip.customErrorElement)
   }
 
+  get getCustomStreetErrorElement() {
+    return this.root.querySelector(this.inputFields.street.customErrorElement)
+  }
+
   hideLoader (loader) {
     if (!loader) return
     loader.style.visibility = 'hidden'
@@ -299,6 +322,11 @@ export default class FormZadb extends Form {
 
   triggerCustomZipError (displayElement) {
     const customError = this.getCustomZipErrorElement
+    customError.style.display = displayElement ? 'block' : 'none'
+  }
+
+  triggerCustomStreetError(displayElement) {
+    const customError = this.getCustomStreetErrorElement
     customError.style.display = displayElement ? 'block' : 'none'
   }
 }

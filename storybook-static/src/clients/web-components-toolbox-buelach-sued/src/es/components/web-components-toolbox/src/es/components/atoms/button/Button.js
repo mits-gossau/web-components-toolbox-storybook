@@ -16,10 +16,22 @@ export default class Button extends Shadow() {
     return ['label', 'disabled']
   }
 
-  constructor (...args) {
-    super(...args)
+  constructor (options = {}, ...args) {
+    super({ importMetaUrl: import.meta.url, ...options }, ...args)
 
-    this.origInnerHTML = this.root.innerHTML
+    // get the original innerHTML of the component, so that when it rerenders as an a-tag it doesn't loose its content
+    let button
+    // incase there is already a button, grab the buttons innerHTML, since renderHTML is going to create a new button resp. a-tag instead of the button
+    if ((button = this.root.querySelector('button'))) {
+      if (this.label) {
+        if (this.label.textContent.length && this.label.textContent.trim().length) this.labelText = this.label.textContent.trim()
+        this.label.remove()
+      }
+      this.origInnerHTML = button.innerHTML
+      button.remove()
+    } else {
+      this.origInnerHTML = this.root.innerHTML
+    }
     this.clickListener = event => {
       if (this.hasAttribute('disabled')) event.preventDefault()
       if (this.getAttribute('request-event-name')) {
@@ -56,7 +68,7 @@ export default class Button extends Shadow() {
       this.setAttribute('data-href', this.getAttribute('href'))
       this.setAttribute('role', 'link')
     }
-    if (this.textContent.length) {
+    if (this.textContent.length && this.textContent.trim().length) {
       this.labelText = this.textContent.trim() // allow its initial textContent to become the label if there are no nodes but only text
       this.textContent = ''
     }
@@ -152,7 +164,7 @@ export default class Button extends Shadow() {
   }
 
   /**
-   * renders the o-teaser-wrapper css
+   * renders the css
    *
    * @return {Promise<void>}
    */
@@ -259,6 +271,15 @@ export default class Button extends Shadow() {
         }
       }
     `
+    return this.fetchTemplate()
+  }
+
+  /**
+   * fetches the template
+   *
+   * @return {Promise<void>}
+   */
+  fetchTemplate () {
     const replaces = this.buttonTagName === 'a'
       ? [{
           pattern: '([^-]{1})button',
@@ -270,58 +291,59 @@ export default class Button extends Shadow() {
       case 'button-primary-':
         return this.fetchCSS([{
           // @ts-ignore
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./primary-/primary-.css`,
+          path: `${this.importMetaUrl}./primary-/primary-.css`,
           namespace: false,
           replaces
         }])
       case 'button-secondary-':
         return this.fetchCSS([{
           // @ts-ignore
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./secondary-/secondary-.css`,
+          path: `${this.importMetaUrl}./secondary-/secondary-.css`,
           namespace: false,
           replaces
         }])
       case 'button-tertiary-':
         return this.fetchCSS([{
           // @ts-ignore
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./tertiary-/tertiary-.css`,
+          path: `${this.importMetaUrl}./tertiary-/tertiary-.css`,
           namespace: false,
           replaces
         }])
       case 'button-quaternary-':
         return this.fetchCSS([{
           // @ts-ignore
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./quaternary-/quaternary-.css`,
+          path: `${this.importMetaUrl}./quaternary-/quaternary-.css`,
           namespace: false,
           replaces
         }])
       case 'button-download-':
         return this.fetchCSS([{
           // @ts-ignore
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./download-/download-.css`,
+          path: `${this.importMetaUrl}./download-/download-.css`,
           namespace: false,
           replaces
         }])
       case 'button-category-':
         return this.fetchCSS([{
           // @ts-ignore
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./primary-/primary-.css`,
+          path: `${this.importMetaUrl}./primary-/primary-.css`,
           namespace: false,
-          replaces
+          replaces: replaces.concat([{
+            pattern: '--button-primary-',
+            flags: 'g',
+            replacement: '--button-category-'
+          }])
         },
         {
           // @ts-ignore
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./category-/category-.css`,
+          path: `${this.importMetaUrl}./category-/category-.css`,
           namespace: false,
           replaces
-        }]).then(fetchCSSParams => {
-          // harmonize the primary-.css namespace with --category
-          fetchCSSParams[0].styleNode.textContent = fetchCSSParams[0].styleNode.textContent.replace(/--primary-/g, '--category-')
-        })
+        }])
       case 'button-square-':
         return this.fetchCSS([{
           // @ts-ignore
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./square-/square-.css`,
+          path: `${this.importMetaUrl}./square-/square-.css`,
           namespace: false,
           replaces
         }])

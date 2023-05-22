@@ -12,6 +12,10 @@ import { Shadow } from '../../prototypes/Shadow.js'
  * @css {}
  */
 export default class Grid extends Shadow() {
+  constructor (options = {}, ...args) {
+    super({ importMetaUrl: import.meta.url, ...options }, ...args)
+  }
+
   connectedCallback () {
     this.hidden = true
     const showPromises = []
@@ -53,24 +57,33 @@ export default class Grid extends Shadow() {
         }
       }
     `
+    return this.fetchTemplate()
+  }
+
+  /**
+   * fetches the template
+   *
+   * @return {Promise<void>}
+   */
+  fetchTemplate () {
     /** @type {import("../../prototypes/Shadow.js").fetchCSSParams[]} */
     const styles = [
       {
-        path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}../../../../css/reset.css`, // no variables for this reason no namespace
+        path: `${this.importMetaUrl}../../../../css/reset.css`, // no variables for this reason no namespace
         namespace: false
       },
       {
-        path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}../../../../css/style.css`, // apply namespace and fallback to allow overwriting on deeper level
+        path: `${this.importMetaUrl}../../../../css/style.css`, // apply namespace and fallback to allow overwriting on deeper level
         namespaceFallback: true
       }
     ]
     switch (this.getAttribute('namespace')) {
       case 'grid-2colums2rows-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./2colums2rows-/2colums2rows-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./2colums2rows-/2colums2rows-.css`, // apply namespace since it is specific and no fallback
           namespace: false
         }, ...styles], false).then(fetchCSSParams => {
-          // make template ${code} accessible
+          // make template ${code} accessible aka. set the variables in the literal string
           fetchCSSParams[0].styleNode.textContent = eval('`' + fetchCSSParams[0].style + '`')// eslint-disable-line no-eval
         })
       default:

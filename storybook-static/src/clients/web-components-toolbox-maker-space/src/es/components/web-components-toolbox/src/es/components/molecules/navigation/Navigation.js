@@ -44,7 +44,11 @@ import { Shadow } from '../../prototypes/Shadow.js'
  */
 export default class Navigation extends Mutation() {
   constructor (options = {}, ...args) {
-    super(Object.assign(options, { mutationObserverInit: { attributes: true, attributeFilter: ['aria-expanded'] } }), ...args)
+    super({
+      importMetaUrl: import.meta.url,
+      mutationObserverInit: { attributes: true, attributeFilter: ['aria-expanded'] },
+      ...options
+    }, ...args)
 
     this.isDesktop = this.checkMedia('desktop')
     // desktop keep gray background in right position
@@ -593,60 +597,79 @@ export default class Navigation extends Mutation() {
         100% {left: 0}
       }
     `
+    return this.fetchTemplate()
+  }
+
+  /**
+   * fetches the template
+   *
+   * @return {Promise<void>}
+   */
+  fetchTemplate () {
     /** @type {import("../../prototypes/Shadow.js").fetchCSSParams[]} */
     const styles = [
       {
-        path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}../../../../css/reset.css`, // no variables for this reason no namespace
+        path: `${this.importMetaUrl}../../../../css/reset.css`, // no variables for this reason no namespace
         namespace: false
       },
       {
-        path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}../../../../css/style.css`, // apply namespace and fallback to allow overwriting on deeper level
+        path: `${this.importMetaUrl}../../../../css/style.css`, // apply namespace and fallback to allow overwriting on deeper level
         namespaceFallback: true
       }
     ]
     switch (this.getAttribute('namespace')) {
       case 'navigation-default-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./default-/default-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./default-/default-.css`, // apply namespace since it is specific and no fallback
           namespace: false
         }], false)
       case 'navigation-alnatura-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./default-/default-.css`, // apply namespace since it is specific and no fallback
-          namespace: false
+          path: `${this.importMetaUrl}./default-/default-.css`, // apply namespace since it is specific and no fallback
+          namespace: false,
+          replaces: [{
+            pattern: '--navigation-default-',
+            flags: 'g',
+            replacement: '--navigation-alnatura-'
+          }]
         }, {
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./alnatura-/alnatura-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./alnatura-/alnatura-.css`, // apply namespace since it is specific and no fallback
           namespace: false
-        }, ...styles], false).then(fetchCSSParams => {
-          // harmonize the default-.css namespace with navigation-alnatura-
-          fetchCSSParams[0].styleNode.textContent = fetchCSSParams[0].styleNode.textContent.replace(/--navigation-default-/g, '--navigation-alnatura-')
-        })
+        }, ...styles], false)
       case 'navigation-nature-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./default-/default-.css`, // apply namespace since it is specific and no fallback
-          namespace: false
+          path: `${this.importMetaUrl}./default-/default-.css`, // apply namespace since it is specific and no fallback
+          namespace: false,
+          replaces: [{
+            pattern: '--navigation-default-',
+            flags: 'g',
+            replacement: '--navigation-nature-'
+          }]
         }, {
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./nature-/nature-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./nature-/nature-.css`, // apply namespace since it is specific and no fallback
           namespace: false
-        }, ...styles], false).then(fetchCSSParams => {
-          // harmonize the default-.css namespace with navigation-nature-
-          fetchCSSParams[0].styleNode.textContent = fetchCSSParams[0].styleNode.textContent.replace(/--navigation-default-/g, '--navigation-nature-')
-        })
+        }, ...styles], false)
       case 'navigation-yearbooks-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./default-/default-.css`, // apply namespace since it is specific and no fallback
-          namespace: false
+          path: `${this.importMetaUrl}./default-/default-.css`, // apply namespace since it is specific and no fallback
+          namespace: false,
+          replaces: [{
+            pattern: '--navigation-default-',
+            flags: 'g',
+            replacement: '--navigation-yearbooks-'
+          }]
         }, {
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./alnatura-/alnatura-.css`, // apply namespace since it is specific and no fallback
-          namespace: false
+          path: `${this.importMetaUrl}./alnatura-/alnatura-.css`, // apply namespace since it is specific and no fallback
+          namespace: false,
+          replaces: [{
+            pattern: '--navigation-alnatura-',
+            flags: 'g',
+            replacement: '--navigation-yearbooks-'
+          }]
         }, {
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./yearbooks-/yearbooks-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./yearbooks-/yearbooks-.css`, // apply namespace since it is specific and no fallback
           namespace: false
-        }, ...styles], false).then(fetchCSSParams => {
-          // harmonize the default-.css namespace with navigation-alnatura-
-          fetchCSSParams[0].styleNode.textContent = fetchCSSParams[0].styleNode.textContent.replace(/--navigation-default-/g, '--navigation-yearbooks-')
-          fetchCSSParams[1].styleNode.textContent = fetchCSSParams[1].styleNode.textContent.replace(/--navigation-alnatura-/g, '--navigation-yearbooks-')
-        })
+        }, ...styles], false)
       default:
         return Promise.resolve()
     }

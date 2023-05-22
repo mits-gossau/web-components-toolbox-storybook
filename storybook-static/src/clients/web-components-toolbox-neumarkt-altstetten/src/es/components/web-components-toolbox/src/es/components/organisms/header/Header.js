@@ -40,8 +40,8 @@ import { Shadow } from '../../prototypes/Shadow.js'
  * }
  */
 export default class Header extends Shadow() {
-  constructor (...args) {
-    super(...args)
+  constructor (options = {}, ...args) {
+    super({ importMetaUrl: import.meta.url, ...options }, ...args)
 
     this.setAttribute('role', 'banner')
     this.setAttribute('aria-label', 'Header')
@@ -397,10 +397,19 @@ export default class Header extends Shadow() {
         }
       }
     `
+    return this.fetchTemplate()
+  }
+
+  /**
+   * fetches the template
+   *
+   * @return {Promise<void>}
+   */
+  fetchTemplate () {
     switch (this.getAttribute('namespace')) {
       case 'header-default-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./default-/default-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./default-/default-.css`, // apply namespace since it is specific and no fallback
           namespace: false
         }], false)
       default:

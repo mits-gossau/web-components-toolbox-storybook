@@ -1,0 +1,18 @@
+/**
+  * Variables naming rule: --{selector aka component aka namespace}-{css property}-{pseudo class or media query name} eg. --p-background-color-hover 
+  * NOTE: Within the component don't use any name spacing eg. component header don't use --header-default-color just use --color the namespace can be added by the Shadow as an html attribute
+  * - if a component holds other components or nodes you can declare or remap classes eg. :host > h1 {--color: var(--h1-color, white);}
+  * - if a component holds other components you should share the attribute namespace with its children
+  */
+
+:root {
+  --background-color: #ffffff;
+  --color-disabled: #6c6c6c;
+  --color-hover: #385ba0;
+  --color-secondary: #263e6e;
+  --color-tertiary: #263e6e;
+  --footer-default-invert-svg-color-custom: #ffffff;
+
+  --header-default-margin-custom: 0 0 2em 0;
+  --header-default-margin-mobile-custom: 0 0 2em 0;
+}

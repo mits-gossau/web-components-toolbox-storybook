@@ -12,7 +12,11 @@ import { Intersection } from '../../prototypes/Intersection.js'
  */
 export default class Teaser extends Intersection() {
   constructor (options = {}, ...args) {
-    super(Object.assign(options, { intersectionObserverInit: { rootMargin: '0px 0px 0px 0px' } }), ...args)
+    super({
+      importMetaUrl: import.meta.url,
+      intersectionObserverInit: { rootMargin: '0px 0px 0px 0px' },
+      ...options
+    }, ...args)
 
     this.setAttribute('role', 'figure')
     // link behavior made accessible
@@ -186,37 +190,48 @@ export default class Teaser extends Intersection() {
         }
       }
     `
+    return this.fetchTemplate()
+  }
+
+  /**
+   * fetches the template
+   *
+   * @return {Promise<void>}
+   */
+  fetchTemplate () {
     /** @type {import("../../prototypes/Shadow.js").fetchCSSParams[]} */
     const styles = [
       {
-        path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}../../../../css/reset.css`, // no variables for this reason no namespace
+        path: `${this.importMetaUrl}../../../../css/reset.css`, // no variables for this reason no namespace
         namespace: false
       },
       {
-        path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}../../../../css/style.css`, // apply namespace and fallback to allow overwriting on deeper level
+        path: `${this.importMetaUrl}../../../../css/style.css`, // apply namespace and fallback to allow overwriting on deeper level
         namespaceFallback: true
       }
     ]
     switch (this.getAttribute('namespace')) {
       case 'teaser-tile-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./tile-/tile-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./tile-/tile-.css`, // apply namespace since it is specific and no fallback
           namespace: false
         }, ...styles], false)
       case 'teaser-tile-text-center-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./tile-/tile-.css`, // apply namespace since it is specific and no fallback
-          namespace: false
+          path: `${this.importMetaUrl}./tile-/tile-.css`, // apply namespace since it is specific and no fallback
+          namespace: false,
+          replaces: [{
+            pattern: '--teaser-tile-',
+            flags: 'g',
+            replacement: '--teaser-tile-text-center-'
+          }]
         }, {
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./tile-text-center-/tile-text-center-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./tile-text-center-/tile-text-center-.css`, // apply namespace since it is specific and no fallback
           namespace: false
-        }, ...styles], false).then(fetchCSSParams => {
-          // harmonize the tile-.css namespace with teaser-tile-text-center-
-          fetchCSSParams[0].styleNode.textContent = fetchCSSParams[0].styleNode.textContent.replace(/--teaser-tile-/g, '--teaser-tile-text-center-')
-        })
+        }, ...styles], false)
       case 'teaser-tile-rounded-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./tile-/tile-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./tile-/tile-.css`, // apply namespace since it is specific and no fallback
           namespace: false,
           // harmonize the tile-.css namespace with teaser-tile-rounded-
           replaces: [{
@@ -225,32 +240,32 @@ export default class Teaser extends Intersection() {
             replacement: '--teaser-tile-rounded-'
           }]
         }, {
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./tile-rounded-/tile-rounded-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./tile-rounded-/tile-rounded-.css`, // apply namespace since it is specific and no fallback
           namespace: false
         }, ...styles], false)
       case 'teaser-overlay-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./overlay-/overlay-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./overlay-/overlay-.css`, // apply namespace since it is specific and no fallback
           namespace: false
         }, ...styles], false)
       case 'teaser-overlay-top-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./overlay-top-/overlay-top-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./overlay-top-/overlay-top-.css`, // apply namespace since it is specific and no fallback
           namespace: false
         }, ...styles], false)
       case 'teaser-download-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./download-/download-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./download-/download-.css`, // apply namespace since it is specific and no fallback
           namespace: false
         }, ...styles], false)
       case 'teaser-round-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./round-/round-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./round-/round-.css`, // apply namespace since it is specific and no fallback
           namespace: false
         }, ...styles], false)
       case 'teaser-plain-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./plain-/plain-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./plain-/plain-.css`, // apply namespace since it is specific and no fallback
           namespace: false
         }, ...styles], false)
       default:
@@ -262,10 +277,11 @@ export default class Teaser extends Intersection() {
     // accessible and seo conform a tag wrapped around this component
     if (this.hasAttribute('href') && this.parentNode) {
       const a = document.createElement('a')
+      Array.from(this.attributes).forEach(attribute => {
+        if (!attribute.name.includes('hidden')) a.setAttribute(attribute.name, attribute.value)
+      })
+      if (a.hasAttribute('id')) this.removeAttribute('id')
       a.setAttribute('wrapper', '')
-      a.setAttribute('href', this.getAttribute('href'))
-      a.setAttribute('target', this.getAttribute('target') || '_self')
-      if (this.hasAttribute('rel')) a.setAttribute('rel', this.getAttribute('rel'))
       a.style.color = 'inherit'
       a.style.textDecoration = 'inherit'
       this.parentNode.replaceChild(a, this)

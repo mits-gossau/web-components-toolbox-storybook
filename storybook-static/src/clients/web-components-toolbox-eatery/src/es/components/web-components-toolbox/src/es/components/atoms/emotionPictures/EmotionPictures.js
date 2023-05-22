@@ -14,7 +14,11 @@ import { Intersection } from '../../prototypes/Intersection.js'
  */
 export default class EmotionPictures extends Intersection() {
   constructor (options = {}, ...args) {
-    super(Object.assign(options, { intersectionObserverInit: { rootMargin: '0px', threshold: 0.75 } }), ...args)
+    super({
+      importMetaUrl: import.meta.url,
+      intersectionObserverInit: { rootMargin: '0px', threshold: 0.75 },
+      ...options
+    }, ...args)
 
     this.setAttribute('role', 'banner')
     Array.from(this.aPictures).forEach(node => node.setAttribute('loading', this.getAttribute('loading') || 'eager'))
@@ -196,11 +200,19 @@ export default class EmotionPictures extends Intersection() {
 
     // add the style for resize to the html
     this.html = this.style
+    return this.fetchTemplate()
+  }
 
+  /**
+   * fetches the template
+   *
+   * @return {Promise<void>}
+   */
+  fetchTemplate () {
     const styles = [
       {
         // @ts-ignore
-        path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}../../../../css/style.css`, // apply namespace and fallback to allow overwriting on deeper level
+        path: `${this.importMetaUrl}../../../../css/style.css`, // apply namespace and fallback to allow overwriting on deeper level
         namespaceFallback: true
       }
     ]
@@ -209,38 +221,40 @@ export default class EmotionPictures extends Intersection() {
       case 'emotion-pictures-with-title-':
         return this.fetchCSS([{
           // @ts-ignore
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./with-title-/with-title-.css`,
+          path: `${this.importMetaUrl}./with-title-/with-title-.css`,
           namespace: false
         }, ...styles], false)
       case 'emotion-pictures-with-button-':
         return this.fetchCSS([{
           // @ts-ignore
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./with-button-/with-button-.css`,
+          path: `${this.importMetaUrl}./with-button-/with-button-.css`,
           namespace: false
         }, ...styles], false)
       case 'emotion-pictures-with-logo-':
         return this.fetchCSS([{
           // @ts-ignore
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./with-logo-/with-logo-.css`,
+          path: `${this.importMetaUrl}./with-logo-/with-logo-.css`,
           namespace: false
         }, ...styles], false)
       case 'emotion-pictures-with-video-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./with-title-/with-title-.css`, // apply namespace since it is specific and no fallback
-          namespace: false
+          path: `${this.importMetaUrl}./with-title-/with-title-.css`, // apply namespace since it is specific and no fallback
+          namespace: false,
+          replaces: [{
+            pattern: '--emotion-pictures-with-title-',
+            flags: 'g',
+            replacement: '--emotion-pictures-with-video-'
+          }]
         },
         {
           // @ts-ignore
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./with-video-/with-video-.css`,
+          path: `${this.importMetaUrl}./with-video-/with-video-.css`,
           namespace: false
-        }, ...styles], false).then(fetchCSSParams => {
-          // harmonize the emotion-picture-with-title-.css namespace with --emotion-picture-with-video
-          fetchCSSParams[0].styleNode.textContent = fetchCSSParams[0].styleNode.textContent.replace(/--emotion-pictures-with-title-/g, '--emotion-pictures-with-video-')
-        })
+        }, ...styles], false)
       case 'emotion-pictures-default-':
         return this.fetchCSS([{
           // @ts-ignore
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./default-/default-.css`,
+          path: `${this.importMetaUrl}./default-/default-.css`,
           namespace: false
         }], false)
       default:

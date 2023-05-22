@@ -55,8 +55,8 @@
   --teaser-tile-h5-font-size:1.5em;
   --teaser-title-figcaption-background-color: var(--m-white);
 
-  --hotspot-button-background-color-hover: #AACF80;
-  --hotspot-button-background-color: #ff6600;
+  --hotspot-default-button-background-color-hover: #AACF80;
+  --hotspot-default-button-background-color: #ff6600;
   --hotspot-picture-img-max-height: var(--image-hotspot-width);
   --hotspot-picture-img-width: var(--image-hotspot-width);
   --image-hotspot-width: 100vw;

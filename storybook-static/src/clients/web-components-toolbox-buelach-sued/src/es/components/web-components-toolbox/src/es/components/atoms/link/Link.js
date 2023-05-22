@@ -33,8 +33,8 @@ import { Shadow } from '../../prototypes/Shadow.js'
  *
  */
 export default class Link extends Shadow() {
-  constructor (a, ...args) {
-    super(...args)
+  constructor (a, options = {}, ...args) {
+    super({ importMetaUrl: import.meta.url, ...options }, ...args)
 
     this._a = a
     this.setAttribute('role', 'link')
@@ -89,7 +89,7 @@ export default class Link extends Shadow() {
   /**
    * renders the css
    *
-   * @return {void}
+   * @return {Promise<void>}
    */
   renderCSS () {
     this.css = /* css */`
@@ -243,27 +243,38 @@ export default class Link extends Shadow() {
         }
       }
     `
+    return this.fetchTemplate()
+  }
+
+  /**
+   * fetches the template
+   *
+   * @return {Promise<void>}
+   */
+  fetchTemplate () {
     switch (this.getAttribute('namespace')) {
       case 'underline-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./underline-/underline-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./underline-/underline-.css`, // apply namespace since it is specific and no fallback
           namespace: false
         }])
       case 'download-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./download-/download-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./download-/download-.css`, // apply namespace since it is specific and no fallback
           namespace: false
         }])
       case 'tag-filter-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./tag-filter-/tag-filter-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./tag-filter-/tag-filter-.css`, // apply namespace since it is specific and no fallback
           namespace: false
         }])
       case 'category-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./category-/category-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./category-/category-.css`, // apply namespace since it is specific and no fallback
           namespace: false
         }])
+      default:
+        return Promise.resolve()
     }
   }
 
@@ -315,7 +326,7 @@ export default class Link extends Shadow() {
   }
 
   get iconPath () {
-    return this.getAttribute('icon-path') || `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}../../molecules/teaser/download-/img/download.svg`
+    return this.getAttribute('icon-path') || `${this.importMetaUrl}../../molecules/teaser/download-/img/download.svg`
   }
 
   get parentNodeShadowRootHost () {

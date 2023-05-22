@@ -46,8 +46,8 @@ export default class Modal extends Shadow() {
     return ['open']
   }
 
-  constructor (...args) {
-    super(...args)
+  constructor (options = {}, ...args) {
+    super({ importMetaUrl: import.meta.url, ...options }, ...args)
 
     // this.setAttribute('aria-label', 'Section')
     this.setAttribute('role', 'dialog') // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role
@@ -230,7 +230,7 @@ export default class Modal extends Shadow() {
   /**
    * renders the o-modal css
    *
-   * @return {void}
+   * @return {Promise<void>}
    */
   renderCSS () {
     this.css = /* css */`
@@ -303,11 +303,21 @@ export default class Modal extends Shadow() {
         }
       }
     `
+    return this.fetchTemplate()
+  }
+
+  /**
+   * fetches the template
+   *
+   * @return {Promise<void>}
+   */
+  fetchTemplate () {
     switch (this.getAttribute('namespace')) {
       case 'modal-default-':
+      default:
         return this.fetchCSS([{
           // @ts-ignore
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./default-/default-.css`,
+          path: `${this.importMetaUrl}./default-/default-.css`,
           namespace: false
         }], false)
     }

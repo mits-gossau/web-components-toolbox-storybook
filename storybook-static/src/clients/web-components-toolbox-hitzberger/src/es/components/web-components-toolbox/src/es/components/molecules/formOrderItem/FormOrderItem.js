@@ -5,35 +5,66 @@
 import Form from '../form/Form.js'
 
 export default class FormOrderItem extends Form {
-  constructor (...args) {
-    super(...args)
+  constructor (options = {}, ...args) {
+    super({ importMetaUrl: import.meta.url, ...options }, ...args)
     this.eventListener = event => {
       const inputField = this.root.querySelector(':focus')
-      if (!inputField) return
-      const value = inputField?.value ? inputField.value : '0'
-      this.updateInputAttributeValue(inputField, value)
-      this.calcTotal(value, this.priceAttribute, this.priceTotalElement)
+      if (!inputField || inputField.getAttribute('type') === 'checkbox') return
+      if (inputField === this.clearQuantityBtn) {
+        if (event.key === 'Enter' || event.key === 'Spacebar' || event.key === ' ') this.clickListener()
+      } else {
+        const value = inputField?.value ? inputField.value : '0'
+        this.updateInputAttributeValue(inputField, value)
+        this.calcTotal(value, this.priceAttribute, this.priceTotalElement)
+      }
     }
     this.clickListener = event => {
       this.quantityField.value = ''
       this.calcTotal('0', this.priceAttribute, this.priceTotalElement)
     }
+    this.checkboxChangeListener = event => {
+      if(event.currentTarget.checked) {
+        this.calcTotal('1', this.priceAttribute, this.priceTotalElement)
+      } else {
+        this.calcTotal('0', this.priceAttribute, this.priceTotalElement)
+      }
+    }
   }
 
   connectedCallback () {
     super.connectedCallback()
-    this.clearQuantityBtn.addEventListener('click', this.clickListener)
+    if (this.clearQuantityBtn) this.clearQuantityBtn.addEventListener('click', this.clickListener)
     this.addEventListener('keyup', this.eventListener)
+    if(this.checkboxInput) this.checkboxInput.addEventListener('change', this.checkboxChangeListener)
     this.setPrice(this.priceAttribute, this.priceElement)
     this.calcTotal('0', this.priceAttribute, this.priceTotalElement)
+    if (this.getAttribute('is-fixed-price')) {
+      const currentPrice = parseFloat(this.priceAttribute)
+      const parentFormElement = this.closest('m-form')
+
+      if (parentFormElement.getAttribute('fixed-price-total')) {
+        let amount = parseFloat(parentFormElement.getAttribute('fixed-price-total'))
+        amount += currentPrice
+        parentFormElement.setAttribute('fixed-price-total', amount)
+      } else {
+        parentFormElement.setAttribute('fixed-price-total', currentPrice)
+      }
+      
+    }
   }
 
   disconnectedCallback () {
     super.disconnectedCallback()
-    this.clearQuantityBtn.removeEventListener('click', this.clickListener)
+    if (this.clearQuantityBtn) this.clearQuantityBtn.removeEventListener('click', this.clickListener)
+    if(this.checkboxInput) this.checkboxInput.removeEventListener('change', this.checkboxChangeListener)
     this.removeEventListener('keyup', this.eventListener)
   }
 
+  /**
+   * renders the css
+   *
+   * @return {Promise<void>}
+   */
   renderCSS () {
     this.css = /* css */ `
       :host {
@@ -58,16 +89,24 @@ export default class FormOrderItem extends Form {
         padding:var(--padding, 0);
         border-top: 1px solid var(--border-top-color, black);
       }
-    }`
+    `
+    return this.fetchTemplate()
+  }
 
+  /**
+   * fetches the template
+   *
+   * @return {Promise<void>}
+   */
+  fetchTemplate () {
     /** @type {import("../../prototypes/Shadow.js").fetchCSSParams[]} */
     const styles = [
       {
-        path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}../../../../css/reset.css`, // no variables for this reason no namespace
+        path: `${this.importMetaUrl}../../../../css/reset.css`, // no variables for this reason no namespace
         namespace: false
       },
       {
-        path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}../../../../css/style.css`, // apply namespace and fallback to allow overwriting on deeper level
+        path: `${this.importMetaUrl}../../../../css/style.css`, // apply namespace and fallback to allow overwriting on deeper level
         namespaceFallback: true
       }
     ]
@@ -75,7 +114,7 @@ export default class FormOrderItem extends Form {
     switch (this.getAttribute('namespace')) {
       case 'form-order-item-default-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./default-/default-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./default-/default-.css`, // apply namespace since it is specific and no fallback
           namespace: false
         }, ...styles], false)
       default:
@@ -90,7 +129,7 @@ export default class FormOrderItem extends Form {
    */
   setPrice (priceAttribute, priceElement) {
     if (!priceElement) return
-    priceElement.innerText = priceAttribute
+    priceElement.innerText = parseFloat(priceAttribute).toFixed(2)
   }
 
   /**
@@ -127,7 +166,7 @@ export default class FormOrderItem extends Form {
   }
 
   get quantityField () {
-    return this.root.querySelector('#quantity')
+    return this.root.querySelector('.quantity')
   }
 
   get priceAttribute () {
@@ -136,6 +175,10 @@ export default class FormOrderItem extends Form {
 
   get priceElement () {
     return this.root.querySelector('.price') || null
+  }
+
+  get checkboxInput () {
+    return this.root.querySelector('input[type=checkbox]') || null
   }
 
   get priceTotalElement () {

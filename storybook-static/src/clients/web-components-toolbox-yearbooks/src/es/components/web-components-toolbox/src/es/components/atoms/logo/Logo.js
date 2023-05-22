@@ -45,8 +45,8 @@ import { Shadow } from '../../prototypes/Shadow.js'
  * }
  */
 export default class Logo extends Shadow() {
-  constructor (...args) {
-    super(...args)
+  constructor (options = {}, ...args) {
+    super({ importMetaUrl: import.meta.url, ...options }, ...args)
 
     this.textSelector = ':not(img):not(a):not(style):not(script)'
     this.setAttribute('lang', document.documentElement.getAttribute('lang') || 'de')
@@ -102,7 +102,7 @@ export default class Logo extends Shadow() {
   /**
    * renders the css
    *
-   * @return {void}
+   * @return {Promise<void>}
    */
   renderCSS () {
     this.css = /* css */`
@@ -192,17 +192,28 @@ export default class Logo extends Shadow() {
         }
       }
     `
+    return this.fetchTemplate()
+  }
+
+  /**
+   * fetches the template
+   *
+   * @return {Promise<void>}
+   */
+  fetchTemplate () {
     switch (this.getAttribute('namespace')) {
       case 'logo-default-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./default-/default-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./default-/default-.css`, // apply namespace since it is specific and no fallback
           namespace: false
         }])
       case 'logo-partner-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./partner-/partner-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./partner-/partner-.css`, // apply namespace since it is specific and no fallback
           namespace: false
         }])
+      default:
+        return Promise.resolve()
     }
   }
 

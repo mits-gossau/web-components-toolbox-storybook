@@ -5,8 +5,8 @@
 import { Shadow } from '../../prototypes/Shadow.js'
 
 export default class NewsList extends Shadow() {
-  constructor (...args) {
-    super(...args)
+  constructor (options = {}, ...args) {
+    super({ importMetaUrl: import.meta.url, ...options }, ...args)
     this.RESOLVE_STATE = 'LOADED'
     this.answerEventNameListener = event => {
       this.hidden = false
@@ -66,7 +66,7 @@ export default class NewsList extends Shadow() {
       contentfulRenderer.setAttribute('type', 'text/javascript')
       contentfulRenderer.setAttribute('id', 'contentful-renderer')
       try {
-        contentfulRenderer.setAttribute('src', `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}../../controllers/contentful/rich-text-html-renderer.es5.min.js`)
+        contentfulRenderer.setAttribute('src', `${this.importMetaUrl}../../controllers/contentful/rich-text-html-renderer.es5.min.js`)
         document.body.appendChild(contentfulRenderer)
         contentfulRenderer.onload = () => resolve(this.RESOLVE_STATE)
       } catch (e) {
@@ -79,6 +79,11 @@ export default class NewsList extends Shadow() {
     return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
   }
 
+  /**
+   * renders css
+   *
+   * @return {Promise<void>}
+   */
   renderCSS () {
     this.css = /* css */ `
     :host > div {
@@ -88,22 +93,30 @@ export default class NewsList extends Shadow() {
     }
     @media only screen and (max-width: _max-width_) {}
     `
+    return this.fetchTemplate()
+  }
 
+  /**
+   * fetches the template
+   *
+   * @return {Promise<void>}
+   */
+  fetchTemplate () {
     /** @type {import("../../prototypes/Shadow.js").fetchCSSParams[]} */
     const styles = [
       {
-        path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}../../../../css/reset.css`, // no variables for this reason no namespace
+        path: `${this.importMetaUrl}../../../../css/reset.css`, // no variables for this reason no namespace
         namespace: false
       },
       {
-        path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}../../../../css/style.css`, // apply namespace and fallback to allow overwriting on deeper level
+        path: `${this.importMetaUrl}../../../../css/style.css`, // apply namespace and fallback to allow overwriting on deeper level
         namespaceFallback: false
       }
     ]
     switch (this.getAttribute('namespace')) {
       case 'news-list-default-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./default-/default-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./default-/default-.css`, // apply namespace since it is specific and no fallback
           namespace: false
         }, ...styles])
       default:

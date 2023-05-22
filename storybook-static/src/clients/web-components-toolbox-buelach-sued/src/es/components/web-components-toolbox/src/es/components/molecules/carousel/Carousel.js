@@ -50,8 +50,8 @@ import { Shadow } from '../../prototypes/Shadow.js'
  * @type {CustomElementConstructor}
  */
 export default class MacroCarousel extends Shadow() {
-  constructor (...args) {
-    super(...args)
+  constructor (options = {}, ...args) {
+    super({ importMetaUrl: import.meta.url, ...options }, ...args)
 
     this.macroCarousel = document.createElement('macro-carousel')
     // copy all kids into the macro-carousel
@@ -354,42 +354,56 @@ export default class MacroCarousel extends Shadow() {
         }
       }
     `.replace(/var\(--/g, `var(--${this.namespace}`)
+    return this.fetchTemplate()
+  }
 
+  /**
+   * fetches the template
+   *
+   * @return {Promise<void>}
+   */
+  fetchTemplate () {
     /** @type {import("../../prototypes/Shadow.js").fetchCSSParams[]} */
     const styles = [
       {
-        path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}../../../../css/style.css`, // apply namespace and fallback to allow overwriting on deeper level
+        path: `${this.importMetaUrl}../../../../css/style.css`, // apply namespace and fallback to allow overwriting on deeper level
         namespaceFallback: true
       }
     ]
     switch (this.getAttribute('namespace')) {
       case 'carousel-default-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./default-/default-.css`, // apply namespace since it is specific and no fallback
+          path: `${this.importMetaUrl}./default-/default-.css`, // apply namespace since it is specific and no fallback
           namespace: false
         }, ...styles], false)
       case 'carousel-emotion-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./default-/default-.css`, // apply namespace since it is specific and no fallback
-          namespace: false
+          path: `${this.importMetaUrl}./default-/default-.css`, // apply namespace since it is specific and no fallback
+          namespace: false,
+          replaces: [{
+            pattern: '--carousel-default-',
+            flags: 'g',
+            replacement: '--carousel-emotion-'
+          }]
         }, {
           // @ts-ignore
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./emotion-/emotion-.css`,
+          path: `${this.importMetaUrl}./emotion-/emotion-.css`,
           namespace: false
-        }, ...styles], false).then(fetchCSSParams => {
-          fetchCSSParams[0].styleNode.textContent = fetchCSSParams[0].styleNode.textContent.replace(/--carousel-default-/g, '--carousel-emotion-')
-        })
+        }, ...styles], false)
       case 'carousel-portrait-':
         return this.fetchCSS([{
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./default-/default-.css`, // apply namespace since it is specific and no fallback
-          namespace: false
+          path: `${this.importMetaUrl}./default-/default-.css`, // apply namespace since it is specific and no fallback
+          namespace: false,
+          replaces: [{
+            pattern: '--carousel-default-',
+            flags: 'g',
+            replacement: '--carousel-portrait-'
+          }]
         }, {
           // @ts-ignore
-          path: `${import.meta.url.replace(/(.*\/)(.*)$/, '$1')}./portrait-/portrait-.css`,
+          path: `${this.importMetaUrl}./portrait-/portrait-.css`,
           namespace: false
-        }, ...styles], false).then(fetchCSSParams => {
-          fetchCSSParams[0].styleNode.textContent = fetchCSSParams[0].styleNode.textContent.replace(/--carousel-default-/g, '--carousel-portrait-')
-        })
+        }, ...styles], false)
       default:
         return this.fetchCSS(styles, false)
     }
