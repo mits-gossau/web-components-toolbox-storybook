@@ -86,6 +86,7 @@ This Storybook supports following clients (added as submodules in `src`):
 - [Oranger Garten](https://github.com/mits-gossau/web-components-toolbox-orangergarten)
 - [Park im Grüene](https://github.com/mits-gossau/web-components-toolbox-parkimgruene)
 - [StageOne](https://github.com/mits-gossau/web-components-toolbox-stage-one)
+- [Steps](https://github.com/mits-gossau/web-components-toolbox-steps)
 - [TechDay](https://github.com/mits-gossau/web-components-toolbox-techday)
 - [Yearbooks](https://github.com/mits-gossau/web-components-toolbox-yearbooks)
 - [Zürisee Center](https://github.com/mits-gossau/web-components-toolbox-zueriseecenter)
