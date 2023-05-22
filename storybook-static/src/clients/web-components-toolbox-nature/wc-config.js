@@ -170,6 +170,11 @@
   './src/es/components/', // baseUrl
   [
     {
+     selector: 'nature-m-',
+     url: 'molecules/',
+     separateFolder: true 
+    },
+    {
       selector: 'a-',
       url: 'web-components-toolbox/src/es/components/atoms/',
       separateFolder: true
