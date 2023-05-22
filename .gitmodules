@@ -78,3 +78,6 @@
 	path = src/clients/web-components-toolbox-alnatura
 	url = git@github.com:mits-gossau/web-components-toolbox-alnatura
 	ignore = dirty
+[submodule "src/clients/web-components-toolbox-mitreva"]
+	path = src/clients/web-components-toolbox-mitreva
+	url = https://github.com/mits-gossau/web-components-toolbox-mitreva
