@@ -51,7 +51,7 @@ Take a look at [the deployed Storybook](https://mits-gossau.github.io/web-compon
 To take over changes on stories just build Storybook with static files, create a commit and push it afterwards.
 
 ```console
-npm run build-storybook
+npm run build
 ```
 
 ```console
@@ -79,6 +79,8 @@ This Storybook supports following clients (added as submodules in `src`):
   - m
   - showcase
 - [Migros City](https://github.com/mits-gossau/web-components-toolbox-migros-city)
+- [MigrosPro](https://github.com/mits-gossau/web-components-toolbox-migrospro)
+- [Mitreva](https://github.com/mits-gossau/web-components-toolbox-mitreva)
 - [Nature](https://github.com/mits-gossau/web-components-toolbox-nature)
 - [Neumarkt Altstetten](https://github.com/mits-gossau/web-components-toolbox-neumarkt-altstetten)
 - [Oranger Garten](https://github.com/mits-gossau/web-components-toolbox-orangergarten)
@@ -91,7 +93,7 @@ This Storybook supports following clients (added as submodules in `src`):
 > Hint: Update submodules
 >
 > ```console
-> git submodule update --init --recursive --remote --force
+> npm run update
 >```
 
 ## Web Components
