@@ -18,11 +18,14 @@ import themeLogistikplattform from '!!style-loader?injectType=lazyStyleTag!css-l
 import themeMakerSpace from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-maker-space/src/css/variablesCustom.css';
 import themeMDX from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-mdx/src/css/variablesCustom.css';
 import themeMigrosCity from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-migros-city/src/css/variablesCustom.css';
+import themeMigrosPro from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-migrospro/src/css/variablesCustom.css';
+import themeMitreva from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-mitreva/src/css/variablesCustom.css';
 import themeNature from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-nature/src/css/variablesCustom.css';
 import themeNeumarktAltstetten from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-neumarkt-altstetten/src/css/variablesCustom.css';
 import themeOrangerGarten from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-orangergarten/src/css/variablesCustom.css';
 import themeParkImGruene from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-parkimgruene/src/css/variablesCustom.css';
 import themeStageOne from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-stage-one/src/css/variablesCustom.css';
+import themeSteps from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-steps/src/css/variablesCustom.css';
 import themeTechDay from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-techday/src/css/variablesCustom.css';
 import themeYearbooksIndustrie from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-yearbooks/src/css/variablesIndustrie.css';
 import themeYearbooksMiduca from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-yearbooks/src/css/variablesMiduca.css';
@@ -57,11 +60,14 @@ export const parameters = {
       'Maker Space': themeMakerSpace,
       'MDX': themeMDX,
       'Migros City': themeMigrosCity,
+      'MigrosPro': themeMigrosPro,
+      'Mitreva': themeMitreva,
       'Nature': themeNature,
       'Neumarkt Altstetten': themeNeumarktAltstetten,
       'Oranger Garten': themeOrangerGarten,
       'Park im Grüene': themeParkImGruene,
       'StageOne': themeStageOne,
+      'Steps': themeSteps,
       'TechDay': themeTechDay,
       'Yearbooks Industrie': themeYearbooksIndustrie,
       'Yearbooks Miduca': themeYearbooksMiduca,
