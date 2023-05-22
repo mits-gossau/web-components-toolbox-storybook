@@ -84,3 +84,6 @@
 [submodule "src/clients/web-components-toolbox-migrospro"]
 	path = src/clients/web-components-toolbox-migrospro
 	url = https://github.com/mits-gossau/web-components-toolbox-migrospro
+[submodule "src/clients/web-components-toolbox-steps"]
+	path = src/clients/web-components-toolbox-steps
+	url = https://github.com/mits-gossau/web-components-toolbox-steps.git
