@@ -7,11 +7,15 @@
 
 :root {
   --background-color: #222222;
+  --color: #ffffff;
+  --a-color: var(--m-red-600);
+  --color-hover: var(--m-red-800);
   --color-disabled: #6c6c6c;
-  --color-hover: #433b4c;
   --color-secondary: #1B191D;
   --color-tertiary: #1B191D;
-  --color: #ffffff;
+  
+  --h6-font-size: 0.875em;
+
   --footer-default-invert-svg-color-custom: #222222;
 
   --navigation-default-color-custom: #ffffff;
@@ -22,4 +26,9 @@
 
   --header-default-margin-custom: 0 0 2em 0;
   --header-default-margin-mobile-custom: 0 0 2em 0;
+}
+
+:root {
+  background-color: var(--background-color);
+  color: var(--color);
 }

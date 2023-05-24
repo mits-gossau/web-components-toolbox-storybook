@@ -5,41 +5,24 @@
   * - if a component holds other components you should share the attribute namespace with its children
   */
 /* font tracking */
-@import url("https://cdn.fonts.net/t/1.css?apiType=css&projectid=b2e5ea60-e0d9-11ec-b713-06e2001461d0");
+@import url("https://cdn.fonts.net/t/1.css?apiType=css&projectid=8121ed97-d402-4592-a434-4e2ce73b1534");
 
-/* custom alnatura fonts */
-@font-face {
-  font-family: "FrutigerRegular";
-  src: url("https://cdn.migros.ch/ch.migros/static/fonts/Frutiger/Frutiger55Roman.woff2") format("woff2"), url("https://cdn.migros.ch/ch.migros/static/fonts/Frutiger/Frutiger55Roman.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+/* custom migropro fonts */
+@font-face{
+	font-family:"HelveticaNowText";
+	src:url("https://cdn.migros.ch/ch.migros/static/fonts/helvetica-now/HelveticaNowTextW05-Regular.woff2") format("woff2"),url("https://cdn.migros.ch/ch.migros/static/fonts/helvetica-now/HelveticaNowTextW05-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
-
-@font-face {
-  font-family: "FrutigerBold";
-  src: url("https://cdn.migros.ch/ch.migros/static/fonts/Frutiger/Frutiger65Bold.woff2") format("woff2"), url("https://cdn.migros.ch/ch.migros/static/fonts/Frutiger/Frutiger65Bold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+ 
+@font-face{
+	font-family:"HelveticaNowTextBold";
+	src:url("https://cdn.migros.ch/ch.migros/static/fonts/helvetica-now/HelveticaNowTextW05-Bold.woff2") format("woff2"),url("https://cdn.migros.ch/ch.migros/static/fonts/helvetica-now/HelveticaNowTextW05-Bold.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
-
-@font-face {
-  font-family: "KalamRegular";
-  src: url("https://cdn.migros.ch/ch.migros/static/fonts/Kalam/Kalam-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Helvetica Neue Condensed';
-  src: url(https://cdn.migros.ch/ch.migros/static/fonts/helveticaneue-condensed-bold/helveticaneue-condensed-bold.woff);
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
   --background-color: #fffef4;
   --bg-line-height: 1.5em;
@@ -58,9 +41,9 @@
   --emotion-pictures-with-button-img-max-height: var(--emotion-pictures-default-img-max-height);
   --emotion-pictures-with-logo-img-max-height: var(--emotion-pictures-default-img-max-height);
   --emotion-pictures-with-title-img-max-height: var(--emotion-pictures-default-img-max-height);
-  --font-family-bold: FrutigerBold, HelveticaNowTextBold, HelveticaNowText, Helvetica, Arial, sans-serif;
-  --font-family-secondary: KalamRegular, Avenir35Light, sans-serif;
-  --font-family: FrutigerRegular, HelveticaNowText, Helvetica, Arial, sans-serif;
+  --font-family-bold: HelveticaNowTextBold, HelveticaNowText, Helvetica, Arial, sans-serif;
+  --font-family-secondary: var(--font-family-bold);
+  --font-family: HelveticaNowText, Helvetica, Arial, sans-serif;
   --footer-default-h4-color: var(--background-color);
   --footer-default-invert-a-color-hover-custom: var(--color-tertiary);
   --footer-default-invert-color-hover-custom: var(--color-tertiary);
