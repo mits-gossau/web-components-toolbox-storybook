@@ -81,9 +81,12 @@
 [submodule "src/clients/web-components-toolbox-mitreva"]
 	path = src/clients/web-components-toolbox-mitreva
 	url = https://github.com/mits-gossau/web-components-toolbox-mitreva
+	ignore = dirty
 [submodule "src/clients/web-components-toolbox-migrospro"]
 	path = src/clients/web-components-toolbox-migrospro
 	url = https://github.com/mits-gossau/web-components-toolbox-migrospro
+	ignore = dirty
 [submodule "src/clients/web-components-toolbox-steps"]
 	path = src/clients/web-components-toolbox-steps
 	url = https://github.com/mits-gossau/web-components-toolbox-steps.git
+	ignore = dirty
