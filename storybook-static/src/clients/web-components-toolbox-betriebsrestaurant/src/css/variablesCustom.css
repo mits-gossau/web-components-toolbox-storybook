@@ -19,4 +19,7 @@
   --emotion-pictures-with-title-bg-color-custom: var(--m-black);
   --emotion-pictures-with-title-bg-background-color-custom: var(--m-white);
   --search-input-width: 10em;
+  --header-default-content-width: max(calc(1200px - var(--content-spacing) * 2), 60%);
+  --emotion-pictures-with-video-bg-color-custom: var(--m-black);
+  --emotion-pictures-with-video-bg-background-color-custom: var(--m-white);
 }
