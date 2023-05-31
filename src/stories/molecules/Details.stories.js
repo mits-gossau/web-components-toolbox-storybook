@@ -1,18 +1,18 @@
 // Details.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/molecules/details/Details"
-).then((module) => self.customElements.define("m-details", module.Details()));
+  '../../web-components-toolbox/src/es/components/molecules/details/Details'
+).then((module) => self.customElements.define('m-details', module.Details()))
 
 import(
-  "../../web-components-toolbox/src/es/components/organisms/wrapper/Wrapper"
-).then((module) => self.customElements.define("o-wrapper", module.Wrapper()));
+  '../../web-components-toolbox/src/es/components/organisms/wrapper/Wrapper'
+).then((module) => self.customElements.define('o-wrapper', module.Wrapper()))
 
 export default {
-  title: "Molecules/Details",
-  component: "m-details",
-};
+  title: 'Molecules/Details',
+  component: 'm-details'
+}
 
 export const Default = () => html`
   <o-body-style color-secondary="var(--m-green-600)">
@@ -206,7 +206,7 @@ export const Default = () => html`
       </div>
     </details>
   </m-details>
-`;
+`
 
 export const IconRight = () => html`
   <o-body-style color-secondary="var(--m-green-600)">
@@ -404,7 +404,7 @@ export const IconRight = () => html`
       </div>
     </details>
   </m-details>
-`;
+`
 
 export const MenuPortion = () => html`
   <o-body-style
@@ -505,7 +505,7 @@ export const MenuPortion = () => html`
       </m-details>
     </div>
   </o-body-style>
-`;
+`
 
 export const MenuSingle = () => html`
   <o-body-style
@@ -651,4 +651,4 @@ export const MenuSingle = () => html`
       </m-details>
     </div>
   </o-body-style>
-`;
+`

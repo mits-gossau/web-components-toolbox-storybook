@@ -1,18 +1,18 @@
 // Wrapper.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/organisms/wrapper/Wrapper"
-).then((module) => self.customElements.define("o-wrapper", module.Wrapper()));
+  '../../web-components-toolbox/src/es/components/organisms/wrapper/Wrapper'
+).then((module) => self.customElements.define('o-wrapper', module.Wrapper()))
 
 import(
-  "../../web-components-toolbox/src/es/components/atoms/picture/Picture"
-).then((module) => self.customElements.define("a-picture", module.default));
+  '../../web-components-toolbox/src/es/components/atoms/picture/Picture'
+).then((module) => self.customElements.define('a-picture', module.default))
 
 export default {
-  title: "Organisms/Wrapper",
-  component: "o-wrapper",
-};
+  title: 'Organisms/Wrapper',
+  component: 'o-wrapper'
+}
 
 export const NoCalcColumnWidth = () => html`
   <o-wrapper
@@ -68,7 +68,7 @@ export const NoCalcColumnWidth = () => html`
       ></a-picture
     ></a>
   </o-wrapper>
-`;
+`
 
 export const NoCalcColumnWidthLeft = () => html`
   <o-wrapper
@@ -124,7 +124,7 @@ export const NoCalcColumnWidthLeft = () => html`
       ></a-picture
     ></a>
   </o-wrapper>
-`;
+`
 
 export const Teaser = () => html`
   <h2 class="title-border">picture-first-mobile</h2>
@@ -240,7 +240,7 @@ export const Teaser = () => html`
       alt="Migros"
     ></a-picture>
   </o-wrapper>
-`;
+`
 
 export const TeaserRecipe = () => html`
   <o-wrapper namespace="wrapper-teaser-recipe-" no-calc-column-width>
@@ -287,7 +287,7 @@ export const TeaserRecipe = () => html`
       </figure>
     </m-teaser>
   </o-wrapper>
-`;
+`
 
 export const Text = () =>
   html`
@@ -303,7 +303,7 @@ export const Text = () =>
       <p width="25%">Lorem Ipsum dolor ...</p>
       <p width="25%">Lorem Ipsum dolor ...</p>
     </o-wrapper>
-  `;
+  `
 
 export const TextCenter = () =>
   html`
@@ -319,7 +319,7 @@ export const TextCenter = () =>
       <p width="25%">Lorem Ipsum dolor ...</p>
       <p width="25%">Lorem Ipsum dolor ...</p>
     </o-wrapper>
-  `;
+  `
 
 export const TextPictureCover = () =>
   html`
@@ -364,4 +364,4 @@ export const TextPictureCover = () =>
         </a-picture>
       </div>
     </o-wrapper>
-  `;
+  `

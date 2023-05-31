@@ -1,14 +1,14 @@
 // Breadcrumb.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
-import("../../web-components-toolbox/src/es/components/atoms/breadcrumb/Breadcrumb").then((module) =>
-  self.customElements.define("a-breadcrumb", module.default)
-);
+import('../../web-components-toolbox/src/es/components/atoms/breadcrumb/Breadcrumb').then((module) =>
+  self.customElements.define('a-breadcrumb', module.default)
+)
 
 export default {
-  title: "Atoms/Breadcrumb",
-  component: "a-breadcrumb",
-};
+  title: 'Atoms/Breadcrumb',
+  component: 'a-breadcrumb'
+}
 
 export const Default = () =>
   html`
@@ -21,4 +21,4 @@ export const Default = () =>
         <li><a href="#">Lorem</a></li>
       </ul></a-breadcrumb
     >
-  `;
+  `

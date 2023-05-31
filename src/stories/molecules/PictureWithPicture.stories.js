@@ -1,16 +1,16 @@
 // PictureWithPicture.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/molecules/pictureWithPicture/PictureWithPicture"
+  '../../web-components-toolbox/src/es/components/molecules/pictureWithPicture/PictureWithPicture'
 ).then((module) =>
-  self.customElements.define("m-picture-with-picture", module.default)
-);
+  self.customElements.define('m-picture-with-picture', module.default)
+)
 
 export default {
-  title: "Molecules/PictureWithPicture",
-  component: "m-picture-with-picture",
-};
+  title: 'Molecules/PictureWithPicture',
+  component: 'm-picture-with-picture'
+}
 
 export const Default = () =>
   html`
@@ -58,4 +58,4 @@ export const Default = () =>
         </a-picture>
       </div>
     </m-picture-with-picture>
-  `;
+  `

@@ -1,14 +1,14 @@
 // TagFilter.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/molecules/tagFilter/TagFilter"
-).then((module) => self.customElements.define("m-tag-filter", module.default));
+  '../../web-components-toolbox/src/es/components/molecules/tagFilter/TagFilter'
+).then((module) => self.customElements.define('m-tag-filter', module.default))
 
 export default {
-  title: "Molecules/TagFilter",
-  component: "m-tag-filter",
-};
+  title: 'Molecules/TagFilter',
+  component: 'm-tag-filter'
+}
 
 export const Horizontal = () =>
   html`
@@ -54,7 +54,7 @@ export const Horizontal = () =>
         >DIY</a-button
       >
     </m-tag-filter>
-  `;
+  `
 
 export const Vertical = () =>
   html`
@@ -100,4 +100,4 @@ export const Vertical = () =>
         >DIY</a-button
       >
     </m-tag-filter>
-  `;
+  `

@@ -1,16 +1,16 @@
 // IntersectionScrollEffect.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/organisms/intersectionScrollEffect/IntersectionScrollEffect"
+  '../../web-components-toolbox/src/es/components/organisms/intersectionScrollEffect/IntersectionScrollEffect'
 ).then((module) =>
-  self.customElements.define("o-intersection-scroll-effect", module.default)
-);
+  self.customElements.define('o-intersection-scroll-effect', module.default)
+)
 
 export default {
-  title: "Organisms/IntersectionScrollEffect",
-  component: "o-intersection-scroll-effect",
-};
+  title: 'Organisms/IntersectionScrollEffect',
+  component: 'o-intersection-scroll-effect'
+}
 
 export const Default = () =>
   html`
@@ -30,4 +30,4 @@ export const Default = () =>
       ></a-picture>
     </o-intersection-scroll-effect>
     <div style="height: 800px"></div>
-  `;
+  `

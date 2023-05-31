@@ -1,14 +1,14 @@
 // Pagination.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/molecules/pagination/Pagination"
-).then((module) => self.customElements.define("m-pagination", module.default));
+  '../../web-components-toolbox/src/es/components/molecules/pagination/Pagination'
+).then((module) => self.customElements.define('m-pagination', module.default))
 
 export default {
-  title: "Molecules/Pagination (WIP)",
-  component: "m-pagination",
-};
+  title: 'Molecules/Pagination (WIP)',
+  component: 'm-pagination'
+}
 
 export const Default = () => html`
   <m-pagination
@@ -16,4 +16,4 @@ export const Default = () => html`
     request-event-name="request-list-news"
     namespace="pagination-default-"
   />
-`;
+`

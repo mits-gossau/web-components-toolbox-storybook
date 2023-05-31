@@ -1,14 +1,14 @@
 // Picture.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/atoms/picture/Picture"
-).then((module) => self.customElements.define("a-picture", module.default));
+  '../../web-components-toolbox/src/es/components/atoms/picture/Picture'
+).then((module) => self.customElements.define('a-picture', module.default))
 
 export default {
-  title: "Atoms/Picture",
-  component: "a-picture",
-};
+  title: 'Atoms/Picture',
+  component: 'a-picture'
+}
 
 export const Cover = () =>
   html`
@@ -17,7 +17,7 @@ export const Cover = () =>
       defaultSource="src/web-components-toolbox/src/es/components/atoms/picture/cover-/img/Oeffnungszeiten-Hightlight-Teaser.png"
       alt="Öffnungszeiten"
     />
-  `;
+  `
 
 export const Overflow = () =>
   html`
@@ -26,7 +26,7 @@ export const Overflow = () =>
       defaultSource="src/web-components-toolbox/src/es/components/atoms/picture/cover-/img/Oeffnungszeiten-Hightlight-Teaser.png"
       alt="Öffnungszeiten"
     />
-  `;
+  `
 
 export const OverflowScaleUp = () =>
   html`
@@ -35,7 +35,7 @@ export const OverflowScaleUp = () =>
       defaultSource="src/web-components-toolbox/src/es/components/atoms/picture/cover-/img/Oeffnungszeiten-Hightlight-Teaser.png"
       alt="Öffnungszeiten"
     />
-  `;
+  `
 
 export const ScaleUp = () =>
   html`
@@ -44,7 +44,7 @@ export const ScaleUp = () =>
       defaultSource="src/web-components-toolbox/src/es/components/atoms/picture/cover-/img/Oeffnungszeiten-Hightlight-Teaser.png"
       alt="Öffnungszeiten"
     />
-  `;
+  `
 
 export const StoreLogo = () =>
   html`
@@ -53,7 +53,7 @@ export const StoreLogo = () =>
       defaultSource="src/web-components-toolbox/src/es/components/atoms/picture/cover-/img/Oeffnungszeiten-Hightlight-Teaser.png"
       alt="Öffnungszeiten"
     />
-  `;
+  `
 
 export const Teaser = () =>
   html`
@@ -62,4 +62,4 @@ export const Teaser = () =>
       defaultSource="src/web-components-toolbox/src/es/components/atoms/picture/cover-/img/Oeffnungszeiten-Hightlight-Teaser.png"
       alt="Öffnungszeiten"
     />
-  `;
+  `

@@ -1,14 +1,14 @@
 // BodyStyle.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/organisms/bodyStyle/BodyStyle"
-).then((module) => self.customElements.define("o-body-style", module.default));
+  '../../web-components-toolbox/src/es/components/organisms/bodyStyle/BodyStyle'
+).then((module) => self.customElements.define('o-body-style', module.default))
 
 export default {
-  title: "Organisms/BodyStyle",
-  component: "o-body-style",
-};
+  title: 'Organisms/BodyStyle',
+  component: 'o-body-style'
+}
 
 export const Default = () =>
   html`
@@ -17,4 +17,4 @@ export const Default = () =>
         <p>Lorem Ipsum dolor ...</p>
       </section>
     </o-body-style>
-  `;
+  `

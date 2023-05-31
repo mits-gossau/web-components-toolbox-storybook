@@ -1,14 +1,14 @@
 // Form.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/molecules/form/Form"
-).then((module) => self.customElements.define("m-form", module.default));
+  '../../web-components-toolbox/src/es/components/molecules/form/Form'
+).then((module) => self.customElements.define('m-form', module.default))
 
 export default {
-  title: "Molecules/Form",
-  component: "m-form",
-};
+  title: 'Molecules/Form',
+  component: 'm-form'
+}
 
 export const Default = () =>
   html`
@@ -522,7 +522,7 @@ export const Default = () =>
       data-serialized-field-conditions="{}"
       data-serialized-fields-not-displayed="{}"
     />
-  `;
+  `
 
 export const Variant = () => html`
   <a-button namespace="button-primary-">Hello</a-button>
@@ -1374,4 +1374,4 @@ export const Variant = () => html`
         data-serialized-fields-not-displayed="{}"
       ></div></div
   ></m-form>
-`;
+`

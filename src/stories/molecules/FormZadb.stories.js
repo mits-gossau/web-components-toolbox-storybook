@@ -1,14 +1,14 @@
 // Form.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/molecules/formZadb/FormZadb"
-).then((module) => self.customElements.define("m-form-zadb", module.default));
+  '../../web-components-toolbox/src/es/components/molecules/formZadb/FormZadb'
+).then((module) => self.customElements.define('m-form-zadb', module.default))
 
 export default {
-  title: "Molecules/FormZadb",
-  component: "m-form-zadb",
-};
+  title: 'Molecules/FormZadb',
+  component: 'm-form-zadb'
+}
 
 export const Default = () =>
   html`
@@ -475,4 +475,4 @@ export const Default = () =>
       data-serialized-field-conditions="{}"
       data-serialized-fields-not-displayed="{}"
     ></div>
-  `;
+  `

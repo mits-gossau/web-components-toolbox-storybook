@@ -1,14 +1,14 @@
 // GoogleMaps.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/atoms/googleMaps/GoogleMaps"
-).then((module) => self.customElements.define("a-google-maps", module.default));
+  '../../web-components-toolbox/src/es/components/atoms/googleMaps/GoogleMaps'
+).then((module) => self.customElements.define('a-google-maps', module.default))
 
 export default {
-  title: "Atoms/GoogleMaps",
-  component: "a-google-maps",
-};
+  title: 'Atoms/GoogleMaps',
+  component: 'a-google-maps'
+}
 
 export const Default = () => html`<a-google-maps
   namespace="google-maps-default-"
@@ -40,11 +40,11 @@ export const Default = () => html`<a-google-maps
       </o-wrapper>
     </div>
   </div>
-</a-google-maps> `;
+</a-google-maps> `
 
 export const Iframe = () => html`
   <a-google-maps
     namespace="google-maps-iframe-"
     iframe-url="https://snazzymaps.com/embed/241515"
   ></a-google-maps>
-`;
+`

@@ -1,14 +1,14 @@
 // Logo.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
-import("../../web-components-toolbox/src/es/components/atoms/logo/Logo").then(
-  (module) => self.customElements.define("a-logo", module.default)
-);
+import('../../web-components-toolbox/src/es/components/atoms/logo/Logo').then(
+  (module) => self.customElements.define('a-logo', module.default)
+)
 
 export default {
-  title: "Atoms/Logo",
-  component: "a-logo",
-};
+  title: 'Atoms/Logo',
+  component: 'a-logo'
+}
 
 export const Default = () =>
   html`
@@ -20,7 +20,7 @@ export const Default = () =>
       src="src/web-components-toolbox/src/img/logo_zueriseecenter.png"
       href="/"
     ></a-logo>
-  `;
+  `
 
 export const Partner = () =>
   html`
@@ -32,4 +32,4 @@ export const Partner = () =>
       src="src/web-components-toolbox/src/img/logo_zueriseecenter.png"
       href="/"
     ></a-logo>
-  `;
+  `

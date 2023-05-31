@@ -1,16 +1,16 @@
 // ImageHotspot.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/molecules/imageHotspot/ImageHotspot"
+  '../../web-components-toolbox/src/es/components/molecules/imageHotspot/ImageHotspot'
 ).then((module) =>
-  self.customElements.define("m-image-hotspot", module.default)
-);
+  self.customElements.define('m-image-hotspot', module.default)
+)
 
 export default {
-  title: "Molecules/ImageHotspot",
-  component: "m-image-hotspot",
-};
+  title: 'Molecules/ImageHotspot',
+  component: 'm-image-hotspot'
+}
 
 export const Default = () =>
   html`
@@ -253,4 +253,4 @@ export const Default = () =>
         </div>
       </a-hotspot>
     </m-image-hotspot>
-  `;
+  `

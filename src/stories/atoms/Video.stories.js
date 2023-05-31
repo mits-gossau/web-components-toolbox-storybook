@@ -1,14 +1,14 @@
 // Video.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
-import("../../web-components-toolbox/src/es/components/atoms/video/Video").then(
-  (module) => self.customElements.define("a-video", module.default)
-);
+import('../../web-components-toolbox/src/es/components/atoms/video/Video').then(
+  (module) => self.customElements.define('a-video', module.default)
+)
 
 export default {
-  title: "Atoms/Video",
-  component: "a-video",
-};
+  title: 'Atoms/Video',
+  component: 'a-video'
+}
 
 export const Default = () => html` <a-video>
     <style>
@@ -48,7 +48,7 @@ export const Default = () => html` <a-video>
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
-  </a-video>`;
+  </a-video>`
 
 export const Autoplay = () => html`
   <a-video
@@ -66,7 +66,7 @@ export const Autoplay = () => html`
       }
     </style>
   </a-video>
-`;
+`
 
 export const Controls = () => html`
   <a-video controls>
@@ -75,7 +75,7 @@ export const Controls = () => html`
       src="https://gateway.ipfs.io/ipfs/QmRjXPrLb4wyvNQNfqaeZxT7tchAcznbTJimdey8aLRmJ9?filename=no_coast_drift_hd_stock_video.mp4"
     />
   </a-video>
-`;
+`
 
 export const Crop = () => html`
   <a-video
@@ -92,4 +92,4 @@ export const Crop = () => html`
       src="src/web-components-toolbox/src/es/components/atoms/video/crop-/video/video.mp4"
     />
   </a-video>
-`;
+`

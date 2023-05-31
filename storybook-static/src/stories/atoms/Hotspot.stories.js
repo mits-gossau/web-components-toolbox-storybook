@@ -1,14 +1,14 @@
 // Hotspot.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/atoms/hotspot/Hotspot"
-).then((module) => self.customElements.define("a-hotspot", module.default));
+  '../../web-components-toolbox/src/es/components/atoms/hotspot/Hotspot'
+).then((module) => self.customElements.define('a-hotspot', module.default))
 
 export default {
-  title: "Atoms/Hotspot",
-  component: "a-hotspot",
-};
+  title: 'Atoms/Hotspot',
+  component: 'a-hotspot'
+}
 
 export const Default = () => html`
   <div style="background-color: gray; height: 80vh; position: relative;">
@@ -45,7 +45,7 @@ export const Default = () => html`
       </div>
     </a-hotspot>
   </div>
-`;
+`
 
 export const Helper = () => html`<div
   style="background-color: gray; height: 80vh; position: relative;"
@@ -82,4 +82,4 @@ export const Helper = () => html`<div
       </article>
     </div>
   </a-hotspot>
-</div> `;
+</div> `

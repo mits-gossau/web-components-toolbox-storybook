@@ -1,14 +1,14 @@
 // Grid.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/organisms/grid/Grid"
-).then((module) => self.customElements.define("o-grid", module.default));
+  '../../web-components-toolbox/src/es/components/organisms/grid/Grid'
+).then((module) => self.customElements.define('o-grid', module.default))
 
 export default {
-  title: "Organisms/Grid",
-  component: "o-grid",
-};
+  title: 'Organisms/Grid',
+  component: 'o-grid'
+}
 
 export const Default = () =>
   html`
@@ -26,7 +26,7 @@ export const Default = () =>
         <div><p>Lorem Ipsum dolor ...</p></div>
       </section>
     </o-grid>
-  `;
+  `
 
 export const TwoColumnsTwoRows = () => html`
   <h2>vertical</h2>
@@ -248,4 +248,4 @@ export const TwoColumnsTwoRows = () => html`
       </div>
     </section>
   </o-grid>
-`;
+`

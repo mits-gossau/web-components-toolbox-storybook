@@ -1,14 +1,14 @@
 // Teaser.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/molecules/teaser/Teaser"
-).then((module) => self.customElements.define("m-teaser", module.default));
+  '../../web-components-toolbox/src/es/components/molecules/teaser/Teaser'
+).then((module) => self.customElements.define('m-teaser', module.default))
 
 export default {
-  title: "Molecules/Teaser",
-  component: "m-teaser",
-};
+  title: 'Molecules/Teaser',
+  component: 'm-teaser'
+}
 
 export const Download = () =>
   html`
@@ -89,7 +89,7 @@ export const Download = () =>
         </figure>
       </m-teaser>
     </o-wrapper>
-  `;
+  `
 
 export const Overlay = () => html`
   <o-wrapper namespace="wrapper-teaser-">
@@ -159,7 +159,7 @@ export const Overlay = () => html`
       </figcaption>
     </figure>
   </m-teaser>
-`;
+`
 
 export const OverlayTop = () => html`
   <o-wrapper namespace="wrapper-teaser-recipe-">
@@ -190,7 +190,7 @@ export const OverlayTop = () => html`
       </figure>
     </m-teaser>
   </o-wrapper>
-`;
+`
 
 export const Plain = () => html`
   <o-wrapper namespace="wrapper-teaser-">
@@ -390,7 +390,7 @@ export const Plain = () => html`
       </figure>
     </m-teaser>
   </o-wrapper>
-`;
+`
 
 export const Round = () => html`
   <o-wrapper namespace="wrapper-teaser-">
@@ -437,7 +437,7 @@ export const Round = () => html`
       </figure>
     </m-teaser>
   </o-wrapper>
-`;
+`
 
 export const Tile = () => html`
   <o-wrapper namespace="wrapper-teaser-">
@@ -1530,7 +1530,7 @@ export const Tile = () => html`
       </figure>
     </m-teaser>
   </o-wrapper>
-`;
+`
 
 export const TileRounded = () => html`
   <o-wrapper namespace="wrapper-teaser-">
@@ -2629,7 +2629,7 @@ export const TileRounded = () => html`
       </figure>
     </m-teaser>
   </o-wrapper>
-`;
+`
 
 export const TileTextCenter = () => html`
   <o-wrapper namespace="wrapper-teaser-">
@@ -2761,4 +2761,4 @@ export const TileTextCenter = () => html`
       </figcaption>
     </figure>
   </m-teaser>
-`;
+`

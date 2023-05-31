@@ -1,16 +1,16 @@
 // EmotionPictures.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/atoms/emotionPictures/EmotionPictures"
+  '../../web-components-toolbox/src/es/components/atoms/emotionPictures/EmotionPictures'
 ).then((module) =>
-  self.customElements.define("a-emotion-pictures", module.default)
-);
+  self.customElements.define('a-emotion-pictures', module.default)
+)
 
 export default {
-  title: "Atoms/EmotionPictures",
-  component: "a-emotion-pictures",
-};
+  title: 'Atoms/EmotionPictures',
+  component: 'a-emotion-pictures'
+}
 
 export const Default = () =>
   html`
@@ -40,7 +40,7 @@ export const Default = () =>
         ></a-picture>
       </a>
     </a-emotion-pictures>
-  `;
+  `
 
 export const Button = () =>
   html`
@@ -79,7 +79,7 @@ export const Button = () =>
             <a-picture picture-load defaultSource="src/web-components-toolbox/src/es/components/atoms/emotionPictures/with-button-/img/jcr_content.jpeg" alt="randomized image"></a-picture>
         </div>
     </a-emotion-pictures>
-  `;
+  `
 
 export const Logo = () =>
   html`
@@ -192,7 +192,7 @@ export const Logo = () =>
         </div>
       </div>
     </a-emotion-pictures>
-  `;
+  `
 
 export const Title = () =>
   html`
@@ -256,7 +256,7 @@ export const Title = () =>
         ></a-picture>
       </div>
     </a-emotion-pictures>
-  `;
+  `
 
 export const Video = () =>
   html`
@@ -273,4 +273,4 @@ export const Video = () =>
         </a-video>
       </div>
     </a-emotion-pictures>
-  `;
+  `

@@ -1,14 +1,14 @@
 // Body.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/organisms/body/Body"
-).then((module) => self.customElements.define("o-body", module.default));
+  '../../web-components-toolbox/src/es/components/organisms/body/Body'
+).then((module) => self.customElements.define('o-body', module.default))
 
 export default {
-  title: "Organisms/Body",
-  component: "o-body",
-};
+  title: 'Organisms/Body',
+  component: 'o-body'
+}
 
 export const Default = () =>
   html`
@@ -17,4 +17,4 @@ export const Default = () =>
         <p>Lorem Ipsum dolor ...</p>
       </section>
     </o-body>
-  `;
+  `

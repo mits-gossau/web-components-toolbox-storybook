@@ -1,14 +1,14 @@
 // Input.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
-import("../../web-components-toolbox/src/es/components/atoms/input/Input").then(
-  (module) => self.customElements.define("a-input", module.default)
-);
+import('../../web-components-toolbox/src/es/components/atoms/input/Input').then(
+  (module) => self.customElements.define('a-input', module.default)
+)
 
 export default {
-  title: "Atoms/Input",
-  component: "a-input",
-};
+  title: 'Atoms/Input',
+  component: 'a-input'
+}
 
 export const Default = () => html`
   <a-input
@@ -61,4 +61,4 @@ export const Default = () => html`
   >
     Input Search Field Error
   </a-input>
-`;
+`

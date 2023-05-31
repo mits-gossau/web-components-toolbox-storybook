@@ -1,14 +1,14 @@
 // Navigation.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/molecules/navigation/Navigation"
-).then((module) => self.customElements.define("m-navigation", module.default));
+  '../../web-components-toolbox/src/es/components/molecules/navigation/Navigation'
+).then((module) => self.customElements.define('m-navigation', module.default))
 
 export default {
-  title: "Molecules/Navigation (WIP)",
-  component: "m-navigation",
-};
+  title: 'Molecules/Navigation (WIP)',
+  component: 'm-navigation'
+}
 
 export const Default = () =>
   html`
@@ -523,4 +523,4 @@ export const Default = () =>
         <li><a href="#">EN</a></li>
       </ul>
     </m-navigation>
-  `;
+  `

@@ -1,16 +1,16 @@
 // CarouselTwo.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/molecules/carouselTwo/CarouselTwo"
+  '../../web-components-toolbox/src/es/components/molecules/carouselTwo/CarouselTwo'
 ).then((module) =>
-  self.customElements.define("m-carousel-two", module.default)
-);
+  self.customElements.define('m-carousel-two', module.default)
+)
 
 export default {
-  title: "Molecules/CarouselTwo",
-  component: "m-carousel-two",
-};
+  title: 'Molecules/CarouselTwo',
+  component: 'm-carousel-two'
+}
 
 export const Default = () => html`
   <h2>
@@ -437,7 +437,7 @@ export const Default = () => html`
       </div>
     </section>
   </m-carousel-two>
-`;
+`
 
 export const SeperateNav = () => html` <m-carousel-two
   namespace="carousel-two-seperate-nav-"
@@ -877,7 +877,7 @@ export const SeperateNav = () => html` <m-carousel-two
     <span class="milestone" data-index="2">Bankett (eckige Tische)</span>
     <span class="milestone" data-index="3">Bankett (eckige Tische)</span>
   </a-slider-button>
-</m-carousel-two>`;
+</m-carousel-two>`
 
 export const Teaser = () => html`<h2>Navigation Teaser</h2>
   <m-carousel-two no-default-nav active="11" namespace="carousel-two-teaser-">
@@ -1018,7 +1018,7 @@ export const Teaser = () => html`<h2>Navigation Teaser</h2>
         </figure>
       </m-teaser>
     </section>
-  </m-carousel-two>`;
+  </m-carousel-two>`
 
 export const Thumbnail = () => html`
   <h2>Navigation overlay(ed)</h2>
@@ -2111,4 +2111,4 @@ export const Thumbnail = () => html`
       ></a-picture>
     </nav>
   </m-carousel-two>
-`;
+`

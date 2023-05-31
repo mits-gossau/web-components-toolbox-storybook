@@ -1,10 +1,10 @@
 // VideoPortraitMode.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 export default {
-  title: "Molecules/Video Portrait Mode",
-  component: "m-video-portrait-mode"
-};
+  title: 'Molecules/Video Portrait Mode',
+  component: 'm-video-portrait-mode'
+}
 
 export const Default = () => html`
   <o-wrapper>
@@ -38,4 +38,4 @@ export const Default = () => html`
       </div>
     </section>
   </o-wrapper>
-`;
+`

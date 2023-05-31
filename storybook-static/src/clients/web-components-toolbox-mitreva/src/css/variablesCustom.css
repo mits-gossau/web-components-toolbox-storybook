@@ -8,35 +8,35 @@
 /* font tracking */
 @import url("https://cdn.fonts.net/t/1.css?apiType=css&projectid=df37a6b4-f373-4678-8e14-c9a4483d7124");
 
-/* custom migropro fonts */
-@font-face{
-  font-family:"HelveticaNowText";
-  src:url("https://cdn.migros.ch/ch.migros/static/fonts/helvetica-now/HelveticaNowTextW05-Regular.woff2") format("woff2"),url("https://cdn.migros.ch/ch.migros/static/fonts/helvetica-now/HelveticaNowTextW05-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+/* custom mitreva fonts */
+@font-face {
+    font-family: "HelveticaNowText";
+    src: url("https://cdn.migros.ch/ch.migros/static/fonts/helvetica-now/HelveticaNowTextW05-Regular.woff2") format("woff2"), url("https://cdn.migros.ch/ch.migros/static/fonts/helvetica-now/HelveticaNowTextW05-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
- 
-@font-face{
-  font-family:"HelveticaNowTextBold";
-  src:url("https://cdn.migros.ch/ch.migros/static/fonts/helvetica-now/HelveticaNowTextW05-Bold.woff2") format("woff2"),url("https://cdn.migros.ch/ch.migros/static/fonts/helvetica-now/HelveticaNowTextW05-Bold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+
+@font-face {
+    font-family: "HelveticaNowTextBold";
+    src: url("https://cdn.migros.ch/ch.migros/static/fonts/helvetica-now/HelveticaNowTextW05-Bold.woff2") format("woff2"), url("https://cdn.migros.ch/ch.migros/static/fonts/helvetica-now/HelveticaNowTextW05-Bold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 :root {
-  --background-color: #ffffff;
-  --color-disabled: #6c6c6c;
-  --color-hover: #385ba0;
-  --color-secondary: #263e6e;
-  --color-tertiary: #263e6e;
-  --footer-default-invert-svg-color-custom: #ffffff;
+    --background-color: #ffffff;
+    --color-disabled: #6c6c6c;
+    --color-hover: #385ba0;
+    --color-secondary: #263e6e;
+    --color-tertiary: #263e6e;
+    --footer-default-invert-svg-color-custom: #ffffff;
 
-  --font-family-bold: HelveticaNowTextBold, HelveticaNowText, Helvetica, Arial, sans-serif;
-  --font-family-secondary: var(--font-family-bold);
-  --font-family: HelveticaNowText, Helvetica, Arial, sans-serif;
+    --font-family-bold: HelveticaNowTextBold, HelveticaNowText, Helvetica, Arial, sans-serif;
+    --font-family-secondary: var(--font-family-bold);
+    --font-family: HelveticaNowText, Helvetica, Arial, sans-serif;
 
-  --header-default-margin-custom: 0 0 2em 0;
-  --header-default-margin-mobile-custom: 0 0 2em 0;
+    --header-default-margin-custom: 0 0 2em 0;
+    --header-default-margin-mobile-custom: 0 0 2em 0;
 }

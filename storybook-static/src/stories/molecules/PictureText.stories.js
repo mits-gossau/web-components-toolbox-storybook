@@ -1,16 +1,16 @@
 // PictureText.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/molecules/pictureText/PictureText"
+  '../../web-components-toolbox/src/es/components/molecules/pictureText/PictureText'
 ).then((module) =>
-  self.customElements.define("m-picture-text", module.default)
-);
+  self.customElements.define('m-picture-text', module.default)
+)
 
 export default {
-  title: "Molecules/PictureText",
-  component: "m-picture-text",
-};
+  title: 'Molecules/PictureText',
+  component: 'm-picture-text'
+}
 
 export const Default = () =>
   html`
@@ -49,4 +49,4 @@ export const Default = () =>
         </div>
       </div>
     </m-picture-text>
-  `;
+  `

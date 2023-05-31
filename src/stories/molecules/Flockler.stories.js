@@ -1,14 +1,14 @@
 // Flockler.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/molecules/flockler/Flockler"
-).then((module) => self.customElements.define("m-flockler", module.default));
+  '../../web-components-toolbox/src/es/components/molecules/flockler/Flockler'
+).then((module) => self.customElements.define('m-flockler', module.default))
 
 export default {
-  title: "Molecules/Flockler",
-  component: "m-flockler",
-};
+  title: 'Molecules/Flockler',
+  component: 'm-flockler'
+}
 
 export const Default = () =>
   html`
@@ -17,4 +17,4 @@ export const Default = () =>
       embed-id="17351b12b2d0ef35d9212fc920f01d7c"
       namespace="flockler-default-"
     />
-  `;
+  `

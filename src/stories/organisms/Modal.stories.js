@@ -1,14 +1,14 @@
 // Modal.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/organisms/modal/Modal"
-).then((module) => self.customElements.define("o-modal", module.default));
+  '../../web-components-toolbox/src/es/components/organisms/modal/Modal'
+).then((module) => self.customElements.define('o-modal', module.default))
 
 export default {
-  title: "Organisms/Modal",
-  component: "o-modal",
-};
+  title: 'Organisms/Modal',
+  component: 'o-modal'
+}
 
 export const Default = () =>
   html`
@@ -20,4 +20,4 @@ export const Default = () =>
       ></a-picture>
     </div>
     <o-modal />
-  `;
+  `

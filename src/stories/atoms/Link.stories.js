@@ -1,25 +1,24 @@
 // Link.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
-import("../../web-components-toolbox/src/es/components/atoms/link/Link").then(
-  (module) => self.customElements.define("a-link", module.default)
-);
+import('../../web-components-toolbox/src/es/components/atoms/link/Link').then(
+  (module) => self.customElements.define('a-link', module.default)
+)
 
 export default {
-  title: "Atoms/Link",
-  component: "a-link",
-};
+  title: 'Atoms/Link',
+  component: 'a-link'
+}
 
 export const Category = () =>
-html`
+  html`
   <a-link
     namespace="category-"
     icon-path="src/web-components-toolbox/src/es/components/atoms/link/img/download-orange.svg"
     >
       <a href="#">Category</a>
   </a-link>
-`;
-
+`
 
 export const Download = () =>
   html`
@@ -29,7 +28,7 @@ export const Download = () =>
       >
         <a href="#">Download</a>
     </a-link>
-  `;
+  `
 
 export const TagFilter = () =>
   html`
@@ -39,8 +38,7 @@ export const TagFilter = () =>
       >
         <a href="#">Tag Filter</a>
     </a-link>
-  `;
-
+  `
 
 export const Underline = () =>
   html`
@@ -50,5 +48,4 @@ export const Underline = () =>
       >
         <a href="#">Underline</a>
     </a-link>
-  `;
-
+  `

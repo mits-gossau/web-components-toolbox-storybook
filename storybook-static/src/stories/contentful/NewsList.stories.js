@@ -1,32 +1,32 @@
 // NewsList.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 // import(
 //   "../../web-components-toolbox/src/es/components/controllers/contentful/Contentful"
 // ).then((module) => customElements.define("c-contentful", module.default));
 
 import(
-  "../../web-components-toolbox/src/es/components/controllers/recipe/Recipe"
-).then((module) => customElements.define("c-recipe", module.default));
+  '../../web-components-toolbox/src/es/components/controllers/recipe/Recipe'
+).then((module) => customElements.define('c-recipe', module.default))
 
 import(
-  "../../web-components-toolbox/src/es/components/pages/general/General"
-).then((module) => customElements.define("p-general", module.default));
+  '../../web-components-toolbox/src/es/components/pages/general/General'
+).then((module) => customElements.define('p-general', module.default))
 
 import(
-  "../../web-components-toolbox/src/es/components/organisms/body/Body"
-).then((module) => customElements.define("o-body", module.default));
+  '../../web-components-toolbox/src/es/components/organisms/body/Body'
+).then((module) => customElements.define('o-body', module.default))
 
 import(
-  "../../web-components-toolbox/src/es/components/contentful/newsList/NewsList"
+  '../../web-components-toolbox/src/es/components/contentful/newsList/NewsList'
 ).then((module) =>
-  customElements.define("contentful-news-list", module.default)
-);
+  customElements.define('contentful-news-list', module.default)
+)
 
 export default {
-  title: "Contentful/NewsList (WIP)",
-  component: "contentful-news-list",
-};
+  title: 'Contentful/NewsList (WIP)',
+  component: 'contentful-news-list'
+}
 
 export const Default = () =>
   html`
@@ -55,4 +55,4 @@ export const Default = () =>
         </o-body>
       </p-general>
     </c-recipe>
-  <!--</c-contentful>--> `;
+  <!--</c-contentful>--> `

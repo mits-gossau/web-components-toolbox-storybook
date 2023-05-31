@@ -1,14 +1,14 @@
 // Arrow.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/organisms/body/Body"
-).then((module) => self.customElements.define("o-body", module.default));
+  '../../web-components-toolbox/src/es/components/organisms/body/Body'
+).then((module) => self.customElements.define('o-body', module.default))
 
 export default {
-  title: "Atoms/Typography",
-  component: "o-body",
-};
+  title: 'Atoms/Typography',
+  component: 'o-body'
+}
 
 export const Default = () =>
   html` <o-body
@@ -30,4 +30,4 @@ export const Default = () =>
       culpa qui <a href="#">officia deserunt mollit</a> anim id est laborum.
     </p>
     <p>&nbsp;</p>
-  </o-body>`;
+  </o-body>`

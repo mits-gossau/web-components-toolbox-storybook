@@ -1,14 +1,14 @@
 // Carousel.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/molecules/carousel/Carousel"
-).then((module) => self.customElements.define("m-carousel", module.default));
+  '../../web-components-toolbox/src/es/components/molecules/carousel/Carousel'
+).then((module) => self.customElements.define('m-carousel', module.default))
 
 export default {
-  title: "Molecules/Carousel",
-  component: "m-carousel",
-};
+  title: 'Molecules/Carousel',
+  component: 'm-carousel'
+}
 
 export const Default = () => html`
   <div class="wrapper" style="max-width: 640px">
@@ -58,7 +58,7 @@ export const Default = () => html`
       </div>
     </m-carousel>
   </div>
-`;
+`
 
 export const Emotion = () => html`
   <div class="wrapper" style="max-width: 640px">
@@ -109,7 +109,7 @@ export const Emotion = () => html`
       </div>
     </m-carousel>
   </div>
-`;
+`
 
 export const Portrait = () => html`
   <div class="wrapper" style="max-width: 260px">
@@ -155,4 +155,4 @@ export const Portrait = () => html`
       </div>
     </m-carousel>
   </div>
-`;
+`

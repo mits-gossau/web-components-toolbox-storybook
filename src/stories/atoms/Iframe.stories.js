@@ -1,14 +1,14 @@
 // Iframe.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/atoms/iframe/Iframe"
-).then((module) => self.customElements.define("a-iframe", module.default));
+  '../../web-components-toolbox/src/es/components/atoms/iframe/Iframe'
+).then((module) => self.customElements.define('a-iframe', module.default))
 
 export default {
-  title: "Atoms/Iframe",
-  component: "a-iframe",
-};
+  title: 'Atoms/Iframe',
+  component: 'a-iframe'
+}
 
 export const Default = () => html`
   <h2>Iframe with and background-color</h2>
@@ -116,7 +116,7 @@ export const Default = () => html`
       ></iframe>
     </template>
   </a-iframe>
-`;
+`
 
 export const Portrait = () => html`
   <h2>iframe in portrait mode with keep aspect ratio</h2>
@@ -131,4 +131,4 @@ export const Portrait = () => html`
       ></iframe>
     </template>
   </a-iframe>
-`;
+`

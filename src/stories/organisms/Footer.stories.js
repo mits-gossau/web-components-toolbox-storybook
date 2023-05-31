@@ -1,14 +1,14 @@
 // Footer.stories.js
-import { html } from "lit-html";
+import { html } from 'lit-html'
 
 import(
-  "../../web-components-toolbox/src/es/components/organisms/footer/Footer"
-).then((module) => self.customElements.define("o-footer", module.default));
+  '../../web-components-toolbox/src/es/components/organisms/footer/Footer'
+).then((module) => self.customElements.define('o-footer', module.default))
 
 export default {
-  title: "Organisms/Footer",
-  component: "o-footer",
-};
+  title: 'Organisms/Footer',
+  component: 'o-footer'
+}
 
 export const Default = () =>
   html`
@@ -153,4 +153,4 @@ export const Default = () =>
         </div>
       </div>
     </o-footer>
-  `;
+  `
