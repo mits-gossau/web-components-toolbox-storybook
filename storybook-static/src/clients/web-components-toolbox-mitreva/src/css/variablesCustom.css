@@ -26,12 +26,21 @@
 }
 
 :root {
-    --background-color: #ffffff;
-    --color-disabled: #6c6c6c;
-    --color-hover: #385ba0;
-    --color-secondary: #263e6e;
-    --color-tertiary: #263e6e;
-    --footer-default-invert-svg-color-custom: #ffffff;
+    --mitreva-black: #000000;
+    --mitreva-gray-700: #6E6E6E;
+    --mitreva-blue-300: #B4CCE1;
+    --mitreva-blue-800: #0071B0;
+
+    --background-color: var(--m-white);
+    --color: var(--mitreva-black);
+    --color-hover: var(--mitreva-blue-300);
+    --color-active: var(--color-hover);
+    --color-disabled: var(--mitreva-gray-700);
+    --color-hover: var(--mitreva-blue-300);
+    --color-secondary: var(--mitreva-blue-800);
+    --color-tertiary: var(--mitreva-blue-800);
+    --footer-default-invert-svg-color-custom: var(--m-white);
+    --navigation-default-color-active: var(--color-active);
 
     --font-family-bold: HelveticaNowTextBold, HelveticaNowText, Helvetica, Arial, sans-serif;
     --font-family-secondary: var(--font-family-bold);
