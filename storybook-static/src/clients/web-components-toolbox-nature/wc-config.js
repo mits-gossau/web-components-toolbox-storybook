@@ -170,9 +170,9 @@
   './src/es/components/', // baseUrl
   [
     {
-      selector: 'nature-m-',
-      url: 'molecules/',
-      separateFolder: true
+     selector: 'nature-m-',
+     url: 'molecules/',
+     separateFolder: true 
     },
     {
       selector: 'a-',

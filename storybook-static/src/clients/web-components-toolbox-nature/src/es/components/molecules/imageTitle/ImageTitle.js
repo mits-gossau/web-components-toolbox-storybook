@@ -1,6 +1,7 @@
 // @ts-check
 import { Shadow } from '../../web-components-toolbox/src/es/components/prototypes/Shadow.js'
 
+
 /**
  * @export
  * @class ImageTitle
@@ -39,12 +40,12 @@ export default class ImageTitle extends Shadow() {
         z-index: 101;
       }
       :host > div.title {
-        background-color: ${this.getAttribute('background-color')};
+        background-color: ${this.getAttribute("background-color")};
         --h2-font-size: 2.75em;
       }
       :host > div.text {
-        color: ${this.getAttribute('color')};
-        --h-color: ${this.getAttribute('color')};
+        color: ${this.getAttribute("color")};
+        --h-color: ${this.getAttribute("color")};
       }
       :host a-emotion-pictures {
         grid-column-end: span 2;
