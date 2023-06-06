@@ -6,29 +6,59 @@
   */
 
 :root {
-  --background-color: #222222;
-  --color: #ffffff;
-  --a-color: var(--m-red-600);
-  --color-hover: var(--m-red-800);
-  --color-disabled: #6c6c6c;
-  --color-secondary: #1B191D;
-  --color-tertiary: #1B191D;
-  
-  --h6-font-size: 0.875em;
+    /* colors */
+    --steps-color-black: #000000;
+    --steps-color-white: #ffffff;
+    --steps-color-light-grey: #f6f6f6;
+    --steps-color-grey: #6c6c6c;
+    --steps-color-red-dark: #bd0f15;
+    --steps-color-red: #f04249;
+    --steps-color-red-light: #f7a1a4;
+    --steps-color-blue-dark: #260990;
+    --steps-color-blue: #3d0fe5;
+    --steps-color-blue-light: #8c6ff6;
+    --steps-color-blue-lighter: #c6b7fa;
 
-  --footer-default-invert-svg-color-custom: #222222;
+    --background-color: var(--steps-color-light-grey);
+    --color: var(--steps-color-black);
+    --a-color: var(--steps-color-black);
+    --color-hover: var(--steps-color-grey);
+    --color-disabled: var(--steps-color-grey);
+    --color-secondary: var(--steps-color-black);
+    --color-tertiary: var(--steps-color-blue);
+    --button-quaternary-color-custom: var(--steps-color-black);
 
-  --navigation-default-color-custom: #ffffff;
-  --footer-default-invert-color-custom: #ffffff;
-  --footer-default-invert-svg-color-custom: #ffffff;
+    --footer-default-invert-svg-color-custom: var(--steps-color-black);
+    --navigation-default-color-custom: var(--steps-color-white);
+    --footer-default-invert-color-custom: var(--steps-color-white);
+    --footer-default-invert-svg-color-custom: var(--steps-color-white);
+    --button-primary-color-custom: var(--steps-color-white);
 
-  --button-primary-color-custom: #ffffff;
+    /* font sizes  */
+    --steps-font-size: 112.5%;
+    --steps-font-size-body: calc(0.875rem + 0.25vw);
+    --steps-font-size-h1: calc(1.5rem + 2.25vw);
+    --steps-font-size-h2: calc(1.125rem + 2vw);
+    --steps-font-size-h3: calc(1rem + 1.5vw);
+    --steps-font-size-h4: calc(0.875rem + 1.125vw);
+    --steps-font-size-h5: calc(0.875rem + 0.625vw);
+    --steps-font-size-h6: var(--font-size-body);
 
-  --header-default-margin-custom: 0 0 2em 0;
-  --header-default-margin-mobile-custom: 0 0 2em 0;
+    --h1-font-size: var(--steps-font-size-h1);
+    --h2-font-size: var(--steps-font-size-h1);
+    --h3-font-size: var(--steps-font-size-h1);
+    --h6-font-size: var(--steps-font-size-h6);
+
+    /* margins and paddings */
+    --header-default-margin-custom: 0 0 2em 0;
+    --header-default-margin-mobile-custom: 0 0 2em 0;
+    --h-margin-bottom: 0.25em;
+
+    /* border radius */
+    --button-secondary-border-radius: 24px;
 }
 
 :root {
-  background-color: var(--background-color);
-  color: var(--color);
+    background-color: var(--background-color);
+    color: var(--color);
 }
