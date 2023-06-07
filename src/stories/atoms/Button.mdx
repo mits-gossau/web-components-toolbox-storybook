@@ -1,0 +1,53 @@
+{/* Button.mdx */}
+
+import { Canvas, Meta, Primary, Controls, Story, Source } from '@storybook/blocks';
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+<br />
+---
+<br />
+### [Primary](?path=/story/atoms-button--primary)
+```html
+<a-button namespace="button-primary-">Button</a-button>
+```
+<Story of={ButtonStories.Primary} />
+<br />
+---
+### [Secondary](?path=/story/atoms-button--secondary)
+```html
+<a-button namespace="button-secondary-">Button</a-button>
+```
+<Story of={ButtonStories.Secondary} />
+<br />
+---
+### [Quaternary](?path=/story/atoms-button--quaternary)
+```html
+<a-button namespace="button-quaternary-">Button</a-button>
+```
+<Story of={ButtonStories.Quaternary} />
+<br />
+---
+### [Download](?path=/story/atoms-button--download)
+```html
+<a-button namespace="button-download-">Button</a-button>
+```
+<Story of={ButtonStories.Download} />
+<br />
+---
+### [Category](?path=/story/atoms-button--category)
+```html
+<a-button namespace="button-category-">Button</a-button>
+```
+<Story of={ButtonStories.Category} />
+<br />
+---
+### disabled
+<blockquote>
+Hint: You can disable a button with additional attribute `disabled`
+</blockquote>
+```html
+<a-button namespace="button-...-" disabled>Button</a-button>
+```

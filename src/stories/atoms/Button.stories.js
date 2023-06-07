@@ -10,10 +10,8 @@ export default {
   component: 'a-button'
 }
 
-export const Primary = () => html`
-  <a-button namespace="button-primary-">Button</a-button>
-  <a-button namespace="button-primary-" disabled>Button</a-button>
-`
+export const Primary = () => html`<a-button namespace="button-primary-">Button</a-button>
+<a-button namespace="button-primary-" disabled>Button</a-button>`
 
 export const Secondary = () => html`
   <a-button namespace="button-secondary-">Button</a-button>
