@@ -49,6 +49,9 @@
     --h3-font-size: var(--steps-font-size-h1);
     --h6-font-size: var(--steps-font-size-h6);
 
+    /* font weights */
+    --a-font-weight: bold;
+
     /* margins and paddings */
     --header-default-margin-custom: 0 0 2em 0;
     --header-default-margin-mobile-custom: 0 0 2em 0;
