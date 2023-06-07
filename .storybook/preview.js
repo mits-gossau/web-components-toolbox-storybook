@@ -74,6 +74,11 @@ export const parameters = {
     },
     defaultTheme: 'No Theme'
   },
+  options: {
+    storySort: {
+      method: 'alphabetical'
+    }
+  },
   themes: {
     list: [
       { name: 'corporate', class: 'themeCorporateLight', color: 'rgb(255, 102, 0)' },
