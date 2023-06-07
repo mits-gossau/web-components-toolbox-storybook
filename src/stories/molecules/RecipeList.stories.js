@@ -26,7 +26,7 @@ import(
 ).then((module) => self.customElements.define('o-grid', module.default))
 
 export default {
-  title: 'Molecules/RecipeList (WIP)',
+  title: 'Molecules/RecipeList',
   component: 'm-recipe-list'
 }
 

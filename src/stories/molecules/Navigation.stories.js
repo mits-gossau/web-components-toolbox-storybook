@@ -6,7 +6,7 @@ import(
 ).then((module) => self.customElements.define('m-navigation', module.default))
 
 export default {
-  title: 'Molecules/Navigation (WIP)',
+  title: 'Molecules/Navigation',
   component: 'm-navigation'
 }
 
