@@ -2,5 +2,40 @@ import { Meta } from '@storybook/blocks';
 
 <Meta title="Design Tokens/Colors" />
 
+<style>
+	{`
+		.color-square {
+			height: 64px;
+			width: 64px;
+		}
+	`}
+</style>
+
 # Colors
 
+<table>
+	<thead>
+		<tr>
+			<th>Color</th>
+			<th>Variable</th>
+			<th>Value</th>
+		</tr>
+	</thead>
+  <tbody>
+	<tr>
+		<td>
+			<div class="color-square" style={{backgroundColor: 'var(--m-orange-600)'}}></div>
+		</td>
+      	<td>
+			```css
+				--m-orange-600
+			```
+		</td>
+		<td>
+			```
+				#FF6600
+			```
+		</td>
+    </tr>
+  </tbody>
+</table>
