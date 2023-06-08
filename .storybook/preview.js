@@ -77,7 +77,7 @@ export const parameters = {
   options: {
     storySort: {
       method: 'alphabetical',
-      order: ['Intro', 'Clients', 'Work in progress', 'Outsourcing', 'Atoms', 'Molecules', 'Organisms', 'Contentful']
+      order: ['Intro', 'Getting Started', 'Clients', 'Work in progress', 'Outsourcing', 'Design Tokens', 'Atoms', 'Molecules', 'Organisms', 'Contentful']
     }
   },
   themes: {
