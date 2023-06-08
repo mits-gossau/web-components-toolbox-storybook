@@ -4,96 +4,27 @@ import { Meta } from '@storybook/blocks';
 
 <style>
   {`
-    .button-theme-toggle {
-      background: transparent;
-      border: none;
-      border-radius: 4px;
-      color: #333;
-      font-size: 13px;
-      font-weight: bold;
-      height: 28px;
-      -webkit-box-pack: center;
-      justify-content: center;
-      margin-top: 6px;
-      padding: 8px 7px;
-      background-color: rgba(2,156,253,0.07);
-      color: #0E95D8;
-      display: inline-flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
+    .intro-logo {
+      display: flex;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
+      text-align: center;
     }
-    .button-theme-toggle svg {
-      width: 14px;
-      display: inline-block;
-      shape-rendering: inherit;
-      vertical-align: middle;
-      fill: currentColor;
-    }
-    .button-theme-label {
-      display: inline-block;
-      -webkit-text-decoration: none;
-      text-decoration: none;
-      padding: 10px;
-      font-weight: 700;
-      font-size: 13px;
-      line-height: 1;
-      height: 40px;
-      border: none;
-      border-top: 3px solid transparent;
-      border-bottom: 3px solid transparent;
-      background: transparent;
-  }
   `}
 </style>
 
-# Welcome to Web Components <em>toolbox</em>
+<div className="intro-logo">
+# 🎉 Welcome to 🎉 
+<br />
+<img src="/src/assets/images/web-components.svg" />
+<br />
+# 🛠️
+<br />
+Stories for all<br />Web Components<br />of the <em>toolbox</em>
 
-This Storybook is about offering stories for all Web Components toolbox elements.
+👇  
+[Getting Started](?path=/docs/getting-started--docs)   
 
-## Supported Projects (themes)
-
-We are supporting themes of the following clients. You can change toggle a theme with click on <button type="button" class="button-theme-toggle" title="CSS custom properties themes"><svg viewBox="0 0 14 14" width="14px" height="14px" class="css-149xqrd"><path fill-rule="evenodd" d="M11.8535.1464a.5.5 0 0 0-.7071 0L2.9827 8.3102a2.2396 2.2396 0 0 0-1.0737.599C.6772 10.141.2402 11.903.0852 12.9978 0 13.5998 0 14.0002 0 14.0002s.4004 0 1.0023-.0853c1.095-.155 2.8569-.5919 4.0887-1.8237.307-.307.5067-.6806.5992-1.0743l8.1633-8.1633a.5.5 0 0 0 0-.7071l-2-2Zm-6.253 9.546L6.543 8.75l-1.293-1.2929-.9424.9424a2.242 2.242 0 0 1 .7835.5097c.23.2302.4.4977.5095.7831ZM7.25 8.0428 12.7929 2.5 11.5 1.2071 5.957 6.75 7.25 8.0429ZM4.3839 9.6163c.4881.4882.4881 1.2796 0 1.7678-.7665.7664-1.832 1.1845-2.7791 1.403a8.6972 8.6972 0 0 1-.49.0982 8.7151 8.7151 0 0 1 .0982-.4899c.2186-.9471.6367-2.0126 1.403-2.779.4882-.4882 1.2797-.4882 1.7679 0Z"></path></svg><div title="Theme" class="button-theme-label">No Theme</div></button> at the top.
-
-- [Default](https://github.com/mits-gossau/web-components-toolbox)
-- [Alnatura](https://github.com/mits-gossau/web-components-toolbox-alnatura)
-- [Betriebsrestaurants](https://github.com/mits-gossau/web-components-toolbox-betriebsrestaurant)
-- [Bülach Süd](https://github.com/mits-gossau/web-components-toolbox-buelach-sued)
-- [Eatery](https://github.com/mits-gossau/web-components-toolbox-eatery)
-- [Hitzberger](https://github.com/mits-gossau/web-components-toolbox-hitzberger)
-- [Kaimug](https://github.com/mits-gossau/web-components-toolbox-kaimug)
-- [Klubschule](https://github.com/mits-gossau/web-components-toolbox-klubschule)
-- [Logistikplattform](https://github.com/mits-gossau/web-components-toolbox-logistikplattform)
-- [Maker Space](https://github.com/mits-gossau/web-components-toolbox-maker-space)
-- [MDX](https://github.com/mits-gossau/web-components-toolbox-mdx)
-  - corporate
-  - m
-  - showcase
-- [Migros City](https://github.com/mits-gossau/web-components-toolbox-migros-city)
-- [MigrosPro](https://github.com/mits-gossau/web-components-toolbox-migrospro)
-- [Mitreva](https://github.com/mits-gossau/web-components-toolbox-mitreva)
-- [Nature](https://github.com/mits-gossau/web-components-toolbox-nature)
-- [Neumarkt Altstetten](https://github.com/mits-gossau/web-components-toolbox-neumarkt-altstetten)
-- [Oranger Garten](https://github.com/mits-gossau/web-components-toolbox-orangergarten)
-- [Park im Grüene](https://github.com/mits-gossau/web-components-toolbox-parkimgruene)
-- [StageOne](https://github.com/mits-gossau/web-components-toolbox-stage-one)
-- [Steps](https://github.com/mits-gossau/web-components-toolbox-steps)
-- [TechDay](https://github.com/mits-gossau/web-components-toolbox-techday)
-- [Yearbooks](https://github.com/mits-gossau/web-components-toolbox-yearbooks)
-- [Zürisee Center](https://github.com/mits-gossau/web-components-toolbox-zueriseecenter)
-
-
-## Work in progress (WIP)
-
-Following components are work in progress (WIP)
-
-- [Newslist](?path=/story/contentful-newslist-wip--default)
-- [CookieBanner](?path=/story/molecules-cookiebanner-wip--default)
-- [Pagination](?path=/story/molecules-pagination-wip--default)
-- [Header](?path=/story/organisms-header-wip--default)
-
-## Outsourcing
-
-Following components are project specific and should be outsourced
-
-- [IconAmp](?path=/story/atoms-iconamp--default) - client: Nature
+&copy; Migros
+</div>
