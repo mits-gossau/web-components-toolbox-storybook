@@ -11,5 +11,7 @@ export default create({
   colorPrimary: '#FF6600',
   colorSecondary: '#FF6600',
   textColor: '#333333',
-  textInverseColor: '#ffffff'
+  textInverseColor: '#ffffff',
+  appBg: '#FFF3EB',
+  appBorderColor: '#FFB380'
 })
