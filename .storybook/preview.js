@@ -19,7 +19,6 @@ import themeMakerSpace from '!!style-loader?injectType=lazyStyleTag!css-loader!.
 import themeMDX from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-mdx/src/css/variablesCustom.css'
 import themeMigrosCity from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-migros-city/src/css/variablesCustom.css'
 import themeMigrosPro from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-migrospro/src/css/variablesCustom.css'
-import themeMitreva from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-mitreva/src/css/variablesCustom.css'
 import themeNature from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-nature/src/css/variablesCustom.css'
 import themeNeumarktAltstetten from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-neumarkt-altstetten/src/css/variablesCustom.css'
 import themeOrangerGarten from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-orangergarten/src/css/variablesCustom.css'
@@ -29,6 +28,7 @@ import themeSteps from '!!style-loader?injectType=lazyStyleTag!css-loader!../src
 import themeTechDay from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-techday/src/css/variablesCustom.css'
 import themeYearbooksIndustrie from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-yearbooks/src/css/variablesIndustrie.css'
 import themeYearbooksMiduca from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-yearbooks/src/css/variablesMiduca.css'
+import themeYearbooksMitreva from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-yearbooks/src/css/variablesMitreva.css'
 import themeYearbooksOperations from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-yearbooks/src/css/variablesOperations.css'
 import themeZueriseeCenter from '!!style-loader?injectType=lazyStyleTag!css-loader!../src/clients/web-components-toolbox-zueriseecenter/src/css/variablesCustom.css'
 
@@ -59,7 +59,6 @@ export const parameters = {
       MDX: themeMDX,
       'Migros City': themeMigrosCity,
       MigrosPro: themeMigrosPro,
-      Mitreva: themeMitreva,
       Nature: themeNature,
       'Neumarkt Altstetten': themeNeumarktAltstetten,
       'Oranger Garten': themeOrangerGarten,
@@ -69,6 +68,7 @@ export const parameters = {
       TechDay: themeTechDay,
       'Yearbooks Industrie': themeYearbooksIndustrie,
       'Yearbooks Miduca': themeYearbooksMiduca,
+      'Yearbooks Mitreva': themeYearbooksMiduca,
       'Yearbooks Operations': themeYearbooksOperations,
       'Zürisee Center': themeZueriseeCenter
     },
