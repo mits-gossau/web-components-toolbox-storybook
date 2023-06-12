@@ -68,7 +68,7 @@ export const parameters = {
       TechDay: themeTechDay,
       'Yearbooks Industrie': themeYearbooksIndustrie,
       'Yearbooks Miduca': themeYearbooksMiduca,
-      'Yearbooks Mitreva': themeYearbooksMiduca,
+      'Yearbooks Mitreva': themeYearbooksMitreva,
       'Yearbooks Operations': themeYearbooksOperations,
       'Zürisee Center': themeZueriseeCenter
     },
