@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, width=device-width, initial-scale=1.0"
+    />
+    <meta name="title" content="Steps" />
+    <meta name="description" content="Official Website of Steps.ch" />
+    <link
+      href="../web-components-toolbox/src/css/initial.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../web-components-toolbox/src/css/reset.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../web-components-toolbox/src/css/colors.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../web-components-toolbox/src/css/fonts.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../web-components-toolbox/src/css/variables.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      async
+      rel="preload"
+      as="script"
+      type="text/javascript"
+      src="../web-components-toolbox/src/es/helpers/Environment.js?msrcVersion=20230117142619"
+    ></script>
+    <!-- wc-config.js gets loaded once the template fetched its body path -->
+    <!--<script async rel=preload as="script" type="text/javascript" src="../wc-config.js"></script>-->
+    <title>Spielplan</title>
+    <link
+      href="../../../css/variablesCustom.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="../../../img/icons/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="../../../img/icons/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="../../../img/icons/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="../../../img/icons/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="../../../img/icons/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="../../../img/icons/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="../../../img/icons/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="../../../img/icons/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../../img/icons/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="../../../img/icons/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../../img/icons/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="../../../img/icons/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../../img/icons/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../../../img/icons/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="../../../img/icons/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+
+  <body>
+    <c-fetch-html>
+      <c-fetch-css>
+        <c-fetch-modules>
+          <o-body>
+
+            <!-- <header>
+              <h1>Spielplan</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </header> -->
+
+            <!-- <section>
+              <style>
+                :host ul.list-legend {
+                  padding-left: 0;
+                }
+                :host ul.list-legend li img[src$="svg"] {
+                  position: relative;
+                  top: -2px;
+                  margin-right: 2px;
+                  width: 24px;
+                  height: 24px;
+                }
+              </style>
+              <ul class="list-legend">
+                <li>
+                  <img src="../../../img/icons/icon-uebertitel.svg" width="24" height="24" />
+                  Deskriptive &Uuml;bertitel
+                </li>
+                <li>
+                  <img src="../../../img/icons/icon-einfuehrung.svg" width="24" height="24" />
+                  Einf&uuml;hrung
+                </li>
+                <li>
+                  <img src="../../../img/icons/icon-nachbesprechung.svg" width="24" height="24" />
+                  Nachbesprechung
+                </li>
+                <li>
+                  <img src="../../../img/icons/icon-familien.svg" width="24" height="24" />
+                  F&uuml;r die ganze Familie
+                </li>
+              </ul>
+            </section> -->
+
+            <!-- <section>
+              <style>
+                :host .filter-buttons {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-start;
+                }
+                @media only screen and (min-width: 768px)  {
+                  :host .filter-buttons {
+                    flex-direction: row;
+                  }
+                }
+                :host a-button:not(:last-child) {
+                  margin-right: 1.25rem;
+                  margin-bottom: 1.25rem;
+                }
+                @media only screen and (min-width: 768px)  {
+                  :host a-button:not(:last-child) {
+                    margin-bottom: 0;
+                  }
+                }
+                :host a-button.active {
+                  --button-secondary-font-family: var(--font-family-bold);
+                }
+                :host .filter-items {
+                  margin: 0.625rem 0
+                }
+                :host .filter-items ul {
+                  padding-left: 0;
+                  display: flex;
+                  flex-direction: row;
+                  flex-wrap: wrap;
+                }
+                :host .filter-items a {
+                  text-decoration: none;
+                  font-family: var(--font-family);
+                  display: inline-flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: space-between;
+                  margin: 0 1.25rem 0 0;
+                  padding: 0.625rem 0;
+                }
+                :host .filter-items a::before {
+                  display: block;
+                  content: attr(data-text);
+                  font-family: var(--font-family-bold);
+                  font-weight: normal;
+                  height: 0;
+                  overflow: hidden;
+                  visibility: hidden;
+                  margin: 0 1px;
+                }
+                :host .filter-items a:hover {
+                  color: var(--steps-color-black);
+                  font-family: var(--font-family-bold);
+                  font-weight: normal;
+                }
+              </style>
+              <div class="filter-buttons">
+                <a-button namespace="button-secondary-">Datum ausw&auml;hlen &#8594; &#x1F4C5;</a-button>
+                <a-button namespace="button-secondary-">Compagnien &#8594;</a-button>
+                <a-button namespace="button-secondary-" class="active">Ort &#8595;</a-button>
+              </div>
+              <div class="filter-items">
+                <ul>
+                  <li><a href="#" data-text="Aarau">Aarau</a></li> 
+                  <li><a href="#" data-text="Baden">Baden</a></li>
+                  <li><a href="#" data-text="Basel">Basel</a></li> 
+                  <li><a href="#" data-text="Bellinzona">Bellinzona</a></li>
+                  <li><a href="#" data-text="Bern">Bern</a></li> 
+                  <li><a href="#" data-text="Biel/Bienne">Biel/Bienne</a></li> 
+                  <li><a href="#" data-text="Aarau">Aarau</a></li> 
+                  <li><a href="#" data-text="Baden">Baden</a></li>
+                  <li><a href="#" data-text="Basel">Basel</a></li> 
+                  <li><a href="#" data-text="Bellinzona">Bellinzona</a></li>
+                  <li><a href="#" data-text="Bern">Bern</a></li> 
+                  <li><a href="#" data-text="Biel/Bienne">Biel/Bienne</a></li> 
+                  <li><a href="#" data-text="Aarau">Aarau</a></li> 
+                  <li><a href="#" data-text="Baden">Baden</a></li>
+                  <li><a href="#" data-text="Basel">Basel</a></li> 
+                  <li><a href="#" data-text="Bellinzona">Bellinzona</a></li>
+                  <li><a href="#" data-text="Bern">Bern</a></li> 
+                  <li><a href="#" data-text="Biel/Bienne">Biel/Bienne</a></li> 
+                  <li><a href="#" data-text="Aarau">Aarau</a></li> 
+                  <li><a href="#" data-text="Baden">Baden</a></li>
+                  <li><a href="#" data-text="Basel">Basel</a></li> 
+                  <li><a href="#" data-text="Bellinzona">Bellinzona</a></li>
+                  <li><a href="#" data-text="Bern">Bern</a></li> 
+                  <li><a href="#" data-text="Biel/Bienne">Biel/Bienne</a></li> 
+                  <li><a href="#" data-text="Aarau">Aarau</a></li> 
+                  <li><a href="#" data-text="Baden">Baden</a></li>
+                  <li><a href="#" data-text="Basel">Basel</a></li> 
+                  <li><a href="#" data-text="Bellinzona">Bellinzona</a></li>
+                  <li><a href="#" data-text="Bern">Bern</a></li> 
+                  <li><a href="#" data-text="Biel/Bienne">Biel/Bienne</a></li> 
+                </ul>
+              </div>
+            </section> -->
+
+            <section>
+              <style>
+                :host {
+                  --button-secondary-width: 100%;
+                }
+                :host .event-list {
+                  list-style: none;
+                  margin: 1.25rem 0;
+                  padding-left: 0;
+                }
+                :host .event-item {
+                  border-top: 1px solid var(--steps-color-black);
+                  padding: 1.25rem 0;
+                  display: flex;
+                  flex-direction: row;
+                  gap: 2rem;
+                  position: relative;
+                }
+                :host .event-item:last-child {
+                  border-bottom: 1px solid var(--steps-color-black)
+                }
+                :host .event-item p {
+                  margin: 0;
+                }
+                :host .event-date {
+                  min-width: 100px;
+                  white-space: nowrap;
+                }
+                :host .event-date p {
+                  font-size: var(--h1-font-size);
+                }
+                :host .event-date span {
+                  display: block;
+                  font-size: 1.4rem;
+                }
+                :host .event-info {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 1.25rem;
+                  width: 100%;
+                }
+                :host .event-info > * {
+                  flex-grow: 0;
+                  flex-shrink: 0;
+                  hyphens: auto;
+                }
+                :host .event-info .legend-icons {
+                  display: inline-block;
+                  white-space: nowrap;
+                }
+                :host .event-info .legend-icons:not(:last-child) {
+                  margin-right: 1.25rem;
+                }
+                :host .event-buttons {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  gap: 1.25rem;
+                }
+                :host .event-buttons a-button {
+                  width: 100%;
+                  white-space: nowrap;
+                }
+                :host .sold-out {
+                  color: var(--m-gray-400);
+                  cursor: not-allowed;
+                }
+                :host .sold-out .event-buttons,
+                :host .sold-out img[src*="svg"] {
+                  opacity: 0.4;
+                }
+                :host .sold-out .event-buttons a-button:last-child {
+                  display: none;
+                }
+                :host .badge-sold-out {
+                  background-color: var(--steps-color-white);
+                  border: 2px dashed var(--steps-color-red);
+                  color: var(--steps-color-red);
+                  display: inline-block;
+                  padding: 1.25rem;
+                  position: absolute;
+                  top: calc(50% - 32.5px);
+                  left: calc(50% - 100px);
+                  text-align: center;
+                  transform: rotate(2deg);
+                  width: 200px;
+                }
+                
+                @media only screen and (min-width: 768px)  {
+                  :host .event-item { 
+                    gap: 4rem;
+                  }
+                  :host .event-date {
+                    min-width: 150px;
+                  }
+                  :host .event-info {
+                    flex-direction: row;
+                    justify-content: space-between;
+                  }
+                  :host .event-info > * {
+                    flex-basis: 20%;
+                  }
+                  :host .event-buttons {
+                    align-items: center;
+                  }
+                }
+              </style>
+              <ul class="event-list">
+                <li class="event-item">
+                  <div class="event-date">
+                    <p><span>Samstag</span>24.12.</p>
+                  </div>
+                  <div class="event-info">
+                    <p>
+                      <strong>Far From The Norm (GBR)</strong><br />
+                      <span>BLKDOG</span><br />
+                      <span>Botis Seva</span>
+                    </p>
+                    <p>
+                      <strong>Neuchatel</strong><br />
+                      <span>Théatre du Passage, ADN</span>
+                    </p>
+                    <p>
+                      20.00 Uhr<br />
+                      <br />
+                      <span class="legend-icons">
+                        <img src="../../../img/icons/icon-uebertitel.svg" width="24" height="24" /> 
+                        <img src="../../../img/icons/icon-einfuehrung.svg" width="24" height="24" /> 
+                        <img src="../../../img/icons/icon-nachbesprechung.svg" width="24" height="24" /> 
+                        <img src="../../../img/icons/icon-familien.svg" width="24" height="24" />
+                      </span>
+                      <span class="legend-icons">
+                        <img src="../../../img/icons/icon-hoerbenachteiligung.svg" width="24" height="24" />
+                        <img src="../../../img/icons/icon-nicht-rollstuhlgaengig.svg" width="24" height="24" />
+                      </span>
+                    </p>
+                    <p class="event-buttons">
+                      <a-button namespace="button-secondary-">Info &#8594;</a-button>
+                      <a-button namespace="button-secondary-">Tickets &#8594;</a-button>
+                    </p>
+                  </div>
+                </li>
+                <li class="event-item sold-out">
+                  <p class="badge-sold-out">aus&shy;verkauft</p>
+                  <div class="event-date">
+                    <p><span>Samstag</span>10.5.</p>
+                  </div>
+                  <div class="event-info">
+                    <p>
+                      <strong>Mustername auf 4 Zeilen (DE)</strong><br />
+                      <span>Muster</span><br />
+                      <span>Hans Muster</span>
+                    </p>
+                    <p>
+                      <strong>St. Gallen</strong><br />
+                      <span>Theater St. Gallen, Schauspielhaus</span>
+                    </p>
+                    <p>
+                      19.30 Uhr<br />
+                      <br />
+                      <span class="legend-icons">
+                        <img src="../../../img/icons/icon-uebertitel.svg" width="24" height="24" /> 
+                        <img src="../../../img/icons/icon-einfuehrung.svg" width="24" height="24" /> 
+                      </span>
+                      <span class="legend-icons">
+                        <img src="../../../img/icons/icon-hoerbenachteiligung.svg" width="24" height="24" />
+                      </span>
+                    </p>
+                    <p class="event-buttons">
+                      <a-button namespace="button-secondary-">Info &#8594;</a-button>
+                      <a-button namespace="button-secondary-">Tickets &#8594;</a-button>
+                    </p>
+                  </div>
+                </li>
+                <li class="event-item">
+                  <div class="event-date">
+                    <p><span>Donnerstag</span>3.5.</p>
+                  </div>
+                  <div class="event-info">
+                    <p>
+                      <strong>Mustername (CH)</strong><br />
+                      <span>Muster Yeah</span><br />
+                      <span>Millena Muster</span>
+                    </p>
+                    <p>
+                      <strong>Basel</strong><br />
+                      <span>Kaserne Muster Muster auf</span>
+                    </p>
+                    <p>
+                      16.30 Uhr<br />
+                      <br />
+                      <span class="legend-icons">
+                        <img src="../../../img/icons/icon-uebertitel.svg" width="24" height="24" /> 
+                        <img src="../../../img/icons/icon-einfuehrung.svg" width="24" height="24" /> 
+                        <img src="../../../img/icons/icon-nachbesprechung.svg" width="24" height="24" /> 
+                      </span>
+                      <span class="legend-icons">
+                        <img src="../../../img/icons/icon-hoerbenachteiligung.svg" width="24" height="24" />
+                        <img src="../../../img/icons/icon-nicht-rollstuhlgaengig.svg" width="24" height="24" />
+                      </span>
+                    </p>
+                    <p class="event-buttons">
+                      <a-button namespace="button-secondary-">Info &#8594;</a-button>
+                      <a-button namespace="button-secondary-">Tickets &#8594;</a-button>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </section>
+
+
+          </o-body>
+        </c-fetch-modules>
+      </c-fetch-css>
+    </c-fetch-html>
+  </body>
+  <script>
+    const loadWcConfig = () => {
+      const script = document.createElement("script");
+      script.setAttribute(
+        "src",
+        location.href.replace(
+          /((src)|(docs))\/.*/,
+          "wc-config.js?triggerImmediately=true"
+        )
+      );
+      document.head.appendChild(script);
+    };
+    const loadHTML = (
+      path,
+      selector,
+      append = false,
+      rootFolder,
+      setChild = "appendChild"
+    ) => {
+      if (!path) return null;
+      if (!rootFolder) rootFolder = "docs";
+      path = location.href.replace(new RegExp(`${rootFolder}\/.*`), path);
+      return fetch(path)
+        .then((res) => res.text())
+        .then((innerHTML) => {
+          // fix relative links
+          innerHTML = innerHTML.replace(
+            /([^\.])\.\/([^\.])/g,
+            `$1${path.replace(/(.*\/)(.*)$/, "$1")}$2`
+          );
+          if (append) {
+            const div = document.createElement("div");
+            div.innerHTML = innerHTML;
+            Array.from(div.childNodes).forEach((node) => {
+              if (node) document.querySelector(selector)[setChild](node);
+            });
+          } else {
+            document.querySelector(selector).innerHTML = innerHTML;
+          }
+          // fetched html scripts don't execute automatically, create new script tags and append them to head
+          Array.from(document.querySelectorAll(".template-script")).forEach(
+            (script) => {
+              const newScript = document.createElement("script");
+              newScript.setAttribute("src", script.getAttribute("src"));
+              document.head.appendChild(newScript);
+              script.remove();
+            }
+          );
+        });
+    };
+    const loadCSS = (path, rootFolder) => {
+      if (!path) return null;
+      if (!rootFolder) rootFolder = "docs";
+      const link = document.createElement("link");
+      link.setAttribute(
+        "href",
+        location.href.replace(new RegExp(`${rootFolder}\/.*`), path)
+      );
+      link.setAttribute("rel", "stylesheet");
+      link.setAttribute("type", "text/css");
+      document.head.appendChild(link);
+      return Promise.resolve();
+    };
+    const url = new URL(location.href);
+    // allow body to use no shadow dom / mode=false
+    document
+      .querySelector("o-body")
+      .setAttribute(
+        "mode",
+        url.searchParams.get("body-mode") ||
+          document.querySelector("o-body").getAttribute("mode") ||
+          ""
+      );
+    Promise.all([
+      loadCSS(url.searchParams.get("css"), url.searchParams.get("rootFolder")),
+      loadHTML(
+        url.searchParams.get("login"),
+        "p-general",
+        true,
+        url.searchParams.get("rootFolder"),
+        "prepend"
+      ),
+      loadHTML(
+        url.searchParams.get("logo"),
+        "o-header",
+        true,
+        url.searchParams.get("rootFolder")
+      ),
+      loadHTML(
+        url.searchParams.get("nav"),
+        "o-header",
+        true,
+        url.searchParams.get("rootFolder")
+      ),
+      loadHTML(
+        url.searchParams.get("content"),
+        "o-body",
+        undefined,
+        url.searchParams.get("rootFolder")
+      ),
+      loadHTML(
+        url.searchParams.get("footer"),
+        "p-general",
+        true,
+        url.searchParams.get("rootFolder")
+      ),
+    ]).then(() => loadWcConfig());
+  </script>
+</html>
