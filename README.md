@@ -31,8 +31,11 @@ npm install
 ```
 
 ```console
-npm update
+npm run update
 ```
+
+<small>Go for a coffee. This will take a while.</small>
+
 
 ```console
 npm run storybook
