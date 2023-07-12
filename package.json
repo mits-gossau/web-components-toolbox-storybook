@@ -16,7 +16,7 @@
   "devDependencies": {
     "@babel/core": "^7.22.8",
     "@etchteam/storybook-addon-css-variables-theme": "^1.5.1",
-    "@playwright/test": "^1.35.1",
+    "@playwright/test": "^1.36.0",
     "@storybook/addon-actions": "^7.0.26",
     "@storybook/addon-essentials": "^7.0.26",
     "@storybook/addon-links": "^7.0.26",
