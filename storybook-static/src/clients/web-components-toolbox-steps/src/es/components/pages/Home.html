@@ -1,211 +1,107 @@
-<!DOCTYPE html>
-<html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="user-scalable=no, width=device-width, initial-scale=1.0"
-    />
-    <meta name="title" content="Steps" />
-    <meta name="description" content="Official Website of Steps.ch" />
-    <link
-      href="../web-components-toolbox/src/css/initial.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="../web-components-toolbox/src/css/reset.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="../web-components-toolbox/src/css/colors.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="../web-components-toolbox/src/css/fonts.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="../web-components-toolbox/src/css/variables.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script
-      async
-      rel="preload"
-      as="script"
-      type="text/javascript"
-      src="../web-components-toolbox/src/es/helpers/Environment.js?msrcVersion=20230117142619"
-    ></script>
-    <!-- wc-config.js gets loaded once the template fetched its body path -->
-    <!--<script async rel=preload as="script" type="text/javascript" src="../wc-config.js"></script>-->
-    <title>Web Components Toolbox 😎</title>
-    <link
-      href="../../../css/variablesCustom.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-  </head>
-
-  <body>
-    <c-fetch-html>
-      <c-fetch-css>
-        <c-fetch-modules>
-          <!--<o-header menu-icon="true" namespace="header-default-" namespace-fallback role="header">-->
-          <!-- template path passed by path query gets loaded into here. eg. ./src/es/components/atoms/logo/default-/default-.html -->
-          <!-- template path passed by path query gets loaded into here. eg. ./src/es/components/molecules/navigation/default-/default-.html -->
-          <!--</o-header>-->
-          <o-body>
-            <!-- template path passed by path query gets loaded into here. eg. ./src/es/components/pages/Template.html?path=../molecules/teaser/tile-/tile-.html -->
-
-            <h1>Headline 1</h1>
-            <h2>Headline 2</h2>
-            <h3>Headline 3</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor <u>incididunt ut labore</u> et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation
-              <i>ullamco laboris nisi</i> ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit involuptate velit esse
-              cillum dolore eu <b>fugiat nulla pariatur</b>.Excepteur sint
-              occaecat cupidatat <strike>non proident</strike>, sunt in culpa
-              qui <a href="#">officia deserunt mollit</a> anim id est laborum.
-            </p>
-            <p>&nbsp;</p>
-            <p>
-              <a href="#">
-                <strong>Link with additional html &lt;strong&gt; tag</strong>
-              </a>
-            </p>
-            <p>
-              <a href="#">Link with css <code>font-weight: bold;</code> </a>
-            </p>
-            <p>&nbsp;</p>
-            <div>
-              <a-button namespace="button-secondary-">Button</a-button>
-              <a-button namespace="button-secondary-" disabled>Button</a-button
-              ><br /><br />
-              <a-button namespace="button-quaternary-">Button</a-button>
-              <a-button namespace="button-quaternary-" disabled
-                >Button</a-button
-              >
-            </div>
-            <p>&nbsp;</p>
-          </o-body>
-          <!-- template path passed by path query gets loaded into here. eg. ./src/es/components/organisms/footer/default-/default-.html -->
-        </c-fetch-modules>
-      </c-fetch-css>
-    </c-fetch-html>
-  </body>
-  <script>
-    const loadWcConfig = () => {
-      const script = document.createElement("script");
-      script.setAttribute(
-        "src",
-        location.href.replace(
-          /((src)|(docs))\/.*/,
-          "wc-config.js?triggerImmediately=true"
-        )
-      );
-      document.head.appendChild(script);
-    };
-    const loadHTML = (
-      path,
-      selector,
-      append = false,
-      rootFolder,
-      setChild = "appendChild"
-    ) => {
-      if (!path) return null;
-      if (!rootFolder) rootFolder = "docs";
-      path = location.href.replace(new RegExp(`${rootFolder}\/.*`), path);
-      return fetch(path)
-        .then((res) => res.text())
-        .then((innerHTML) => {
-          // fix relative links
-          innerHTML = innerHTML.replace(
-            /([^\.])\.\/([^\.])/g,
-            `$1${path.replace(/(.*\/)(.*)$/, "$1")}$2`
-          );
-          if (append) {
-            const div = document.createElement("div");
-            div.innerHTML = innerHTML;
-            Array.from(div.childNodes).forEach((node) => {
-              if (node) document.querySelector(selector)[setChild](node);
-            });
-          } else {
-            document.querySelector(selector).innerHTML = innerHTML;
+<o-steps-stage>
+  <div class="stage__picture">
+    <a-picture
+      loading="eager"
+      tabindex="0"
+      loaded-bad-quality="true"
+      loaded="true"
+      namespace="picture-full-"
+    >
+      <picture>
+        <source media="(min-width:768px)" data-srcset="http://via.placeholder.com/1500x980" srcset="http://via.placeholder.com/1500x980">
+        <img data-src="http://via.placeholder.com/1500x980" decoding="sync" loading="eager" src="http://via.placeholder.com/1500x980">
+      </picture>
+    </a-picture>
+  </div>
+  <div class="stage__overlay">
+    <div class="stage__content">
+      <h2>Save the Date!</h2>
+      <span>Next Steps:</span>
+      <span>24.4. - 19.5.2024</span>
+      <a-button
+        namespace="button-steps-"
+        href="#"
+        target="_self"
+        tabindex="0"
+        data-href="/spielplan"
+        role="link"
+        hover=""
+        class="stage__button"
+      >
+        <style>
+          :host a {
+            position: relative;
           }
-          // fetched html scripts don't execute automatically, create new script tags and append them to head
-          Array.from(document.querySelectorAll(".template-script")).forEach(
-            (script) => {
-              const newScript = document.createElement("script");
-              newScript.setAttribute("src", script.getAttribute("src"));
-              document.head.appendChild(newScript);
-              script.remove();
+
+          :host a svg {
+            position: absolute;
+            right: 1.5rem;
+            transition: right 0.3s ease-in-out;
+          }
+
+          :host a:hover svg {
+            right: 1rem;
+          }
+
+          @media (max-width: 768px) {
+            :host a {
+              padding: 16px 48px 16px 24px; /* mobile variable ? */
             }
-          );
-        });
-    };
-    const loadCSS = (path, rootFolder) => {
-      if (!path) return null;
-      if (!rootFolder) rootFolder = "docs";
-      const link = document.createElement("link");
-      link.setAttribute(
-        "href",
-        location.href.replace(new RegExp(`${rootFolder}\/.*`), path)
-      );
-      link.setAttribute("rel", "stylesheet");
-      link.setAttribute("type", "text/css");
-      document.head.appendChild(link);
-      return Promise.resolve();
-    };
-    const url = new URL(location.href);
-    // allow body to use no shadow dom / mode=false
-    document
-      .querySelector("o-body")
-      .setAttribute(
-        "mode",
-        url.searchParams.get("body-mode") ||
-          document.querySelector("o-body").getAttribute("mode") ||
-          ""
-      );
-    Promise.all([
-      loadCSS(url.searchParams.get("css"), url.searchParams.get("rootFolder")),
-      loadHTML(
-        url.searchParams.get("login"),
-        "p-general",
-        true,
-        url.searchParams.get("rootFolder"),
-        "prepend"
-      ),
-      loadHTML(
-        url.searchParams.get("logo"),
-        "o-header",
-        true,
-        url.searchParams.get("rootFolder")
-      ),
-      loadHTML(
-        url.searchParams.get("nav"),
-        "o-header",
-        true,
-        url.searchParams.get("rootFolder")
-      ),
-      loadHTML(
-        url.searchParams.get("content"),
-        "o-body",
-        undefined,
-        url.searchParams.get("rootFolder")
-      ),
-      loadHTML(
-        url.searchParams.get("footer"),
-        "p-general",
-        true,
-        url.searchParams.get("rootFolder")
-      ),
-    ]).then(() => loadWcConfig());
-  </script>
-</html>
+
+            :host a span {
+              font-size: 16px;
+            }
+
+            :host a svg {
+              right: 2rem;
+            }
+
+            :host a:hover svg {
+              right: 1.5rem;
+            }
+          }
+        </style>
+        <a href="/spielplan" target="_self" type="button">
+          <span id="label">Jetzt Newsletter abonnieren</span>
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.83398 8.49992H13.1673M13.1673 8.49992L8.50065 3.83325M13.1673 8.49992L8.50065 13.1666" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </a-button>
+    </div>
+  </div>
+</o-steps-stage>
+
+<section>
+  <h1>Headline 1</h1>
+  <h2>Headline 2</h2>
+  <h3>Headline 3</h3>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor
+    <u>incididunt ut labore</u> et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation <i>ullamco laboris nisi</i> ut aliquip ex ea
+    commodo consequat. Duis aute irure dolor in reprehenderit involuptate velit
+    esse cillum dolore eu <b>fugiat nulla pariatur</b>.Excepteur sint occaecat
+    cupidatat <strike>non proident</strike>, sunt in culpa qui
+    <a href="#">officia deserunt mollit</a> anim id est laborum.
+  </p>
+  <p>&nbsp;</p>
+  <p>
+    <a href="#">
+      <strong>Link with additional html &lt;strong&gt; tag</strong>
+    </a>
+  </p>
+  <p>
+    <a href="#">Link with css <code>font-weight: bold;</code> </a>
+  </p>
+  <p>&nbsp;</p>
+  <div>
+    <a-button namespace="button-secondary-">Button</a-button>
+    <a-button namespace="button-secondary-" disabled>Button</a-button
+    ><br /><br />
+    <a-button namespace="button-quaternary-">Button</a-button>
+    <a-button namespace="button-quaternary-" disabled>Button</a-button>
+  </div>
+  <p>&nbsp;</p>
+</section>

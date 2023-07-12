@@ -1,0 +1,75 @@
+{
+  "events": [
+    {
+      "event": {
+        "choreographer": "Botis Seva",
+        "compagnieName": "BLKDOG",
+        "icons": [
+          "uebertitel",
+          "einfuehrung",
+          "nachbesprechung",
+          "familien"
+        ],
+        "productionTitle": "BLKDOG",
+        "soldOut": "False",
+        "dateTime": "15.08.2024 18:00:00"
+      },
+      "location": {
+        "name": "Zürich",
+        "subline": "Théatre du Passage, ADN",
+        "icons": [
+          "hoerbenachteiligung",
+          "rollstuhlgaengig"
+        ]
+      }
+    },
+    {
+      "event": {
+        "choreographer": "Marc Brew, Sidi Larbi Cherkaoui",
+        "compagnieName": "Marc Brew Company | Eastman (GBR | BEL)",
+        "icons": [
+          "uebertitel",
+          "einfuehrung"
+        ],
+        "productionTitle": "Les Porte-Voix – Cabaret Ventriloque",
+        "soldOut": "True",
+        "dateTime": "24.12.2023 18:30:00"
+      },
+      "location": {
+        "name": "St. Gallen",
+        "subline": "Theater St. Gallen, Schauspielhaus",
+        "icons": [
+          "hoerbenachteiligung"
+        ]
+      }
+    },
+    {
+      "event": {
+        "choreographer": "Millena Muster",
+        "compagnieName": "Mustername (CH)",
+        "icons": [
+          "uebertitel",
+          "einfuehrung",
+          "nachbesprechung"
+        ],
+        "productionTitle": "Muster Yeah",
+        "soldOut": "False",
+        "dateTime": "05.08.2024 09:05:00"
+      },
+      "location": {
+        "name": "Basel",
+        "subline": "Kaserne Muster Muster auf",
+        "icons": [
+          "hoerbenachteiligung",
+          "rollstuhlgaengig"
+        ]
+      }
+    }
+  ],
+  "translations" : {
+    "buttonTickets": "Tickets",
+    "linkDetails": "Mehr Details",
+    "soldOut": "ausverkauft",
+    "timeSuffix": "Uhr"
+  }
+}

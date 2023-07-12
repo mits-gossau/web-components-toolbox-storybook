@@ -268,6 +268,11 @@ export default class Teaser extends Intersection() {
           path: `${this.importMetaUrl}./plain-/plain-.css`, // apply namespace since it is specific and no fallback
           namespace: false
         }, ...styles], false)
+      case 'teaser-plainer-':
+        return this.fetchCSS([{
+          path: `${this.importMetaUrl}./plainer-/plainer-.css`, // apply namespace since it is specific and no fallback
+          namespace: false
+        }, ...styles], false)
       default:
         return this.fetchCSS(styles, false)
     }

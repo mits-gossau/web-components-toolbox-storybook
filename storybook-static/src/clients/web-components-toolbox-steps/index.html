@@ -16,14 +16,15 @@
     <h3>Pages</h3>
     <div id="pages"></div>
     <script>
-      const pageQuery = 'rootFolder=src&css=./src/css/variablesCustom.css&logo=./src/es/components/atoms/logo/default-/default-.html'
+      const pageQuery = 'rootFolder=src&css=./src/css/variablesCustom.css&header=./src/es/components/organisms/header/nav-right-/nav-right-.html&logo=./src/es/components/atoms/logo/default-/default-.html&nav=./src/es/components/molecules/navigation/default-/default-.html&footer=./src/es/components/organisms/footer/default-/default-.html'
       document
         .querySelector('#pages')
         .innerHTML =/* HTML */
         `
       <ul>
-        <li><a href="./src/es/components/pages/Home.html">Home</a></li>
-        <li><a href="./src/es/components/pages/Program.html">Spielplan</a></li>
+        <li><a href="./src/es/components/web-components-toolbox/docs/Template.html?rootFolder=src&css=./src/css/variablesCustom.css&content=./src/es/components/pages/Home.html">Startseite</a></li>
+        <li><a href="./src/es/components/web-components-toolbox/docs/Template.html?${pageQuery}&content=./src/es/components/pages/Spielplan.html">Spielplan</a></li>
+        <li><a href="./src/es/components/web-components-toolbox/docs/Template.html?${pageQuery}&content=./src/es/components/pages/Event.html">Einzelne Veranstaltung</a></li>
       </ul>
     `
     </script>

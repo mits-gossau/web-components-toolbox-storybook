@@ -17,5 +17,6 @@
   --header-default-border-bottom-custom: 1px solid var(--m-gray-300);
   --header-default-logo-width-custom:160px;
   --navigation-default-color-custom: var(--color);
+  --search-input-width: 10em;
   --teaser-round-a-picture-width-custom:80%;
 }
